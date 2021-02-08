@@ -1,0 +1,42 @@
+2021-02-08 15:20:42,182 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2021-02-08 15:20:42,217 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2021-02-08 15:20:42,218 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: Version 5.2.1
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: java.version=1.8.0_192
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: os.name=Mac OS X
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: os.arch=x86_64
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: os.version=10.15.7
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: file.encoding=UTF-8
+2021-02-08 15:20:42,219 INFO o.a.j.JMeter: java.awt.headless=null
+2021-02-08 15:20:42,220 INFO o.a.j.JMeter: Max memory     =1073741824
+2021-02-08 15:20:42,220 INFO o.a.j.JMeter: Available Processors =8
+2021-02-08 15:20:42,224 INFO o.a.j.JMeter: Default Locale=English (EN)
+2021-02-08 15:20:42,224 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2021-02-08 15:20:42,224 INFO o.a.j.JMeter: JMeterHome=/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1
+2021-02-08 15:20:42,224 INFO o.a.j.JMeter: user.dir  =/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin
+2021-02-08 15:20:42,224 INFO o.a.j.JMeter: PWD       =/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin
+2021-02-08 15:20:42,227 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Daniels-MacBook-Pro.local FullName: localhost
+2021-02-08 15:20:43,637 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2021-02-08 15:20:43,654 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.apple.laf.AquaLookAndFeel [Darcula]
+2021-02-08 15:20:43,654 INFO o.a.j.JMeter: Setting LAF to: com.apple.laf.AquaLookAndFeel
+2021-02-08 15:20:43,657 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2021-02-08 15:20:44,517 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-f48717ce2c0ed882ebee62b673fb7206-gui
+2021-02-08 15:20:45,574 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-graphs-additional=2.0, jpgc-functions=2.1, jpgc-casutg=2.9, jpgc-dummy=0.4, jpgc-filterresults=2.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, bzm-random-csv=0.6, jpgc-synthesis=2.2, jpgc-tst=2.5, jpgc-csvars=0.1, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1, jpgc-standard=2.0]
+2021-02-08 15:20:45,577 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager, bzm-random-csv]
+2021-02-08 15:20:46,044 WARN o.a.j.g.ObjectTableModel: Header count=13 but classes count=11
+2021-02-08 15:20:46,044 WARN o.a.j.g.ObjectTableModel: Header count=13 but writeFunctor count=11
+2021-02-08 15:20:46,816 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2021-02-08 15:20:47,185 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2021-02-08 15:20:47,186 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin/proxyserver.jks
+2021-02-08 15:20:47,339 INFO o.a.j.s.FileServer: Default base='/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin'
+2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000

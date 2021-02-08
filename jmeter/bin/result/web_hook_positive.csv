@@ -1,0 +1,13 @@
+name,display_name,trigger_sentences,value,closing
+CurrencyAmountCheck,CurrencyAmountCheck,Currency Amount Check,10 usd,Thanks
+CurrencyAmountCheck,CurrencyAmountCheck,Currency Amount Check,10 jpy,Thanks
+CurrencyAmountCheck,CurrencyAmountCheck,Currency Amount Check,10 cad,Thanks
+StringCheck,StringCheck,String Check,hello world,Thanks
+StringCheck,StringCheck,String Check,hello kasisto,Thanks
+StringCheck,StringCheck,String Check,hello NYC,Thanks
+DateCheck,date_testing,using date check for perf testing,jan 1 2020,Thanks
+DateCheck,date_testing,using date check for perf testing,5 may 2020,Thanks
+DateCheck,date_testing,using date check for perf testing,june 1 1988,Thanks
+EmailCheck,EmailCheck,email check check,test@kasisto.com,Thanks
+EmailCheck,EmailCheck,email check check,test@yahoo.com,Thanks
+EmailCheck,EmailCheck,email check check,test@GMAIL.com,Thanks
