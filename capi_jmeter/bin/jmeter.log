@@ -1,42 +1,892 @@
-2021-02-08 15:20:42,182 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2021-02-08 15:20:42,217 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2021-02-08 15:20:42,218 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: Version 5.2.1
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: java.version=1.8.0_192
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: os.name=Mac OS X
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: os.arch=x86_64
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: os.version=10.15.7
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: file.encoding=UTF-8
-2021-02-08 15:20:42,219 INFO o.a.j.JMeter: java.awt.headless=null
-2021-02-08 15:20:42,220 INFO o.a.j.JMeter: Max memory     =1073741824
-2021-02-08 15:20:42,220 INFO o.a.j.JMeter: Available Processors =8
-2021-02-08 15:20:42,224 INFO o.a.j.JMeter: Default Locale=English (EN)
-2021-02-08 15:20:42,224 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2021-02-08 15:20:42,224 INFO o.a.j.JMeter: JMeterHome=/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1
-2021-02-08 15:20:42,224 INFO o.a.j.JMeter: user.dir  =/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin
-2021-02-08 15:20:42,224 INFO o.a.j.JMeter: PWD       =/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin
-2021-02-08 15:20:42,227 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Daniels-MacBook-Pro.local FullName: localhost
-2021-02-08 15:20:43,637 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2021-02-08 15:20:43,654 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.apple.laf.AquaLookAndFeel [Darcula]
-2021-02-08 15:20:43,654 INFO o.a.j.JMeter: Setting LAF to: com.apple.laf.AquaLookAndFeel
-2021-02-08 15:20:43,657 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2021-02-08 15:20:44,517 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-f48717ce2c0ed882ebee62b673fb7206-gui
-2021-02-08 15:20:45,574 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-graphs-additional=2.0, jpgc-functions=2.1, jpgc-casutg=2.9, jpgc-dummy=0.4, jpgc-filterresults=2.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, bzm-random-csv=0.6, jpgc-synthesis=2.2, jpgc-tst=2.5, jpgc-csvars=0.1, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1, jpgc-standard=2.0]
-2021-02-08 15:20:45,577 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager, bzm-random-csv]
-2021-02-08 15:20:46,044 WARN o.a.j.g.ObjectTableModel: Header count=13 but classes count=11
-2021-02-08 15:20:46,044 WARN o.a.j.g.ObjectTableModel: Header count=13 but writeFunctor count=11
-2021-02-08 15:20:46,816 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2021-02-08 15:20:46,817 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2021-02-08 15:20:47,185 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2021-02-08 15:20:47,186 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin/proxyserver.jks
-2021-02-08 15:20:47,339 INFO o.a.j.s.FileServer: Default base='/Users/danieltadesse/kasisto/kai_perf_tools/apache-jmeter-5.2.1/bin'
-2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2021-02-08 15:20:47,605 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-03-22 21:37:38,316 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2021-03-22 21:37:38,349 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2021-03-22 21:37:38,349 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2021-03-22 21:37:38,351 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: Version 5.2.1
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: java.version=1.8.0_192
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: os.name=Mac OS X
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: os.arch=x86_64
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: os.version=10.15.7
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: file.encoding=UTF-8
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: java.awt.headless=null
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: Max memory     =3817865216
+2021-03-22 21:37:38,352 INFO o.a.j.JMeter: Available Processors =8
+2021-03-22 21:37:38,357 INFO o.a.j.JMeter: Default Locale=English (United States)
+2021-03-22 21:37:38,358 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2021-03-22 21:37:38,358 INFO o.a.j.JMeter: JMeterHome=/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter
+2021-03-22 21:37:38,358 INFO o.a.j.JMeter: user.dir  =/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin
+2021-03-22 21:37:38,358 INFO o.a.j.JMeter: PWD       =/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin
+2021-03-22 21:37:38,362 INFO o.a.j.JMeter: IP: 192.168.1.154 Name: Daniels-MBP FullName: daniels-mbp
+2021-03-22 21:37:39,937 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2021-03-22 21:37:39,954 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.apple.laf.AquaLookAndFeel [Darcula]
+2021-03-22 21:37:39,954 INFO o.a.j.JMeter: Setting LAF to: com.apple.laf.AquaLookAndFeel
+2021-03-22 21:37:39,958 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2021-03-22 21:37:40,882 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-be8b9a83ab80edcbad33b10376ca8ef4-gui
+2021-03-22 21:37:42,173 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-graphs-additional=2.0, jpgc-functions=2.1, jpgc-casutg=2.9, jpgc-dummy=0.4, jpgc-filterresults=2.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, bzm-random-csv=0.6, jpgc-synthesis=2.2, jpgc-tst=2.5, jpgc-csvars=0.1, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1, jpgc-standard=2.0]
+2021-03-22 21:37:42,176 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager, bzm-random-csv]
+2021-03-22 21:37:42,366 WARN o.a.j.g.ObjectTableModel: Header count=13 but classes count=11
+2021-03-22 21:37:42,367 WARN o.a.j.g.ObjectTableModel: Header count=13 but writeFunctor count=11
+2021-03-22 21:37:43,260 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-03-22 21:37:43,260 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-03-22 21:37:43,260 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-03-22 21:37:43,260 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-03-22 21:37:43,261 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2021-03-22 21:37:43,261 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2021-03-22 21:37:43,576 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2021-03-22 21:37:43,577 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/proxyserver.jks
+2021-03-22 21:37:43,707 INFO o.a.j.s.FileServer: Default base='/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin'
+2021-03-22 21:37:43,969 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-03-22 21:37:43,970 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-03-22 21:37:43,970 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-03-22 21:37:43,970 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-03-22 21:38:20,278 INFO o.a.j.g.a.Load: Loading file: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result/kai.jmx
+2021-03-22 21:38:20,279 INFO o.a.j.s.FileServer: Set new base='/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result'
+2021-03-22 21:38:20,476 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-03-22 21:38:20,481 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-03-22 21:38:20,484 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-03-22 21:38:20,487 INFO o.a.j.s.SaveService: Loading file: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result/kai.jmx
+2021-03-22 21:38:20,647 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2021-03-22 21:38:20,740 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2021-03-22 21:38:20,740 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2021-03-22 21:38:21,327 INFO o.a.j.s.FileServer: Set new base='/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result'
+2021-03-22 21:47:07,248 INFO c.b.c.RandomCSVReader: Start reading the file: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+2021-03-22 21:47:07,258 INFO c.b.c.RandomCSVReader: Reading finished. Found 3 records in your csv file
+2021-03-23 09:54:54,924 INFO c.b.c.RandomCSVReader: Start reading the file: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+2021-03-23 09:54:54,932 INFO c.b.c.RandomCSVReader: Reading finished. Found 3 records in your csv file
+2021-03-23 09:57:25,665 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 09:57:25,666 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 09:57:25,667 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 09:57:25,672 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 09:57:25,907 INFO o.a.j.e.StandardJMeterEngine: No enabled thread groups found
+2021-03-23 09:57:25,907 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 09:57:25,908 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 09:57:30,774 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 09:57:30,774 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 09:57:30,778 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 09:57:31,038 INFO o.a.j.e.StandardJMeterEngine: No enabled thread groups found
+2021-03-23 09:57:31,039 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 09:57:31,039 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 09:58:58,774 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 09:58:58,774 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 09:58:58,776 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 09:58:58,977 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 09:58:58,977 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group Kcb_questions.
+2021-03-23 09:58:58,977 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 09:58:58,977 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 30
+2021-03-23 09:58:59,002 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 09:58:59,002 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 09:59:01,250 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-30
+2021-03-23 09:59:01,269 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Daniels-MBP
+2021-03-23 09:59:01,276 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2021-03-23 09:59:01,335 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2021-03-23 09:59:01,338 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2021-03-23 09:59:01,339 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2021-03-23 09:59:01,366 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2021-03-23 09:59:01,367 INFO o.a.j.u.SSLManager: KeyStore created OK
+2021-03-23 09:59:01,367 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2021-03-23 09:59:01,521 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-29
+2021-03-23 09:59:01,784 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-28
+2021-03-23 09:59:02,050 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-27
+2021-03-23 09:59:02,316 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-26
+2021-03-23 09:59:02,583 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-25
+2021-03-23 09:59:02,851 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-24
+2021-03-23 09:59:03,118 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-23
+2021-03-23 09:59:03,385 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-22
+2021-03-23 09:59:03,651 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-21
+2021-03-23 09:59:03,917 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-20
+2021-03-23 09:59:04,187 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-19
+2021-03-23 09:59:04,453 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-18
+2021-03-23 09:59:04,717 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-17
+2021-03-23 09:59:04,985 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-16
+2021-03-23 09:59:05,252 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-15
+2021-03-23 09:59:05,519 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-14
+2021-03-23 09:59:05,788 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-13
+2021-03-23 09:59:06,052 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-12
+2021-03-23 09:59:06,319 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-11
+2021-03-23 09:59:06,586 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-10
+2021-03-23 09:59:06,853 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-9
+2021-03-23 09:59:07,120 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-8
+2021-03-23 09:59:07,386 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-7
+2021-03-23 09:59:07,653 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-6
+2021-03-23 09:59:07,920 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-5
+2021-03-23 09:59:08,186 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-4
+2021-03-23 09:59:08,454 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-3
+2021-03-23 09:59:08,721 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-2
+2021-03-23 09:59:08,987 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 09:59:35,634 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1029111971
+2021-03-23 09:59:35,634 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1089913501
+2021-03-23 09:59:35,661 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1009929938
+2021-03-23 09:59:35,862 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1536390163
+2021-03-23 09:59:35,862 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@513738385
+2021-03-23 09:59:35,947 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1580210306
+2021-03-23 09:59:35,953 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@637491395
+2021-03-23 09:59:36,125 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1986057412
+2021-03-23 09:59:36,785 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@337894833
+2021-03-23 09:59:36,786 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1678473572
+2021-03-23 09:59:38,014 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1890664518
+2021-03-23 09:59:38,014 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1156160492
+2021-03-23 09:59:38,015 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1843147429
+2021-03-23 09:59:38,015 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1288978390
+2021-03-23 09:59:38,100 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@896365
+2021-03-23 09:59:38,407 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@964361165
+2021-03-23 09:59:38,482 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@148201834
+2021-03-23 09:59:38,661 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1816160753
+2021-03-23 09:59:38,688 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1211502679
+2021-03-23 09:59:38,733 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1460377997
+2021-03-23 09:59:38,820 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@159759693
+2021-03-23 09:59:38,862 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@201378723
+2021-03-23 09:59:38,977 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1811373515
+2021-03-23 09:59:39,443 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@77987343
+2021-03-23 09:59:39,581 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1888183496
+2021-03-23 09:59:39,601 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1654444888
+2021-03-23 09:59:39,629 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1593843154
+2021-03-23 09:59:39,648 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1904613098
+2021-03-23 09:59:39,742 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1436832374
+2021-03-23 09:59:39,856 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@35613503
+2021-03-23 10:00:25,567 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:00:25,581 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-27
+2021-03-23 10:00:25,581 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-27 sampler: ${label}
+2021-03-23 10:00:25,585 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-20
+2021-03-23 10:00:25,585 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-20 sampler: ${label}
+2021-03-23 10:00:25,587 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-4
+2021-03-23 10:00:25,587 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-4 sampler: ${label}
+2021-03-23 10:00:25,590 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-15
+2021-03-23 10:00:25,590 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-27
+2021-03-23 10:00:25,590 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-20
+2021-03-23 10:00:25,590 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-15 sampler: ${label}
+2021-03-23 10:00:25,592 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-18
+2021-03-23 10:00:25,592 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-18 sampler: ${label}
+2021-03-23 10:00:25,592 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-4
+2021-03-23 10:00:25,594 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-10
+2021-03-23 10:00:25,594 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-15
+2021-03-23 10:00:25,594 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-10 sampler: ${label}
+2021-03-23 10:00:25,596 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-11
+2021-03-23 10:00:25,596 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-11 sampler: ${label}
+2021-03-23 10:00:25,596 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-18
+2021-03-23 10:00:25,597 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-29
+2021-03-23 10:00:25,597 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-10
+2021-03-23 10:00:25,597 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-29 sampler: ${label}
+2021-03-23 10:00:25,599 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:00:25,599 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-11
+2021-03-23 10:00:25,599 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 10:00:25,600 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-3
+2021-03-23 10:00:25,600 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-29
+2021-03-23 10:00:25,600 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-3 sampler: ${label}
+2021-03-23 10:00:25,601 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-21
+2021-03-23 10:00:25,602 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:00:25,602 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-21 sampler: ${label}
+2021-03-23 10:00:25,603 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-3
+2021-03-23 10:00:25,603 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-2
+2021-03-23 10:00:25,603 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-2 sampler: ${label}
+2021-03-23 10:00:25,604 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-13
+2021-03-23 10:00:25,604 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-21
+2021-03-23 10:00:25,604 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-13 sampler: ${label}
+2021-03-23 10:00:25,606 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-22
+2021-03-23 10:00:25,606 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-22 sampler: ${label}
+2021-03-23 10:00:25,606 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-2
+2021-03-23 10:00:25,607 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-6
+2021-03-23 10:00:25,607 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-13
+2021-03-23 10:00:25,607 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-6 sampler: ${label}
+2021-03-23 10:00:25,608 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-9
+2021-03-23 10:00:25,608 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-22
+2021-03-23 10:00:25,609 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-9 sampler: ${label}
+2021-03-23 10:00:25,610 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-25
+2021-03-23 10:00:25,610 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-6
+2021-03-23 10:00:25,610 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-25 sampler: ${label}
+2021-03-23 10:00:25,611 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-9
+2021-03-23 10:00:25,611 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-8
+2021-03-23 10:00:25,611 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-8 sampler: ${label}
+2021-03-23 10:00:25,612 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-30
+2021-03-23 10:00:25,612 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-30 sampler: ${label}
+2021-03-23 10:00:25,613 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-25
+2021-03-23 10:00:25,613 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-8
+2021-03-23 10:00:25,613 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-5
+2021-03-23 10:00:25,614 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-5 sampler: ${label}
+2021-03-23 10:00:25,616 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-23
+2021-03-23 10:00:25,616 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-30
+2021-03-23 10:00:25,616 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-23 sampler: ${label}
+2021-03-23 10:00:25,617 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-14
+2021-03-23 10:00:25,617 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-5
+2021-03-23 10:00:25,617 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-14 sampler: ${label}
+2021-03-23 10:00:25,618 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-28
+2021-03-23 10:00:25,618 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-23
+2021-03-23 10:00:25,618 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-28 sampler: ${label}
+2021-03-23 10:00:25,619 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-26
+2021-03-23 10:00:25,619 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-14
+2021-03-23 10:00:25,619 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-26 sampler: ${label}
+2021-03-23 10:00:25,620 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-28
+2021-03-23 10:00:25,620 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-12
+2021-03-23 10:00:25,620 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-12 sampler: ${label}
+2021-03-23 10:00:25,621 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-26
+2021-03-23 10:00:25,621 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-17
+2021-03-23 10:00:25,621 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-17 sampler: ${label}
+2021-03-23 10:00:25,622 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-12
+2021-03-23 10:00:25,622 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-16
+2021-03-23 10:00:25,623 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-16 sampler: ${label}
+2021-03-23 10:00:25,623 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-7
+2021-03-23 10:00:25,624 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-7 sampler: ${label}
+2021-03-23 10:00:25,624 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-17
+2021-03-23 10:00:25,624 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-16
+2021-03-23 10:00:25,625 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-24
+2021-03-23 10:00:25,626 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-24 sampler: ${label}
+2021-03-23 10:00:25,626 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-7
+2021-03-23 10:00:25,627 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-19
+2021-03-23 10:00:25,627 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-19 sampler: ${label}
+2021-03-23 10:00:25,628 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-24
+2021-03-23 10:00:25,629 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-19
+2021-03-23 10:00:25,629 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:00:25,629 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1089913501
+2021-03-23 10:00:25,630 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@964361165
+2021-03-23 10:00:25,630 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1580210306
+2021-03-23 10:00:25,631 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1986057412
+2021-03-23 10:00:25,631 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1890664518
+2021-03-23 10:00:25,632 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1654444888
+2021-03-23 10:00:25,632 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1843147429
+2021-03-23 10:00:25,632 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@637491395
+2021-03-23 10:00:25,633 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@896365
+2021-03-23 10:00:25,633 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1678473572
+2021-03-23 10:00:25,633 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1904613098
+2021-03-23 10:00:25,634 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1536390163
+2021-03-23 10:00:25,634 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1009929938
+2021-03-23 10:00:25,634 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1436832374
+2021-03-23 10:00:25,635 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1156160492
+2021-03-23 10:00:25,635 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@513738385
+2021-03-23 10:00:25,635 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@201378723
+2021-03-23 10:00:25,635 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@77987343
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1029111971
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1816160753
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1460377997
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1811373515
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1593843154
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@159759693
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1211502679
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@35613503
+2021-03-23 10:00:25,636 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1888183496
+2021-03-23 10:00:25,637 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@148201834
+2021-03-23 10:00:25,637 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1288978390
+2021-03-23 10:00:25,637 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@337894833
+2021-03-23 10:00:25,637 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:06:08,076 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:06:08,076 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:06:08,078 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:06:08,354 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:06:08,355 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group Kcb_questions.
+2021-03-23 10:06:08,355 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:06:08,355 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 30
+2021-03-23 10:06:08,365 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:06:08,365 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:06:10,623 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-30
+2021-03-23 10:06:10,890 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-29
+2021-03-23 10:06:11,158 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-28
+2021-03-23 10:06:11,427 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-27
+2021-03-23 10:06:11,689 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-26
+2021-03-23 10:06:11,959 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-25
+2021-03-23 10:06:12,227 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-24
+2021-03-23 10:06:12,489 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-23
+2021-03-23 10:06:12,761 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-22
+2021-03-23 10:06:13,022 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-21
+2021-03-23 10:06:13,294 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-20
+2021-03-23 10:06:13,555 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-19
+2021-03-23 10:06:13,824 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-18
+2021-03-23 10:06:14,091 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-17
+2021-03-23 10:06:14,357 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-16
+2021-03-23 10:06:14,622 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-15
+2021-03-23 10:06:14,893 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-14
+2021-03-23 10:06:15,155 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-13
+2021-03-23 10:06:15,422 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-12
+2021-03-23 10:06:15,693 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-11
+2021-03-23 10:06:15,958 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-10
+2021-03-23 10:06:16,221 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-9
+2021-03-23 10:06:16,490 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-8
+2021-03-23 10:06:16,757 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-7
+2021-03-23 10:06:17,022 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-6
+2021-03-23 10:06:17,292 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-5
+2021-03-23 10:06:17,557 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-4
+2021-03-23 10:06:17,822 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-3
+2021-03-23 10:06:18,088 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-2
+2021-03-23 10:06:18,360 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:06:34,271 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@120134242
+2021-03-23 10:06:34,271 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2097453265
+2021-03-23 10:06:34,510 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@200222424
+2021-03-23 10:06:35,806 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@486026451
+2021-03-23 10:06:35,807 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@98181446
+2021-03-23 10:06:35,817 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@979353037
+2021-03-23 10:06:35,825 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1048360288
+2021-03-23 10:06:35,831 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@343859407
+2021-03-23 10:06:35,844 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@214570306
+2021-03-23 10:06:37,003 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@758585140
+2021-03-23 10:06:38,571 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2016131040
+2021-03-23 10:06:38,660 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1272687662
+2021-03-23 10:06:38,792 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@795710160
+2021-03-23 10:06:39,027 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@542161224
+2021-03-23 10:06:39,295 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@518843168
+2021-03-23 10:06:39,800 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@399756149
+2021-03-23 10:06:39,800 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1795468818
+2021-03-23 10:06:39,835 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1982913861
+2021-03-23 10:06:39,946 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1041181632
+2021-03-23 10:06:40,414 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1586077375
+2021-03-23 10:06:40,419 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1537966032
+2021-03-23 10:06:40,742 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2088983377
+2021-03-23 10:06:40,981 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@672170001
+2021-03-23 10:06:41,274 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@287709961
+2021-03-23 10:06:41,545 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1895119799
+2021-03-23 10:06:45,866 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@116931624
+2021-03-23 10:06:46,040 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1889917998
+2021-03-23 10:06:46,892 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@41036662
+2021-03-23 10:06:46,892 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@648330503
+2021-03-23 10:06:46,893 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@640280635
+2021-03-23 10:15:17,224 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:15:17,244 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-7
+2021-03-23 10:15:17,244 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-7 sampler: AUTHENTICATE
+2021-03-23 10:15:17,246 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-6
+2021-03-23 10:15:17,246 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-6 sampler: AUTHENTICATE
+2021-03-23 10:15:17,248 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-21
+2021-03-23 10:15:17,248 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-21 sampler: AUTHENTICATE
+2021-03-23 10:15:17,250 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-3
+2021-03-23 10:15:17,250 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-3 sampler: AUTHENTICATE
+2021-03-23 10:15:17,252 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-23
+2021-03-23 10:15:17,252 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-23 sampler: AUTHENTICATE
+2021-03-23 10:15:17,253 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-7
+2021-03-23 10:15:17,254 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-6
+2021-03-23 10:15:17,254 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-2
+2021-03-23 10:15:17,255 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-2 sampler: AUTHENTICATE
+2021-03-23 10:15:17,255 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-21
+2021-03-23 10:15:17,256 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-3
+2021-03-23 10:15:17,257 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-18
+2021-03-23 10:15:17,257 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-18 sampler: AUTHENTICATE
+2021-03-23 10:15:17,257 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-23
+2021-03-23 10:15:17,259 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-30
+2021-03-23 10:15:17,259 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-30 sampler: AUTHENTICATE
+2021-03-23 10:15:17,260 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-2
+2021-03-23 10:15:17,261 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-16
+2021-03-23 10:15:17,261 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-16 sampler: AUTHENTICATE
+2021-03-23 10:15:17,261 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-18
+2021-03-23 10:15:17,262 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-12
+2021-03-23 10:15:17,262 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-12 sampler: AUTHENTICATE
+2021-03-23 10:15:17,263 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-30
+2021-03-23 10:15:17,264 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-5
+2021-03-23 10:15:17,264 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-5 sampler: AUTHENTICATE
+2021-03-23 10:15:17,265 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-16
+2021-03-23 10:15:17,266 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-4
+2021-03-23 10:15:17,266 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-4 sampler: AUTHENTICATE
+2021-03-23 10:15:17,267 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-12
+2021-03-23 10:15:17,268 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-11
+2021-03-23 10:15:17,268 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-11 sampler: AUTHENTICATE
+2021-03-23 10:15:17,268 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-5
+2021-03-23 10:15:17,269 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-27
+2021-03-23 10:15:17,270 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-27 sampler: AUTHENTICATE
+2021-03-23 10:15:17,271 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-4
+2021-03-23 10:15:17,271 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-29
+2021-03-23 10:15:17,271 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-29 sampler: AUTHENTICATE
+2021-03-23 10:15:17,272 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-11
+2021-03-23 10:15:17,273 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-13
+2021-03-23 10:15:17,273 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-13 sampler: AUTHENTICATE
+2021-03-23 10:15:17,274 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-27
+2021-03-23 10:15:17,274 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-14
+2021-03-23 10:15:17,274 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-14 sampler: AUTHENTICATE
+2021-03-23 10:15:17,275 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-29
+2021-03-23 10:15:17,275 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-24
+2021-03-23 10:15:17,275 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-24 sampler: AUTHENTICATE
+2021-03-23 10:15:17,276 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-13
+2021-03-23 10:15:17,276 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-25
+2021-03-23 10:15:17,277 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-25 sampler: AUTHENTICATE
+2021-03-23 10:15:17,277 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-14
+2021-03-23 10:15:17,278 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:15:17,278 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: AUTHENTICATE
+2021-03-23 10:15:17,280 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-24
+2021-03-23 10:15:17,281 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-17
+2021-03-23 10:15:17,281 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-25
+2021-03-23 10:15:17,281 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-17 sampler: AUTHENTICATE
+2021-03-23 10:15:17,282 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-26
+2021-03-23 10:15:17,282 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-26 sampler: AUTHENTICATE
+2021-03-23 10:15:17,283 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:15:17,283 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-17
+2021-03-23 10:15:17,283 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-8
+2021-03-23 10:15:17,283 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-8 sampler: AUTHENTICATE
+2021-03-23 10:15:17,284 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-22
+2021-03-23 10:15:17,284 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-22 sampler: AUTHENTICATE
+2021-03-23 10:15:17,285 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-26
+2021-03-23 10:15:17,285 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-8
+2021-03-23 10:15:17,285 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-15
+2021-03-23 10:15:17,286 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-15 sampler: AUTHENTICATE
+2021-03-23 10:15:17,286 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-20
+2021-03-23 10:15:17,287 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-20 sampler: AUTHENTICATE
+2021-03-23 10:15:17,287 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-22
+2021-03-23 10:15:17,289 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-10
+2021-03-23 10:15:17,289 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-10 sampler: AUTHENTICATE
+2021-03-23 10:15:17,289 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-15
+2021-03-23 10:15:17,290 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-20
+2021-03-23 10:15:17,291 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-28
+2021-03-23 10:15:17,291 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-28 sampler: AUTHENTICATE
+2021-03-23 10:15:17,292 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-10
+2021-03-23 10:15:17,293 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-9
+2021-03-23 10:15:17,293 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-9 sampler: AUTHENTICATE
+2021-03-23 10:15:17,294 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-19
+2021-03-23 10:15:17,295 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-28
+2021-03-23 10:15:17,295 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-19 sampler: AUTHENTICATE
+2021-03-23 10:15:17,296 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-9
+2021-03-23 10:15:17,297 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-19
+2021-03-23 10:15:17,297 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:15:17,297 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1889917998
+2021-03-23 10:15:17,298 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2088983377
+2021-03-23 10:15:17,298 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@979353037
+2021-03-23 10:15:17,299 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@486026451
+2021-03-23 10:15:17,299 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@648330503
+2021-03-23 10:15:17,300 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1048360288
+2021-03-23 10:15:17,300 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@120134242
+2021-03-23 10:15:17,301 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@200222424
+2021-03-23 10:15:17,301 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@758585140
+2021-03-23 10:15:17,301 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@41036662
+2021-03-23 10:15:17,302 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@287709961
+2021-03-23 10:15:17,302 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@399756149
+2021-03-23 10:15:17,302 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@518843168
+2021-03-23 10:15:17,303 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1537966032
+2021-03-23 10:15:17,303 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1895119799
+2021-03-23 10:15:17,304 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2016131040
+2021-03-23 10:15:17,304 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1982913861
+2021-03-23 10:15:17,304 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@343859407
+2021-03-23 10:15:17,305 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@214570306
+2021-03-23 10:15:17,305 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1795468818
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1272687662
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@795710160
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@542161224
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@98181446
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@116931624
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@640280635
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1586077375
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@672170001
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1041181632
+2021-03-23 10:15:17,306 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2097453265
+2021-03-23 10:15:17,307 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:15:54,034 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:15:54,034 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:15:54,035 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:15:54,239 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:15:54,239 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group Kcb_questions.
+2021-03-23 10:15:54,240 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:15:54,240 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 30
+2021-03-23 10:15:54,247 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:15:54,247 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:15:56,512 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-30
+2021-03-23 10:15:56,512 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+2021-03-23 10:15:56,775 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-29
+2021-03-23 10:15:57,041 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-28
+2021-03-23 10:15:57,309 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-27
+2021-03-23 10:15:57,573 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-26
+2021-03-23 10:15:57,845 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-25
+2021-03-23 10:15:58,111 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-24
+2021-03-23 10:15:58,374 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-23
+2021-03-23 10:15:58,641 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-22
+2021-03-23 10:15:58,907 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-21
+2021-03-23 10:15:59,178 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-20
+2021-03-23 10:15:59,441 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-19
+2021-03-23 10:15:59,708 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-18
+2021-03-23 10:15:59,975 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-17
+2021-03-23 10:16:00,242 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-16
+2021-03-23 10:16:00,509 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-15
+2021-03-23 10:16:00,775 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-14
+2021-03-23 10:16:01,042 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-13
+2021-03-23 10:16:01,308 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-12
+2021-03-23 10:16:01,576 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-11
+2021-03-23 10:16:01,843 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-10
+2021-03-23 10:16:02,110 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-9
+2021-03-23 10:16:02,378 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-8
+2021-03-23 10:16:02,643 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-7
+2021-03-23 10:16:02,910 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-6
+2021-03-23 10:16:03,177 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-5
+2021-03-23 10:16:03,444 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-4
+2021-03-23 10:16:03,710 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-3
+2021-03-23 10:16:03,977 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-2
+2021-03-23 10:16:04,045 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:16:04,057 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-9
+2021-03-23 10:16:04,058 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-9 sampler: AUTHENTICATE
+2021-03-23 10:16:04,059 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-14
+2021-03-23 10:16:04,060 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-14 sampler: AUTHENTICATE
+2021-03-23 10:16:04,061 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-27
+2021-03-23 10:16:04,061 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-27 sampler: AUTHENTICATE
+2021-03-23 10:16:04,063 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-17
+2021-03-23 10:16:04,063 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-17 sampler: AUTHENTICATE
+2021-03-23 10:16:04,063 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-9
+2021-03-23 10:16:04,063 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-14
+2021-03-23 10:16:04,065 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-27
+2021-03-23 10:16:04,065 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-10
+2021-03-23 10:16:04,065 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-10 sampler: AUTHENTICATE
+2021-03-23 10:16:04,066 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-17
+2021-03-23 10:16:04,067 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-30
+2021-03-23 10:16:04,067 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-30 sampler: AUTHENTICATE
+2021-03-23 10:16:04,068 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-29
+2021-03-23 10:16:04,068 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-10
+2021-03-23 10:16:04,069 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-29 sampler: AUTHENTICATE
+2021-03-23 10:16:04,070 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-25
+2021-03-23 10:16:04,070 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-30
+2021-03-23 10:16:04,070 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-25 sampler: AUTHENTICATE
+2021-03-23 10:16:04,071 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:16:04,071 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-29
+2021-03-23 10:16:04,071 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-15
+2021-03-23 10:16:04,071 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-15 sampler: AUTHENTICATE
+2021-03-23 10:16:04,071 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:16:04,073 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:16:04,074 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-26
+2021-03-23 10:16:04,074 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-25
+2021-03-23 10:16:04,074 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-26 sampler: AUTHENTICATE
+2021-03-23 10:16:04,076 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-15
+2021-03-23 10:16:04,076 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-3
+2021-03-23 10:16:04,076 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-3 sampler: AUTHENTICATE
+2021-03-23 10:16:04,078 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-20
+2021-03-23 10:16:04,078 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-26
+2021-03-23 10:16:04,078 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-20 sampler: AUTHENTICATE
+2021-03-23 10:16:04,079 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-7
+2021-03-23 10:16:04,080 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-7 sampler: AUTHENTICATE
+2021-03-23 10:16:04,080 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-3
+2021-03-23 10:16:04,081 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-22
+2021-03-23 10:16:04,081 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-22 sampler: AUTHENTICATE
+2021-03-23 10:16:04,082 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-20
+2021-03-23 10:16:04,083 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-7
+2021-03-23 10:16:04,083 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-11
+2021-03-23 10:16:04,083 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-11 sampler: AUTHENTICATE
+2021-03-23 10:16:04,085 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-18
+2021-03-23 10:16:04,085 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-18 sampler: AUTHENTICATE
+2021-03-23 10:16:04,085 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-22
+2021-03-23 10:16:04,086 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-11
+2021-03-23 10:16:04,086 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-28
+2021-03-23 10:16:04,087 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-28 sampler: AUTHENTICATE
+2021-03-23 10:16:04,088 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-18
+2021-03-23 10:16:04,088 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-8
+2021-03-23 10:16:04,088 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-8 sampler: AUTHENTICATE
+2021-03-23 10:16:04,089 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-21
+2021-03-23 10:16:04,090 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-21 sampler: AUTHENTICATE
+2021-03-23 10:16:04,090 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-28
+2021-03-23 10:16:04,091 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-8
+2021-03-23 10:16:04,091 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-12
+2021-03-23 10:16:04,092 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-12 sampler: AUTHENTICATE
+2021-03-23 10:16:04,094 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-2
+2021-03-23 10:16:04,095 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-2 sampler: AUTHENTICATE
+2021-03-23 10:16:04,095 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-21
+2021-03-23 10:16:04,096 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-12
+2021-03-23 10:16:04,097 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-5
+2021-03-23 10:16:04,097 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-5 sampler: AUTHENTICATE
+2021-03-23 10:16:04,097 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-6
+2021-03-23 10:16:04,097 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-6 sampler: AUTHENTICATE
+2021-03-23 10:16:04,097 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-2
+2021-03-23 10:16:04,098 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-5
+2021-03-23 10:16:04,098 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-13
+2021-03-23 10:16:04,098 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-13 sampler: AUTHENTICATE
+2021-03-23 10:16:04,099 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-16
+2021-03-23 10:16:04,099 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-6
+2021-03-23 10:16:04,099 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-16 sampler: AUTHENTICATE
+2021-03-23 10:16:04,100 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-4
+2021-03-23 10:16:04,100 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-4 sampler: AUTHENTICATE
+2021-03-23 10:16:04,100 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-13
+2021-03-23 10:16:04,101 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-19
+2021-03-23 10:16:04,101 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-19 sampler: AUTHENTICATE
+2021-03-23 10:16:04,101 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-16
+2021-03-23 10:16:04,102 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-23
+2021-03-23 10:16:04,102 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-23 sampler: AUTHENTICATE
+2021-03-23 10:16:04,102 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-4
+2021-03-23 10:16:04,103 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-24
+2021-03-23 10:16:04,103 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-24 sampler: AUTHENTICATE
+2021-03-23 10:16:04,103 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-19
+2021-03-23 10:16:04,104 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-23
+2021-03-23 10:16:04,105 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-24
+2021-03-23 10:16:04,105 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:16:04,105 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+2021-03-23 10:16:04,122 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:16:21,459 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:16:21,460 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:16:21,461 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:16:21,626 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:16:21,626 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 10:16:21,626 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:16:21,626 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 10:16:21,626 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:16:21,626 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:16:31,629 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:16:31,629 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+2021-03-23 10:17:08,133 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:17:08,145 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:17:08,145 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: AUTHENTICATE
+2021-03-23 10:17:08,147 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:17:08,147 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:17:08,147 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+2021-03-23 10:17:08,148 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:29:21,435 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:29:21,435 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:29:21,436 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:29:21,583 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:29:21,583 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 10:29:21,583 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:29:21,583 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 10:29:21,583 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:29:21,583 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:29:31,583 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:29:31,584 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1130551800
+2021-03-23 10:30:20,700 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:30:20,711 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:30:20,712 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: AUTHENTICATE
+2021-03-23 10:30:20,714 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:30:20,714 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:30:20,714 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1130551800
+2021-03-23 10:30:20,715 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:31:08,335 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:31:08,335 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:31:08,336 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:31:08,531 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:31:08,531 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 10:31:08,531 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:31:08,531 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 10:31:08,532 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:31:08,532 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:31:18,536 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:31:21,123 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1695845108
+2021-03-23 10:31:39,343 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:31:39,356 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:31:39,357 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 10:31:39,359 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:31:39,359 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:31:39,359 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1695845108
+2021-03-23 10:31:39,360 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:31:49,766 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:31:49,766 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:31:49,768 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:31:49,862 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:31:49,863 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 10:31:49,863 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:31:49,863 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 10:31:49,863 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:31:49,863 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:31:59,864 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:32:02,374 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@981326561
+2021-03-23 10:57:23,694 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:57:23,714 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:57:23,714 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 10:57:23,717 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:57:23,718 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:57:23,718 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@981326561
+2021-03-23 10:57:23,718 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:57:30,400 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:57:30,400 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:57:30,401 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:57:30,509 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:57:30,509 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 10:57:30,509 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:57:30,509 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 10:57:30,510 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:57:30,510 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:57:40,512 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:57:40,512 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@635722472
+2021-03-23 10:57:41,963 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 10:57:41,975 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 10:57:41,976 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: AUTHENTICATE
+2021-03-23 10:57:41,978 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 10:57:41,978 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 10:57:41,978 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@635722472
+2021-03-23 10:57:41,978 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 10:58:11,048 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 10:58:11,053 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 10:58:11,054 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 10:58:11,170 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 10:58:11,171 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 10:58:11,171 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 10:58:11,171 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 10:58:11,171 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 10:58:11,171 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 10:58:21,175 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 10:58:21,175 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1945784864
+2021-03-23 11:00:18,957 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 11:00:18,969 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 11:00:18,969 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 11:00:18,970 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:00:18,971 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:00:18,971 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1945784864
+2021-03-23 11:00:18,972 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:01:06,859 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:01:06,859 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:01:06,860 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:01:07,085 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:01:07,085 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 11:01:07,085 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:01:07,085 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 11:01:07,085 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:01:07,086 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:01:17,089 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:01:17,090 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@593402791
+2021-03-23 11:02:09,277 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 11:02:09,302 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 11:02:09,303 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: AUTHENTICATE
+2021-03-23 11:02:09,304 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:02:09,305 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:02:09,305 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@593402791
+2021-03-23 11:02:09,305 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:02:50,309 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:02:50,309 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:02:50,311 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:02:50,522 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:02:50,522 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 11:02:50,522 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:02:50,523 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 11:02:50,523 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:02:50,523 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:03:00,528 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:03:00,529 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@50617464
+2021-03-23 11:03:55,725 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 11:03:55,743 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 11:03:55,743 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 11:03:55,753 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:03:55,753 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:03:55,753 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@50617464
+2021-03-23 11:03:55,754 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:04:10,739 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:04:10,740 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:04:10,741 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:04:10,859 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:04:10,859 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 11:04:10,859 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:04:10,859 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 11:04:10,859 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:04:10,859 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:04:20,862 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:04:20,863 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@686911543
+2021-03-23 11:04:24,357 ERROR o.a.j.t.JMeterThread: Test failed!
+java.lang.IllegalArgumentException: Could not read file header line for file /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+	at org.apache.jmeter.services.FileServer.reserveFile(FileServer.java:284) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.config.CSVDataSet.iterationStart(CSVDataSet.java:197) ~[ApacheJMeter_components.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.fireIterationStart(GenericController.java:399) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.fireIterEvents(GenericController.java:391) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:160) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:135) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:135) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.threads.AbstractThreadGroup.next(AbstractThreadGroup.java:92) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:292) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_192]
+2021-03-23 11:04:24,371 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:04:24,371 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:04:24,372 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@686911543
+2021-03-23 11:04:24,372 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:08:16,129 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:08:16,129 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:08:16,130 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:08:16,346 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:08:16,346 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 11:08:16,346 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:08:16,347 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 11:08:16,347 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:08:16,347 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:08:26,350 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:08:26,350 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@791085951
+2021-03-23 11:08:31,705 ERROR o.a.j.t.JMeterThread: Test failed!
+java.lang.IllegalArgumentException: Could not read file header line for file /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv
+	at org.apache.jmeter.services.FileServer.reserveFile(FileServer.java:284) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.config.CSVDataSet.iterationStart(CSVDataSet.java:197) ~[ApacheJMeter_components.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.fireIterationStart(GenericController.java:399) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.fireIterEvents(GenericController.java:391) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:160) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:135) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:135) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.threads.AbstractThreadGroup.next(AbstractThreadGroup.java:92) ~[ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:292) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_192]
+2021-03-23 11:08:31,705 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:08:31,706 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:08:31,706 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@791085951
+2021-03-23 11:08:31,707 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:09:39,307 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:09:39,307 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:09:39,309 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:09:39,425 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:09:39,426 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 11:09:39,426 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:09:39,426 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 11:09:39,426 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:09:39,426 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:09:49,430 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:09:49,430 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2030048347
+2021-03-23 11:10:42,402 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 11:10:42,414 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 11:10:42,414 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 11:10:42,416 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:10:42,416 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:10:42,417 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2030048347
+2021-03-23 11:10:42,418 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:14:37,041 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:14:37,042 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:14:37,043 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:14:37,197 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:14:37,197 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 11:14:37,197 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:14:37,197 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 11:14:37,197 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:14:37,197 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:14:47,201 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:14:47,201 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1109496288
+2021-03-23 11:15:10,214 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 11:15:10,230 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 11:15:10,230 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 11:15:10,232 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:15:10,232 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:15:10,233 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1109496288
+2021-03-23 11:15:10,233 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:15:44,236 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:15:44,236 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:15:44,237 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:15:44,345 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:15:44,346 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 11:15:44,346 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:15:44,346 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 11:15:44,346 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:15:44,346 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:15:54,351 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:15:57,508 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1404425706
+2021-03-23 11:36:01,483 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 11:36:01,494 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 11:36:01,494 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 11:36:01,496 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:36:01,496 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:36:01,496 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1404425706
+2021-03-23 11:36:01,497 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 11:36:16,159 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 11:36:16,160 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 11:36:16,161 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 11:36:16,328 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 11:36:16,328 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group Kcb_questions.
+2021-03-23 11:36:16,328 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 11:36:16,328 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 2
+2021-03-23 11:36:16,329 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 11:36:16,329 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 11:36:22,330 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-2
+2021-03-23 11:36:26,332 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 11:36:26,662 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1228219928
+2021-03-23 11:36:30,866 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2077544428
+2021-03-23 11:54:27,289 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 11:54:27,312 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 11:54:27,312 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 11:54:27,313 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-2
+2021-03-23 11:54:27,313 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-2 sampler: AUTHENTICATE
+2021-03-23 11:54:27,316 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 11:54:27,316 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-2
+2021-03-23 11:54:27,316 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 11:54:27,316 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@2077544428
+2021-03-23 11:54:27,317 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1228219928
+2021-03-23 11:54:27,318 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-03-23 15:00:00,153 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-03-23 15:00:00,154 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-03-23 15:00:00,155 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-03-23 15:00:00,521 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Kcb_questions
+2021-03-23 15:00:00,521 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Kcb_questions.
+2021-03-23 15:00:00,521 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-03-23 15:00:00,521 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2021-03-23 15:00:00,522 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2021-03-23 15:00:00,522 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-03-23 15:00:10,524 INFO o.a.j.t.JMeterThread: Thread started: Kcb_questions 1-1
+2021-03-23 15:00:14,273 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1881282703
+2021-03-23 15:37:42,956 INFO o.a.j.g.a.Start: Stopping test
+2021-03-23 15:37:42,976 INFO o.a.j.t.JMeterThread: Stopping: Kcb_questions 1-1
+2021-03-23 15:37:42,977 WARN o.a.j.t.JMeterThread: Interrupting: Kcb_questions 1-1 sampler: ${label}
+2021-03-23 15:37:42,979 INFO o.a.j.t.JMeterThread: Thread finished: Kcb_questions 1-1
+2021-03-23 15:37:42,979 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-03-23 15:37:42,979 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/KCB_questions_TEMPLATE.csv@1881282703
+2021-03-23 15:37:42,981 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

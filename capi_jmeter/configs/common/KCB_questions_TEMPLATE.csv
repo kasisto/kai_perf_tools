@@ -1,0 +1,24 @@
+ask_kai,label
+how much do i have,user_utterance
+Yes,user_utterance
+how much do i have on my investment account?,user_utterance
+Yes,user_utterance
+What amount is there on my 401k accounts,user_utterance
+Yes,user_utterance
+Show portfolio overview,user_utterance
+breakdown my tech stocks,user_utterance
+how many shares of ACN do i have?,user_utterance
+sell ACN using account 8631,user_utterance
+50,user_utterance
+what's the price of ACN?,user_utterance
+I want to trade ACN,user_utterance
+Buy acn,user_utterance
+80,user_utterance
+BNL45wdg8nksdfjghiweruTOgy3g5aldgt4se,user_utterance
+I want to update my goals,user_utterance
+within 15 years,user_utterance
+Traveling,user_utterance
+Next Question,user_utterance
+Skip Survey,user_utterance
+QA_YES,user_utterance
+Can I see what a conservative allocation model looks like?,user_utterance
