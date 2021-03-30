@@ -97,8 +97,8 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="NBT_TEST" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="268070546">
-            <stringProp name="49">1</stringProp>
+          <collectionProp name="-207985157">
+            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
             <stringProp name="1541058">2400</stringProp>
@@ -1011,7 +1011,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result/ResultTree.csv</stringProp>
+        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="true">
@@ -1048,7 +1048,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result/ResultTree.csv</stringProp>
+        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
         <longProp name="interval_grouping">500</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -1093,7 +1093,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result/ResultTree.csv</stringProp>
+        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
         <longProp name="interval_grouping">10000</longProp>
         <boolProp name="graph_aggregated">true</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -1138,7 +1138,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result/ResultTree.csv</stringProp>
+        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
         <longProp name="interval_grouping">10000</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -1183,7 +1183,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/result/ResultTree.csv</stringProp>
+        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
