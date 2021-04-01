@@ -97,11 +97,11 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="NBT_TEST" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-207985157">
+          <collectionProp name="279309249">
             <stringProp name="219567562">${__P(start_thread,)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
-            <stringProp name="1541058">2400</stringProp>
+            <stringProp name="-127775824">${__P(test_duration,2400)}</stringProp>
             <stringProp name="1567">10</stringProp>
           </collectionProp>
         </collectionProp>
@@ -124,7 +124,7 @@
           <stringProp name="variableNames">token,count</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AUTHENTICATE" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${token}__AUTH" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -153,7 +153,8 @@
   &#xd;
   &quot;type&quot; : &quot;ENTER_TOKEN&quot;,&#xd;
   &quot;payload&quot;: { &#xd;
-	    &quot;token&quot; : &quot;${token}&quot;&#xd;
+	    &quot;token&quot; : &quot;${token}&quot;,&#xd;
+	    &quot;couynt&quot;:&quot;${__groovy(new File(${__P(nbt_directory,NA)}${token}.csv).readLines().size(),)}&quot;&#xd;
   }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -196,7 +197,7 @@
           <stringProp name="LoopController.loops">${count}</stringProp>
         </LoopController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${token}" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${token}__${__CSVRead(${__P(nbt_directory,NA)}${token}.csv,1)}" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -253,8 +254,8 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1933712737">
-            <stringProp name="1629">30</stringProp>
+          <collectionProp name="-207985157">
+            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
             <stringProp name="1541058">2400</stringProp>
@@ -268,16 +269,6 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
-          <collectionProp name="Asserion.test_strings">
-            <stringProp name="723337899">&quot;code&quot;:200</stringProp>
-          </collectionProp>
-          <stringProp name="Assertion.custom_message"></stringProp>
-          <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-          <boolProp name="Assertion.assume_success">false</boolProp>
-          <intProp name="Assertion.test_type">2</intProp>
-        </ResponseAssertion>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AUTHENTICATE" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -427,8 +418,8 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Unauthenticated_Questions_With_Start_session" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1362764666">
-            <stringProp name="1722">60</stringProp>
+          <collectionProp name="896473429">
+            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="1572771">3600</stringProp>
@@ -636,8 +627,8 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Web_Hook_Positive" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-1912763260">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1048197324">
+            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
             <stringProp name="52">4</stringProp>
             <stringProp name="54">6</stringProp>
             <stringProp name="1515111">1800</stringProp>
@@ -832,8 +823,8 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Web_Hook_Negative" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-1910645216">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1525680374">
+            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
             <stringProp name="54">6</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="1515111">1800</stringProp>
