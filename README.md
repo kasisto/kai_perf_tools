@@ -26,13 +26,11 @@
 
 ### How to Run KCB Perf tests
 
-cd /capi_jmeter/bin
-
-sh jmeter -p ../configs/kcb/<env>.properties -t ../configs/kcb/kai.jmx
-  
-e.g. 
-sh jmeter -p ../configs/kcb/webviewqa.properties -t ../configs/kcb/kai.jmx
-sh jmeter -p ../configs/kcb/webviewstage.properties -t ../configs/kcb/kai.jmx
+1. cd /capi_jmeter/bin
+2. sh jmeter -p ../configs/kcb/<env>.properties -t ../configs/kcb/kai.jmx
+  e.g. 
+  sh jmeter -p ../configs/kcb/webviewqa.properties -t ../configs/kcb/kai.jmx
+  sh jmeter -p ../configs/kcb/webviewstage.properties -t ../configs/kcb/kai.jmx
 
 When JMeter loads:
 1. Click Green Arrow
