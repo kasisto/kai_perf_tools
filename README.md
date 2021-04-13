@@ -26,6 +26,16 @@
 
 ### How to Run KCB Perf tests
 
+The kai.jmx defines a JMeter Project for executing a series of requests (based on a CSV) against a target environment.
+
+The requests are defined in Autheticated and Unauthenticated CSV files respectively
+The tokens can be fixed or generated randomly
+The assistant configs are fixed in the kai.jmx at this time.
+
+The are parameters to define how many concurrent requests to make and how long to run the tests for. 
+
+To get starterd:
+
 1. cd /capi_jmeter/bin
 2. sh jmeter -p ../configs/kcb/<env>.properties -t ../configs/kcb/kai.jmx
   e.g. 
