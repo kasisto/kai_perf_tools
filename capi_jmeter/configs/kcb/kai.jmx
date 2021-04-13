@@ -95,7 +95,7 @@
         </collectionProp>
       </HeaderManager>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="NBT_TEST" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="NBT_TEST" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-207985157">
             <stringProp name="219567562">${__P(start_thread,)}</stringProp>
@@ -251,10 +251,10 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1933712737">
-            <stringProp name="1629">30</stringProp>
+          <collectionProp name="1055833959">
+            <stringProp name="51">3</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
             <stringProp name="1541058">2400</stringProp>
@@ -356,15 +356,15 @@
         <hashTree/>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
+          <stringProp name="LoopController.loops">11</stringProp>
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-            <stringProp name="filename">result/Authenticated_questions.csv</stringProp>
+            <stringProp name="filename">/Users/jonphillips/Documents/workspace/kai_perf_tools/capi_jmeter/configs/kcb/Authenticated_questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
-            <boolProp name="randomOrder">true</boolProp>
+            <boolProp name="randomOrder">false</boolProp>
             <boolProp name="ignoreFirstLine">false</boolProp>
             <boolProp name="rewindOnTheEndOfList">true</boolProp>
             <boolProp name="independentListPerThread">true</boolProp>
@@ -1183,7 +1183,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
+        <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
