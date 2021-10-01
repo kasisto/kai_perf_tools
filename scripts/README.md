@@ -14,7 +14,7 @@ To create assistants:
 --n = number of assistants to be created
 
 This will generate a csv file named assistant.csv. The csv can be used on 
-JMeter when testing multiple assistants.
+JMeter when testing multiple assistants. (kai-random-assist.jmx)
 	
 
 To create assistant versions:
