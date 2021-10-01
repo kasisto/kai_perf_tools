@@ -1,4 +1,4 @@
-import json, requests
+import json, uuid
 
 
 class CmsDoc:
@@ -38,9 +38,10 @@ class Assistant(CmsDoc):
     
     def __init__(self, name=None):
         
-        _id = name if name else utils.get_uid(25)
+        _id = name if name else str(uuid.uuid4())[-25:]
         super().__init__(_id)
 
+        self.name = _id
         self.display_name = _id
         self.locale = 'en_US'
         self.default = {
@@ -95,3 +96,6 @@ class Assistant(CmsDoc):
         })
         
         return str(json.dumps(res))
+    
+    def get_id(self):
+        return self.name
