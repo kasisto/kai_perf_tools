@@ -1,3 +1,5 @@
+### How to use
+
 First, we need to export some environment variables. The values depend on which environment you are going to run the tests for.
 
 export URL=ENVIRONMENT_URL 
