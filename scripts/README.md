@@ -9,6 +9,7 @@ export APPLICATION_SECRET=APPLICATION_SECRET
 export PACKAGING_SECRET=PACKAGING_SECRET
 
 To create assistants:
+    
     python -m helpers.create_assistants
     
     You can pass the ff. arguments:
@@ -24,6 +25,7 @@ To create assistants:
 	
 
 To create assistant versions:
+    
     python -m helpers.create_assistant_versions --n=1
 
     --n = number of document to be created
