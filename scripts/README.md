@@ -2,13 +2,14 @@
 
 First, we need to export some environment variables. The values depend on which environment you are going to run the tests for.
 
-export URL=ENVIRONMENT_URL 
-export ASSISTANT_SECRET=DEFAULT_ASSISTANT_SECRET
-export ASSISTANT_NAME=DEFAULT_ASSISTANT_NAME
-export APPLICATION_SECRET=APPLICATION_SECRET
-export PACKAGING_SECRET=PACKAGING_SECRET
+	export URL=ENVIRONMENT_URL 
+	export ASSISTANT_SECRET=DEFAULT_ASSISTANT_SECRET
+	export ASSISTANT_NAME=DEFAULT_ASSISTANT_NAME
+	export APPLICATION_SECRET=APPLICATION_SECRET
+	export PACKAGING_SECRET=PACKAGING_SECRET
 
 To create assistants:
+    
     python -m helpers.create_assistants
     
     You can pass the ff. arguments:
@@ -24,6 +25,7 @@ To create assistants:
 	
 
 To create assistant versions:
+    
     python -m helpers.create_assistant_versions --n=1
 
     --n = number of document to be created
