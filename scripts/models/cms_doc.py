@@ -2,8 +2,8 @@ import json, uuid
 
 
 class CmsDoc:
-    def __init__(self, name):
-        self.name=name
+    def __init__(self, name=None):
+        self.name = name if name else str(uuid.uuid4())[-25:]
         self.display_name = f'dummy_display_name_{name}'
         self.state = 'SAVED'
         self.categorization = {'tags': ['tags'], 'skill': 'skill'}
@@ -29,73 +29,6 @@ class CmsDoc:
             'notes': self.notes,
             'description': self.description
         }))
-    
-    def get_id(self):
-        return self.name
-
-
-class Assistant(CmsDoc):
-    
-    def __init__(self, name=None):
-        
-        _id = name if name else str(uuid.uuid4())[-25:]
-        super().__init__(_id)
-
-        self.name = _id
-        self.display_name = _id
-        self.locale = 'en_US'
-        self.default = {
-            'endpoints': {
-                'iapi': {'secret': _id},
-                'capi': {'secret': _id},
-                'eapi': {'secret': _id}
-            }
-        }
-        self.targets = [
-            {
-                'name':'prod',
-                'display_name': 'production',
-                'primary': True,
-                'endpoints':{
-                    'capi': {'secret': f'{_id}_prod'},
-                    'eapi': {'secret': f'{_id}_prod'}
-                }
-            },
-            {
-                'name':'stage',
-                'display_name': 'staging',
-                'primary': False,
-                'endpoints':{
-                    'capi': {'secret': f'{_id}_stage'},
-                    'eapi': {'secret': f'{_id}_stage'}
-                }
-            }
-        ]
-    
-    
-    def __repr__(self):
-        res = json.loads(super().__repr__())
-        
-        res.update({
-            'display_name': self.display_name,
-            'locale': self.locale,
-            'default': self.default,
-            'targets': self.targets  
-        })
-        
-        return str(res)
-    
-    def get_json(self):
-        res = json.loads(super().__repr__())
-        
-        res.update({
-            'display_name': self.display_name,
-            'locale': self.locale,
-            'default': self.default,
-            'targets': self.targets  
-        })
-        
-        return str(json.dumps(res))
     
     def get_id(self):
         return self.name
