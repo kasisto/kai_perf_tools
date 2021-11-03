@@ -30,8 +30,9 @@ class CreateAssistant(BaseHelper):
             pay = PublishingPayload(PublishingObj('assistant', assistant.get_id(), rev).get_json()).get_json()
 
             self.ensure_global_segment_is_published(assistant=assistant)
-            pub = self.publishing_api.post_documents('stage', pay)
+            # pub = self.publishing_api.post_documents('stage', pay)
             self.assistants.append([assistant.get_id(), 'stage', f'{assistant.get_id()}_stage'])
+            print(f'Assistant {assistant.get_id()} created')
         print(f'Successfully created {self.n} assistants')
         self.generate_csv()
 
@@ -49,7 +50,6 @@ if __name__ == '__main__':
         helper.pack_api.replace(args.package)
     if args.autopublish_to:
         targets = args.autopublish_to.split(',')
-        print(targets)
         helper.create_assistants(autopublish=True, targets=targets)
     else:
         helper.create_assistants()
