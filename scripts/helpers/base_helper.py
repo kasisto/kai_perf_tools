@@ -29,10 +29,16 @@ class BaseHelper:
         headers = self.headers
         res = self.segments_api.post(CmsDoc(f'global').get_json())
         if assistant:
-            headers = {
-                'assistant_name': assistant.get_id(),
-                'secret': assistant.get_id()
-            }
+            if isinstance(assistant, dict):
+                headers = {
+                    'secret': assistant['default']['endpoints']['iapi']['secret'], 
+                    'assistant_name': assistant['name']
+                }
+            else:
+                headers = {
+                    'secret': assistant.get_secret('iapi', target), 
+                    'assistant_name': assistant.get_id()
+                }
             rev = self.segments_api.get_latest_revision('global').get('revision_id')
             pay = PublishingPayload(PublishingObj('segment', f'global', rev))
 
@@ -48,14 +54,28 @@ class BaseHelper:
                 print('Failed to create default assistant')
                 return
         return
+    
+    def get_default_assistant(self):
+        res = AssistantApi().get(os.environ.get('ASSISTANT_NAME'))
+
+        if 'code' in res:
+            if res['code'] == '404':
+                return AssistantApi().post(Assistant(os.environ.get('ASSISTANT_NAME')))
+        return res
 
     
     def get_assistant_enabled_api(self, data, assistant, target='default'):
-        header_overrides = {
-            'secret': assistant.get_secret('iapi', target), 
-            'assistant_name': assistant.get_id()
-        }
-            
+        if isinstance(assistant, dict):
+            header_overrides = {
+                'secret': assistant['default']['endpoints']['iapi']['secret'], 
+                'assistant_name': assistant['name']
+            }
+        else:
+            header_overrides = {
+                'secret': assistant.get_secret('iapi', target), 
+                'assistant_name': assistant.get_id()
+            }
+
         if isinstance(data, str) and data.lower() == 'publishing':
             return PublishingApi(header_overrides=header_overrides)
         if isinstance(data, str) and data.lower() == 'segments':

@@ -1,4 +1,4 @@
-import argparse, csv
+import argparse, csv, time
 
 from .base_helper import BaseHelper
 from models.assistant import Assistant
@@ -26,13 +26,9 @@ class CreateAssistant(BaseHelper):
                 self.assistant_api.post_with_autopublish(assistant, targets)
             else:
                 self.assistant_api.post(assistant)
-            rev = self.assistant_api.get_latest_revision(assistant.get_id())['revision_id']
-            pay = PublishingPayload(PublishingObj('assistant', assistant.get_id(), rev).get_json()).get_json()
-
-            self.ensure_global_segment_is_published(assistant=assistant)
-            # pub = self.publishing_api.post_documents('stage', pay)
             self.assistants.append([assistant.get_id(), 'stage', f'{assistant.get_id()}_stage'])
             print(f'Assistant {assistant.get_id()} created')
+            time.sleep(10)
         print(f'Successfully created {self.n} assistants')
         self.generate_csv()
 
@@ -47,7 +43,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     helper = CreateAssistant(args.n)
     if args.package:
-        helper.pack_api.replace(args.package)
+        replace = helper.pack_api.replace(args.package)
+        print(replace)
     if args.autopublish_to:
         targets = args.autopublish_to.split(',')
         helper.create_assistants(autopublish=True, targets=targets)
