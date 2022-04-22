@@ -4,6 +4,7 @@ import os
 from api.assistant_api import AssistantApi
 from api.packaging_api import PackagingApi
 from api.publishing_api import PublishingApi
+from api.intents_api import IntentsApi
 from api.segments_api import SegmentsApi
 from models.assistant import Assistant
 from models.cms_doc import CmsDoc
@@ -27,22 +28,24 @@ class BaseHelper:
         Ensure that the global segment is published to the target
         """
         headers = self.headers
-        res = self.segments_api.post(CmsDoc(f'global').get_json())
+        # res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
+        # print(res, "TEST")
         if assistant:
             if isinstance(assistant, dict):
-                headers = {
+                self.headers = {
                     'secret': assistant['default']['endpoints']['iapi']['secret'], 
-                    'assistant_name': assistant['name']
+                    'assistant_name': assistant['name'],
+                    'target': 'stage'
                 }
-            else:
-                headers = {
-                    'secret': assistant.get_secret('iapi', target), 
-                    'assistant_name': assistant.get_id()
-                }
+            res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
             rev = self.segments_api.get_latest_revision('global').get('revision_id')
             pay = PublishingPayload(PublishingObj('segment', f'global', rev))
 
             pub = self.publishing_api.post_documents('stage', pay)
+        else:
+            res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
+            a = self.get_default_assistant()
+            self.assistant_api.post_with_autopublish(a)
     
     def create_default_assistant(self):
         res = AssistantApi().get(os.environ.get('ASSISTANT_NAME'))
@@ -78,6 +81,8 @@ class BaseHelper:
 
         if isinstance(data, str) and data.lower() == 'publishing':
             return PublishingApi(header_overrides=header_overrides)
+        if isinstance(data, str) and data.lower() == 'intents':
+            return IntentsApi(header_overrides=header_overrides)
         if isinstance(data, str) and data.lower() == 'segments':
             return SegmentsApi(header_overrides=header_overrides)
     
