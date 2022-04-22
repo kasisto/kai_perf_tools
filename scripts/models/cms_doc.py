@@ -17,7 +17,7 @@ class CmsDoc:
             'state': self.state,
             'categorization': self.categorization,
             'notes': self.notes,
-            'description': self.description
+            'description': self.description,
         }))
     
     def get_json(self):
@@ -32,3 +32,4 @@ class CmsDoc:
     
     def get_id(self):
         return self.name
+

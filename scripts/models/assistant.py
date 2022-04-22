@@ -20,6 +20,7 @@ class Assistant(CmsDoc):
                 "intent.budget_enabled": True,
                 "iapi.disabled_intents": "na",
                 "iapi.timezone": "UTC",
+                "intent.guai.holdings_api_enabled": "true",
                 "intent.kcb_spending_comparison.image_url_base": "https://kaiassets.s3.amazonaws.com/kcb/icons/",
                 "intent.kcb_spending_comparison.image_format": "png",
                 "iapi.domain_locale": "en_US",
