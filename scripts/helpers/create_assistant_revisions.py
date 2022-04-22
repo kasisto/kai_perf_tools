@@ -7,8 +7,8 @@ import time
 from models.publishing import PublishingObj, PublishingPayload
 
 
-class CreateAssistantVersions(BaseHelper):
-    def create_assistant_versions(self):
+class CreateAssistantRevision(BaseHelper):
+    def create_assistant_revisions(self):
         mt_enabled = False
         if mt_enabled:
             a = Assistant(self.default_assistant_name)
@@ -17,10 +17,12 @@ class CreateAssistantVersions(BaseHelper):
         a_intent_api = self.get_assistant_enabled_api('intents', a, 'stage')
         a_pub_api = self.get_assistant_enabled_api('publishing', a, 'stage')
         self.ensure_global_segment_is_published()
+
+        intent = Intent('Test_intent')
         for x in range(self.n):
-            intent = Intent()
-            res = a_intent_api.post(intent)
-            print(res)
+            intent.set_display_sentence(f"This is a display sentence {x}")
+            intent_res = a_intent_api.post(intent)
+            print(intent_res)
             rev = a_intent_api.get_latest_revision(intent.get_id()).get('revision_id')
             pay = PublishingPayload(PublishingObj('intent', intent.get_id(), rev).get_json())
 
@@ -35,6 +37,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--n', type=int)
     args = parser.parse_args()
-    a = CreateAssistantVersions(args.n)
+    a = CreateAssistantRevision(args.n)
     a.create_default_assistant()
-    a.create_assistant_versions()
+    a.create_assistant_revisions()
