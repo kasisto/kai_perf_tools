@@ -23,10 +23,11 @@ class CreateAssistant(BaseHelper):
         for x in range(self.n):
             assistant = Assistant()
             if autopublish:
-                print(self.assistant_api.post_with_autopublish(assistant, targets))
+                self.assistant_api.post_with_autopublish(assistant, targets)
             else:
                 self.assistant_api.post(assistant)
-            self.assistants.append([assistant.get_id(), 'stage', f'{assistant.get_id()}_stage'])
+            for target in targets:
+                self.assistants.append([assistant.get_id(), target, f'{assistant.get_id()}_{target}'])
             print(f'Assistant {assistant.get_id()} created')
             time.sleep(10)
         print(f'Successfully created {self.n} assistants')
