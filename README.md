@@ -28,7 +28,7 @@
 
 The kai.jmx defines a JMeter Project for executing a series of requests (based on a CSV) against a target environment.
 
-The requests are defined in Authenticated and Unauthenticated CSV files respectively
+The requests are defined in the files Authenticated_questions.csv and Unauthenticated_questions.csv
 The tokens can be fixed or generated randomly
 The assistant configs are fixed in the kai.jmx at this time.
 
