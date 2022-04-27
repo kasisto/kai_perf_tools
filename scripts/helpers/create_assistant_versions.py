@@ -20,7 +20,7 @@ class CreateAssistantVersions(BaseHelper):
         for target in targets:
             a_intent_api = self.get_assistant_enabled_api('intents', a, target)
             a_pub_api = self.get_assistant_enabled_api('publishing', a, target)
-            self.ensure_global_segment_is_published()
+            self.ensure_global_segment_is_published(a, [target])
             for x in range(self.n):
                 intent = Intent()
                 res = a_intent_api.post(intent)
@@ -37,7 +37,19 @@ class CreateAssistantVersions(BaseHelper):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--n', type=int)
+    parser.add_argument('--autopublish_to')
+    parser.add_argument('--assistant_id')
     args = parser.parse_args()
-    a = CreateAssistantVersions(args.n)
+    n = args.n
+    targets = ['stage']
+    assistant_id = None
+    if args.assistant_id:
+        assistant_id = args.assistant_id
+
+    if args.autopublish_to:
+        targets = args.autopublish_to.split(',')
+        n = n - 1
+
+    a = CreateAssistantVersions(n)
     a.create_default_assistant()
-    a.create_assistant_versions()
+    a.create_assistant_versions(assistant_id, targets=targets)

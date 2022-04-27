@@ -23,29 +23,29 @@ class BaseHelper:
         self.publishing_api = PublishingApi()
         self.pack_api = PackagingApi()
     
-    def ensure_global_segment_is_published(self, assistant=None, target='stage'):
+    def ensure_global_segment_is_published(self, assistant=None, targets=['stage']):
         """
         Ensure that the global segment is published to the target
         """
         headers = self.headers
-        # res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
-        # print(res, "TEST")
-        if assistant:
-            if isinstance(assistant, dict):
-                self.headers = {
-                    'secret': assistant['default']['endpoints']['iapi']['secret'], 
-                    'assistant_name': assistant['name'],
-                    'target': 'stage'
-                }
-            res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
-            rev = self.segments_api.get_latest_revision('global').get('revision_id')
-            pay = PublishingPayload(PublishingObj('segment', f'global', rev))
 
-            pub = self.publishing_api.post_documents('stage', pay)
-        else:
-            res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
-            a = self.get_default_assistant()
-            self.assistant_api.post_with_autopublish(a)
+        if assistant:
+            for target in targets:
+                if isinstance(assistant, dict):
+                    self.headers = {
+                        'secret': assistant['default']['endpoints']['iapi']['secret'], 
+                        'assistant_name': assistant['name'],
+                        'target': target
+                    }
+                    res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
+                    rev = self.segments_api.get_latest_revision('global').get('revision_id')
+                    pay = PublishingPayload(PublishingObj('segment', f'global', rev))
+
+                    pub = self.publishing_api.post_documents(target, pay)
+                else:
+                    res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
+                    a = self.get_default_assistant()
+                    self.assistant_api.post_with_autopublish(a, [target])
     
     def create_default_assistant(self):
         res = AssistantApi().get(os.environ.get('ASSISTANT_NAME'))
