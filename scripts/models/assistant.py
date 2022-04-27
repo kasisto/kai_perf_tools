@@ -95,6 +95,8 @@ class Assistant(CmsDoc):
     def get_secret(self, ep, target='default'):
         if target.lower() == 'default':
             return self.default.get('endpoints').get(ep).get('secret')
+        elif target:
+            return self.default.get('endpoints').get(ep).get('secret')
         elif self.targets:
             for t in self.targets:
                 if t.get('name').lower() == target:
