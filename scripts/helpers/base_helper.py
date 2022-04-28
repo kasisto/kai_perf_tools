@@ -18,6 +18,7 @@ class BaseHelper:
             'secret': os.environ.get('APPLICATION_SECRET')
         }
         self.default_assistant_name = os.environ.get('ASSISTANT_NAME')
+        self.default_assistant_secret = os.environ.get('ASSISTANT_SECRET')
         self.assistant_api = AssistantApi()
         self.segments_api = SegmentsApi()
         self.publishing_api = PublishingApi()
