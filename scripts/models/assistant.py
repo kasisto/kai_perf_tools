@@ -102,3 +102,8 @@ class Assistant(CmsDoc):
                 if t.get('name').lower() == target:
                     return t.get('endpoints').get(ep).get('secret')
         return None
+
+    def set_secret(self, secret):
+        self.default['endpoints']['iapi']['secret'] = secret
+        self.default['endpoints']['capi']['secret'] = secret
+        self.default['endpoints']['eapi']['secret'] = secret

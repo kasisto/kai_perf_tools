@@ -8,10 +8,14 @@ from models.publishing import PublishingObj, PublishingPayload
 
 
 class CreateAssistantVersions(BaseHelper):
-    def create_assistant_versions(self, assistant_id=None, targets=['stage']):
+    def create_assistant_versions(self, assistant_id=None, targets=['stage'], assistant_secret=None):
         mt_enabled = False
         if assistant_id:
             a = Assistant(assistant_id)
+            if assistant_secret:
+                a.set_secret(assistant_secret)
+            elif self.default_assistant_name == assistant_id:
+                a.set_secret(self.default_assistant_secret)
         elif mt_enabled:
             a = Assistant(self.default_assistant_name)
         else:
@@ -39,10 +43,13 @@ if __name__ == '__main__':
     parser.add_argument('--n', type=int)
     parser.add_argument('--autopublish_to')
     parser.add_argument('--assistant_id')
+    parser.add_argument('--assistant_secret')
+
     args = parser.parse_args()
     n = args.n
     targets = ['stage']
     assistant_id = None
+    assistant_secret = None
     if args.assistant_id:
         assistant_id = args.assistant_id
 
@@ -50,6 +57,9 @@ if __name__ == '__main__':
         targets = args.autopublish_to.split(',')
         n = n - 1
 
+    if args.assistant_secret:
+        assistant_secret = args.assistant_secret
+
     a = CreateAssistantVersions(n)
     a.create_default_assistant()
-    a.create_assistant_versions(assistant_id, targets=targets)
+    a.create_assistant_versions(assistant_id, targets=targets, assistant_secret=assistant_secret)
