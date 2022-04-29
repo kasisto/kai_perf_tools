@@ -29,3 +29,12 @@ To create assistant versions:
     python -m helpers.create_assistant_versions --n=1
 
     --n = number of document to be created
+
+
+To create assistants and create assistant version afterwards
+
+    python -m helpers.create_assistants_and_assistant_versions --n_assistants=3 --package=ASSISTANT-kcb-4-18-2022-e59d30b2a5d8089940262ec9d351b79d.tar.gz --autopublish_to=stage,prod --n_versions=2
+
+To generate csv for existing assistants in environment
+
+    python -m helpers.create_csv_for_assistants --targets=stage,prod
