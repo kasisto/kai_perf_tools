@@ -1,5 +1,5 @@
+import csv, os
 from api.packaging_api import PackagingApi
-import os
 
 from api.assistant_api import AssistantApi
 from api.packaging_api import PackagingApi
@@ -23,6 +23,7 @@ class BaseHelper:
         self.segments_api = SegmentsApi()
         self.publishing_api = PublishingApi()
         self.pack_api = PackagingApi()
+        self.assistants = []
     
     def ensure_global_segment_is_published(self, assistant=None, targets=['stage']):
         """
@@ -86,4 +87,12 @@ class BaseHelper:
             return IntentsApi(header_overrides=header_overrides)
         if isinstance(data, str) and data.lower() == 'segments':
             return SegmentsApi(header_overrides=header_overrides)
+
+    def generate_csv(self):
+        headers = ['assistant_name', 'assistant_target', 'secret']
+
+        with open('assistants.csv', 'w', encoding='UTF8', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(headers)
+            writer.writerows(self.assistants)
     
