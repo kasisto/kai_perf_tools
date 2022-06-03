@@ -1,12 +1,8 @@
-ask_kai,label
-wellness snapshot, GREETING
-show my credit details, CREDIT
-what is my balance, WHAT_IS_MY_BALANCE
-activate my card, ACTIVATE_1
-4114123412341234, ACTIVATE_2
-123, ACTIVATE_3
-jan 2030, ACTIVATE_4
-Capabilities, CAPABILITY
-show my transactions, SHOW_TX
-How secure is bankname?, FAQ_1
-What's the weather?, FAQ_2
+ask_kai,label,kai_assert
+wellness snapshot, GREETING,activation
+show my credit details, CREDIT,200.00
+what is my balance, WHAT_IS_MY_BALANCE,087.58
+Capabilities, CAPABILITY,great with accounts
+show my transactions, SHOW_TX,VISA
+How secure is bankname?, FAQ_1,privacy
+What's the weather?, FAQ_2,rain

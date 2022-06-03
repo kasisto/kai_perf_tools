@@ -40,9 +40,9 @@
             </elementProp>
           </collectionProp>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__P(server,)}</stringProp>
-        <stringProp name="HTTPSampler.port">${__P(port,)}</stringProp>
-        <stringProp name="HTTPSampler.protocol">${__P(protocol,)}</stringProp>
+        <stringProp name="HTTPSampler.domain">localhost</stringProp>
+        <stringProp name="HTTPSampler.port">8090</stringProp>
+        <stringProp name="HTTPSampler.protocol">http</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path">/kai/api/v2/capi/user_message</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
@@ -51,7 +51,7 @@
       </ConfigTestElement>
       <hashTree/>
       <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Minimum Response Time in Milliseconds" enabled="true">
-        <stringProp name="DurationAssertion.duration">${__P(min_duration,)}</stringProp>
+        <stringProp name="DurationAssertion.duration">1000000</stringProp>
       </DurationAssertion>
       <hashTree/>
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -62,7 +62,7 @@
           </elementProp>
           <elementProp name="secret" elementType="Header">
             <stringProp name="Header.name">secret</stringProp>
-            <stringProp name="Header.value">default-assistant-for-nbt-capi-secret</stringProp>
+            <stringProp name="Header.value">prodcapisecret</stringProp>
           </elementProp>
           <elementProp name="Accept" elementType="Header">
             <stringProp name="Header.name">Accept</stringProp>
@@ -92,6 +92,10 @@
             <stringProp name="Header.name">assistant_name</stringProp>
             <stringProp name="Header.value">default_assistant</stringProp>
           </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">assistant_target</stringProp>
+            <stringProp name="Header.value">prod</stringProp>
+          </elementProp>
         </collectionProp>
       </HeaderManager>
       <hashTree/>
@@ -112,7 +116,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">${__P(nbt_token_location,)}</stringProp>
@@ -124,7 +128,7 @@
           <stringProp name="variableNames">token,count</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AUTHENTICATE" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AUTHENTICATE" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -191,12 +195,12 @@
           </JSONPathAssertion>
           <hashTree/>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="false">
           <boolProp name="LoopController.continue_forever">true</boolProp>
           <stringProp name="LoopController.loops">${count}</stringProp>
         </LoopController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${token}" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${token}" enabled="false">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -245,7 +249,7 @@
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
             <stringProp name="ConstantTimer.delay">1</stringProp>
           </ConstantTimer>
           <hashTree/>
@@ -253,11 +257,11 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1055833959">
-            <stringProp name="51">3</stringProp>
+          <collectionProp name="-540696360">
+            <stringProp name="1598">20</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
-            <stringProp name="1541058">2400</stringProp>
+            <stringProp name="1749595">9400</stringProp>
             <stringProp name="1567">10</stringProp>
           </collectionProp>
         </collectionProp>
@@ -268,6 +272,15 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+          <stringProp name="maximumValue">9999999</stringProp>
+          <stringProp name="minimumValue">1000</stringProp>
+          <stringProp name="outputFormat"></stringProp>
+          <boolProp name="perThread">false</boolProp>
+          <stringProp name="randomSeed"></stringProp>
+          <stringProp name="variableName">token</stringProp>
+        </RandomVariableConfig>
+        <hashTree/>
         <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
           <collectionProp name="Asserion.test_strings">
             <stringProp name="723337899">&quot;code&quot;:200</stringProp>
@@ -345,18 +358,9 @@
           </JSONPathAssertion>
           <hashTree/>
         </hashTree>
-        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Token_Generator" enabled="true">
-          <stringProp name="maximumValue">5000000</stringProp>
-          <stringProp name="minimumValue">10000</stringProp>
-          <stringProp name="outputFormat"></stringProp>
-          <boolProp name="perThread">false</boolProp>
-          <stringProp name="randomSeed"></stringProp>
-          <stringProp name="variableName">token</stringProp>
-        </RandomVariableConfig>
-        <hashTree/>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">11</stringProp>
+          <stringProp name="LoopController.loops">1000</stringProp>
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
@@ -366,7 +370,7 @@
             <stringProp name="variableNames"></stringProp>
             <boolProp name="randomOrder">false</boolProp>
             <boolProp name="ignoreFirstLine">false</boolProp>
-            <boolProp name="rewindOnTheEndOfList">true</boolProp>
+            <boolProp name="rewindOnTheEndOfList">false</boolProp>
             <boolProp name="independentListPerThread">true</boolProp>
           </com.blazemeter.jmeter.RandomCSVDataSetConfig>
           <hashTree/>
@@ -1138,9 +1142,55 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <stringProp name="TestPlan.comments">							$$</stringProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
         <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
         <longProp name="interval_grouping">10000</longProp>
-        <boolProp name="graph_aggregated">false</boolProp>
+        <boolProp name="graph_aggregated">true</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
         <stringProp name="exclude_sample_labels"></stringProp>
         <stringProp name="start_offset"></stringProp>
@@ -1220,7 +1270,8 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="TestPlan.comments">$</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
