@@ -40,9 +40,9 @@
             </elementProp>
           </collectionProp>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__P(server,)}</stringProp>
-        <stringProp name="HTTPSampler.port">${__P(port,)}</stringProp>
-        <stringProp name="HTTPSampler.protocol">${__P(protocol,)}</stringProp>
+        <stringProp name="HTTPSampler.domain">kasisto-testing-en-us-qa-domain-a.kitsys.net</stringProp>
+        <stringProp name="HTTPSampler.port">8090</stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path">/kai/api/v2/capi/user_message</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
@@ -62,7 +62,7 @@
           </elementProp>
           <elementProp name="secret" elementType="Header">
             <stringProp name="Header.name">secret</stringProp>
-            <stringProp name="Header.value">qa_capi_secrete5546561BankQA1</stringProp>
+            <stringProp name="Header.value">5cca87a2-56c4-11ec-bf63-0242ac133001</stringProp>
           </elementProp>
           <elementProp name="Accept" elementType="Header">
             <stringProp name="Header.name">Accept</stringProp>
@@ -90,11 +90,11 @@
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">assistant_name</stringProp>
-            <stringProp name="Header.value">ncr-mt-en-us-qa</stringProp>
+            <stringProp name="Header.value">kasisto-testing-en-us</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">assistant_target</stringProp>
-            <stringProp name="Header.value">stage</stringProp>
+            <stringProp name="Header.value">prod</stringProp>
           </elementProp>
         </collectionProp>
       </HeaderManager>
@@ -257,8 +257,8 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="81854394">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="-2064487155">
+            <stringProp name="53">5</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="1572771">3600</stringProp>
@@ -272,30 +272,19 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random assistant" enabled="true">
-          <stringProp name="filename">C:\Users\testuser\Documents\kai_perf_tools\capi_jmeter\configs\kcb\assistants.csv</stringProp>
-          <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="delimiter">,</stringProp>
-          <stringProp name="variableNames"></stringProp>
-          <boolProp name="randomOrder">true</boolProp>
-          <boolProp name="ignoreFirstLine">false</boolProp>
-          <boolProp name="rewindOnTheEndOfList">true</boolProp>
-          <boolProp name="independentListPerThread">false</boolProp>
-        </com.blazemeter.jmeter.RandomCSVDataSetConfig>
-        <hashTree/>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">assistant_name</stringProp>
-              <stringProp name="Header.value">${assistant_name}</stringProp>
+              <stringProp name="Header.value">kasisto-testing-en-us</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">assistant_target</stringProp>
-              <stringProp name="Header.value">${assistant_target}</stringProp>
+              <stringProp name="Header.value">prod</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">secret</stringProp>
-              <stringProp name="Header.value">${secret}</stringProp>
+              <stringProp name="Header.value">5cca87a2-56c4-11ec-bf63-0242ac133001</stringProp>
             </elementProp>
           </collectionProp>
         </HeaderManager>
@@ -339,7 +328,7 @@
   &#xd;
   &quot;type&quot; : &quot;ENTER_TOKEN&quot;,&#xd;
   &quot;payload&quot;: { &#xd;
-	    &quot;token&quot; : &quot;${token}&quot;&#xd;
+	    &quot;token&quot; : &quot;perftoken_${token}&quot;&#xd;
   }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -378,8 +367,8 @@
           <hashTree/>
         </hashTree>
         <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Token_Generator" enabled="true">
-          <stringProp name="maximumValue">5000000</stringProp>
-          <stringProp name="minimumValue">10000</stringProp>
+          <stringProp name="maximumValue">20</stringProp>
+          <stringProp name="minimumValue">1</stringProp>
           <stringProp name="outputFormat"></stringProp>
           <boolProp name="perThread">false</boolProp>
           <stringProp name="randomSeed"></stringProp>
@@ -392,7 +381,7 @@
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-            <stringProp name="filename">C:\Users\testuser\Documents\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions - Copy.csv</stringProp>
+            <stringProp name="filename">/Users/jonphillips/Documents/workspace/kai_perf_tools/capi_jmeter/configs/kcb/Authenticated_questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
@@ -454,6 +443,16 @@
           <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
             <stringProp name="ConstantTimer.delay">3000</stringProp>
           </ConstantTimer>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="986781268">${kai_assert}</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">$</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -1046,6 +1045,51 @@
         <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseCodesPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Codes per Second" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">1000</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
       <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
@@ -1136,51 +1180,6 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
-        <longProp name="interval_grouping">10000</longProp>
-        <boolProp name="graph_aggregated">false</boolProp>
-        <stringProp name="include_sample_labels"></stringProp>
-        <stringProp name="exclude_sample_labels"></stringProp>
-        <stringProp name="start_offset"></stringProp>
-        <stringProp name="end_offset"></stringProp>
-        <boolProp name="include_checkbox_state">false</boolProp>
-        <boolProp name="exclude_checkbox_state">false</boolProp>
-      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
-      <hashTree/>
       <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
@@ -1217,6 +1216,7 @@
         </objProp>
         <stringProp name="filename"></stringProp>
         <boolProp name="saveHeaders">false</boolProp>
+        <stringProp name="TestPlan.comments">				</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
@@ -1254,7 +1254,16 @@
           </value>
         </objProp>
         <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
+        <stringProp name="TestPlan.comments">	</stringProp>
       </ResultCollector>
+      <hashTree/>
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+        <stringProp name="ConstantTimer.delay">300</stringProp>
+      </ConstantTimer>
+      <hashTree/>
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+        <stringProp name="ConstantTimer.delay">300</stringProp>
+      </ConstantTimer>
       <hashTree/>
     </hashTree>
   </hashTree>
