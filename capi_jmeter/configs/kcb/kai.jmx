@@ -257,8 +257,8 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1647082926">
-            <stringProp name="1691">50</stringProp>
+          <collectionProp name="1372529132">
+            <stringProp name="49">1</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="1572771">3600</stringProp>
@@ -304,6 +304,7 @@
       &quot;user_id&quot;: &quot;platform_user_id&quot;&#xd;
     },&#xd;
     &quot;user&quot;: {&#xd;
+&#xd;
     },&#xd;
     &quot;api_version&quot; : &quot;4.1&quot;&#xd;
   },&#xd;
@@ -391,9 +392,10 @@
             &quot;version&quot;: &quot;1.35&quot;&#xd;
         },&#xd;
         &quot;user&quot;: {&#xd;
-            &quot;time_zone&quot;: &quot;America/New_York&quot;&#xd;
+            &quot;time_zone&quot;: &quot;America/New_York&quot;,&#xd;
+            &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
         },&#xd;
-        &quot;api_version&quot;: &quot;4.3&quot;&#xd;
+        &quot;api_version&quot;: &quot;4.1&quot;&#xd;
     },&#xd;
     &quot;type&quot;: &quot;TEXT&quot;,&#xd;
     &quot;payload&quot;: {&#xd;
@@ -420,7 +422,7 @@
           </HTTPSamplerProxy>
           <hashTree/>
           <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">5000</stringProp>
+            <stringProp name="ConstantTimer.delay">3000</stringProp>
           </ConstantTimer>
           <hashTree/>
         </hashTree>
