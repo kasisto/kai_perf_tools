@@ -304,7 +304,6 @@
       &quot;user_id&quot;: &quot;platform_user_id&quot;&#xd;
     },&#xd;
     &quot;user&quot;: {&#xd;
-    	&quot;session_id&quot; : &quot;s&quot;&#xd;
     },&#xd;
     &quot;api_version&quot; : &quot;4.1&quot;&#xd;
   },&#xd;
@@ -380,48 +379,27 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"> {&#xd;
-    &quot;context&quot; : {&#xd;
-        &quot;device&quot; : {&#xd;
-        &quot;type&quot; : &quot;web&quot;,&#xd;
-        &quot;os&quot; : &quot;Mac/iOS&quot;,&#xd;
-        &quot;model&quot; : &quot;Unknown&quot;,&#xd;
-        &quot;id&quot; : &quot;&quot;&#xd;
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;context&quot;: {&#xd;
+        &quot;device&quot;: {&#xd;
+            &quot;type&quot;: &quot;web&quot;,&#xd;
+            &quot;os&quot;: &quot;Mac/iOS&quot;,&#xd;
+            &quot;model&quot;: &quot;Unknown&quot;&#xd;
         },&#xd;
-        &quot;platform&quot; : {&#xd;
-        &quot;name&quot; : &quot;webview&quot;,&#xd;
-        &quot;version&quot; : &quot;1.34&quot;,&#xd;
-        &quot;conversation_id&quot; : &quot;&quot;,&#xd;
-        &quot;user_id&quot; : &quot;admin&quot;&#xd;
+        &quot;platform&quot;: {&#xd;
+            &quot;name&quot;: &quot;web&quot;,&#xd;
+            &quot;version&quot;: &quot;1.35&quot;&#xd;
         },&#xd;
-        &quot;user&quot; : {&#xd;
-        &quot;time_zone&quot; : &quot;America/New_York&quot;,&#xd;
-        &quot;session_id&quot; : &quot;node0uni48o8xm7g519v9p861ouqyc9216498539705949be61df5-dd20-45ae-bba9-e8e9422b075d&quot;,&#xd;
-        &quot;segment_names&quot; : [ &quot;global&quot; ],&#xd;
-        &quot;user_id&quot; : &quot;tokenKCBHD_5&quot;&#xd;
+        &quot;user&quot;: {&#xd;
+            &quot;time_zone&quot;: &quot;America/New_York&quot;&#xd;
         },&#xd;
-        &quot;features&quot; : {&#xd;
-        &quot;allowed&quot; : [ &quot;message_contents.card&quot;, &quot;request_user_input.input_mode.quick_replies&quot;, &quot;message_contents.container.mode.list&quot;, &quot;message_contents.container.mode.rating&quot;, &quot;message_contents.container.mode.carousel&quot;, &quot;request_user_input.input_mode.rating&quot;, &quot;message_contents.medium&quot;, &quot;message_contents.button&quot;, &quot;message_contents.container&quot;, &quot;request_user_input.input_mode.custom&quot;, &quot;message_contents.text&quot;, &quot;message_contents.custom&quot;, &quot;request_user_input.input_mode.carousel&quot;, &quot;request_user_input.input_mode.hidden&quot;, &quot;request_user_input.input_mode.list&quot;, &quot;message_contents.avatar&quot;, &quot;request_user_input.input_mode.checklist&quot;, &quot;request_user_input.multiselect&quot;, &quot;quick_replies&quot; ]&#xd;
-        },&#xd;
-        &quot;api_version&quot; : &quot;4.2&quot;&#xd;
+        &quot;api_version&quot;: &quot;4.3&quot;&#xd;
     },&#xd;
-    &quot;intent_name&quot; : &quot;${intent_name}&quot;,&#xd;
-    &quot;user_message&quot; : {&#xd;
-        &quot;payload&quot; : {&#xd;
-        &quot;text&quot; : &quot;how much did i spend this month compared to last month&quot;&#xd;
-        },&#xd;
-        &quot;type&quot; : &quot;TEXT&quot;&#xd;
-    },&#xd;
-    &quot;user_inputs&quot; : [ {&#xd;
-        &quot;name&quot; : &quot;window_size&quot;,&#xd;
-        &quot;value&quot; : &quot;month&quot;,&#xd;
-        &quot;type&quot; : &quot;KCB_WINDOW_SIZE&quot;&#xd;
-    }, {&#xd;
-        &quot;name&quot; : &quot;tx_direction&quot;,&#xd;
-        &quot;value&quot; : &quot;outgoing&quot;,&#xd;
-        &quot;type&quot; : &quot;KCB_TX_DIRECTION&quot;&#xd;
-    } ]&#xd;
-    }</stringProp>
+    &quot;type&quot;: &quot;TEXT&quot;,&#xd;
+    &quot;payload&quot;: {&#xd;
+        &quot;text&quot;: &quot;${ask_kai}&quot;&#xd;
+    }&#xd;
+}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
