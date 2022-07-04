@@ -1,0 +1,4 @@
+ask_kai,label
+hello, GREETING
+what is my balance, WHAT_IS_MY_BALANCE
+show my transactions, SHOW_TX
