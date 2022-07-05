@@ -1,0 +1,4 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
+kbb_cashposition_summary,8195,1518,1280,1479,1503,1532,1015,44295,0.610%,6.64435,5.60,14.03
+kbb_txinquiry,8145,4,4,6,6,13,2,236,0.000%,6.85146,9.84,14.48
+TOTAL,16340,763,1022,1428,1480,1519,2,44295,0.306%,13.24817,15.08,27.99

@@ -1,0 +1,4 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+kbb_cashposition_summary,650,59927,6466,64103,6652.02,100.000%,.52238,0.47,1.11,925.8
+kbb_transactioninquiry,615,30118,1555,33789,1610.37,99.837%,.49864,0.88,1.06,1815.0
+TOTAL,1265,45435,1555,64103,15683.29,99.921%,1.01664,1.35,2.16,1358.1
