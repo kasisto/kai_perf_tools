@@ -39,6 +39,6 @@ To generate csv for existing assistants in environment
 
     python -m helpers.create_csv_for_assistants --targets=stage,prod
 
-To import package to assistant (By default, we import package to application. So if we don't want to import package to assistant, we should not define assistant_ids and autopublish_to parameters:
+To import package to assistant (By default, we import package to application. So if we don't want to import package to assistant, we should not define assistant_ids and autopublish_to parameters):
     
     python -m helpers.import_package --package=ASSISTANT-2022_06_23_16_57_25_304436-kcb-en_US-4e038d54ca3dcb905193ad0a83592664.tar.gz --autopublish_to=stage,prod --assistant_ids=default_assistant,default_assistant_2
