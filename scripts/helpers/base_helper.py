@@ -68,6 +68,15 @@ class BaseHelper:
                 return AssistantApi().post(Assistant(os.environ.get('ASSISTANT_NAME')))
         return res
 
+    def get_assistant(self, id):
+        res = AssistantApi().get(id)
+
+        if 'code' in res:
+            if res['code'] == '404':
+                print('Assistant does not exists')
+                return False
+        return res
+
     
     def get_assistant_enabled_api(self, data, assistant, target='default'):
         if isinstance(assistant, dict):
