@@ -41,6 +41,6 @@ To generate csv for existing assistants in environment
 
 To import package to application/assistant(When --import_to= assistant, it will skip importing to application and instead will import directly to assistants in assistant_ids with assistant_name and secret):
     
-    python -m helpers.import_package --package=ASSISTANT-2022_06_23_16_57_25_304436-kcb-en_US-4e038d54ca3dcb905193ad0a83592664.tar.gz --autopublish_to=stage,prod --assistant_ids=default_assistant,default_assistant_2, --import_to=application
+    python -m helpers.import_package  --import_to=application --package=ASSISTANT-2022_06_23_16_57_25_304436-kcb-en_US-4e038d54ca3dcb905193ad0a83592664.tar.gz --autopublish_to=stage,prod --assistant_ids=default_assistant,default_assistant_2
     
-    python -m helpers.import_package --package=ASSISTANT-2022_06_23_16_57_25_304436-kcb-en_US-4e038d54ca3dcb905193ad0a83592664.tar.gz --autopublish_to=stage,prod --assistant_ids=default_assistant,default_assistant_2, --import_to=assistant
+    python -m helpers.import_package --import_to=assistant --package=ASSISTANT-2022_06_23_16_57_25_304436-kcb-en_US-4e038d54ca3dcb905193ad0a83592664.tar.gz --autopublish_to=stage,prod --assistant_ids=default_assistant,default_assistant_2
