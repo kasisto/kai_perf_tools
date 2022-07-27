@@ -29,7 +29,7 @@ class ImportPackage(BaseHelper):
                         'assistant_name': assistant.get('name')
                     }
                     print('Importing package to assistant')
-                    replace = PackagingApi(header_overrides=headers).replace(package, type='DATA')
+                    replace = PackagingApi(header_overrides=headers).replace(package, type='ALL')
                     print(replace)
                     autopublish = self.assistant_api.post_with_autopublish(assistant, targets)
                     print(autopublish)
@@ -57,7 +57,6 @@ if __name__ == '__main__':
         if args.import_to:
             if args.import_to == 'application':
                 replace = helper.pack_api.replace(args.package)
-                print(replace)
                 if args.autopublish_to and args.assistant_ids:  
                     targets = args.autopublish_to.split(',')
                     assistant_ids = args.assistant_ids.split(',')
