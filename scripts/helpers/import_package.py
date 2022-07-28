@@ -28,11 +28,12 @@ class ImportPackage(BaseHelper):
                         'secret': secret,
                         'assistant_name': assistant.get('name')
                     }
-                    print('Importing package to assistant')
+                    print('Importing package')
                     replace = PackagingApi(header_overrides=headers).replace(package, type='ALL')
                     print(replace)
-                    autopublish = self.assistant_api.post_with_autopublish(assistant, targets)
-                    print(autopublish)
+                    if replace['code'] in ['200', '250']:
+                        autopublish = self.assistant_api.post_with_autopublish(assistant, targets)
+                        print(autopublish)
 
     def import_package_with_application(self, targets=[], assistant_ids=[]):
         if assistant_ids:
