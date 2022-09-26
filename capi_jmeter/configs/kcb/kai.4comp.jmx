@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="kai" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -336,7 +336,7 @@
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-            <stringProp name="filename">C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv</stringProp>
+            <stringProp name="filename">Authenticated_questions.faqonly.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
