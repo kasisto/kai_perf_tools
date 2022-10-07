@@ -18,6 +18,8 @@ class Assistant(CmsDoc):
                 "intent.ceo_name": "Test",
                 "intent.avatar_enabled": True,
                 "intent.budget_enabled": True,
+		"intent.kcb_show_tx.tx_merchant_enabled":"true",
+		"intent.kcb_show_tx.default_days_back":"30",
                 "iapi.disabled_intents": "na",
                 "iapi.timezone": "UTC",
                 "intent.guai.holdings_api_enabled": "true",
