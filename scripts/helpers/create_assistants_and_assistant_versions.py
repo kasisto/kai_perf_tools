@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     assistant_helper = CreateAssistant(args.n_assistants)
-    n_versions = args.n_versions
+    n_versions = args.n_versions if args.n_versions else 1
     if args.package:
         replace = assistant_helper.pack_api.replace(args.package)
     if args.autopublish_to:
