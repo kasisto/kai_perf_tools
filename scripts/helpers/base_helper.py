@@ -1,4 +1,5 @@
 import csv, os
+from api.responses_api import ResponsesApi
 from api.packaging_api import PackagingApi
 
 from api.assistant_api import AssistantApi
@@ -94,6 +95,8 @@ class BaseHelper:
             return PublishingApi(header_overrides=header_overrides)
         if isinstance(data, str) and data.lower() == 'intents':
             return IntentsApi(header_overrides=header_overrides)
+        if isinstance(data, str) and data.lower() == 'responses':
+            return ResponsesApi(header_overrides=header_overrides)
         if isinstance(data, str) and data.lower() == 'segments':
             return SegmentsApi(header_overrides=header_overrides)
 
