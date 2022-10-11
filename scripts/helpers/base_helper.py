@@ -47,7 +47,11 @@ class BaseHelper:
                     pub = self.publishing_api.post_documents(target, pay)
                 else:
                     res = SegmentsApi(self.headers).post(CmsDoc(f'global').get_json())
-                    a = self.get_default_assistant()
+                    if assistant.get_id() == os.environ.get('ASSISTANT_NAME'):
+                        a = self.get_default_assistant()
+                    else:
+                        a = Assistant(assistant.get_id()).get_json()
+
                     self.assistant_api.post_with_autopublish(a, [target])
     
     def create_default_assistant(self):
