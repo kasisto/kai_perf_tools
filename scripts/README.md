@@ -44,3 +44,7 @@ To import package to application/assistant(When --import_to= assistant, it will 
     python -m helpers.import_package  --import_to=application --package=ASSISTANT-2022_06_23_16_57_25_304436-kcb-en_US-4e038d54ca3dcb905193ad0a83592664.tar.gz --autopublish_to=stage,prod --assistant_ids=default_assistant,default_assistant_2
     
     python -m helpers.import_package --import_to=assistant --package=ASSISTANT-2022_06_23_16_57_25_304436-kcb-en_US-4e038d54ca3dcb905193ad0a83592664.tar.gz --autopublish_to=stage,prod --assistant_ids=default_assistant,default_assistant_2
+
+To add assistant versions to existing assistants(with target):
+
+	python -m helpers.add_versions_to_assistants --n=5 --target=stage,prod
