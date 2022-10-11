@@ -15,7 +15,7 @@ class AddAssistantVersionToAssistant(BaseHelper):
             self.add_assistant_versions_to_assistant(assistant['name'], targets=targets)
 
     def add_assistant_versions_to_assistant(self, assistant_id=None, targets=['stage'], assistant_secret=None):
-        mt_enabled = False
+        mt_enabled = True
         if assistant_id:
             a = Assistant(assistant_id)
             if assistant_secret:
