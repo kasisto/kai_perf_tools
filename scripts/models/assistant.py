@@ -14,6 +14,13 @@ class Assistant(CmsDoc):
         avatar_img_url = "https://cdn.avoxi.com/wp-content/uploads/2017/03/Solutions-Icons-IVR.png"
         self.default = {
             "config": {
+                "intent.bank_name": "ACMEBank",
+                "intent.bot_name": "Kai",
+                "intent.ceo_name": "Test",
+                "intent.avatar_enabled": True,
+                "intent.budget_enabled": True,
+                "intent.kcb_show_tx.tx_merchant_enabled":"true",
+                "intent.kcb_show_tx.default_days_back":"30",
                 "iapi.disabled_intents": "na",
                 "iapi.domain_locale": "en_US",
                 "iapi.timezone": "UTC",
