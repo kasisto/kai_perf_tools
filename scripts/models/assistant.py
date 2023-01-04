@@ -50,6 +50,7 @@ class Assistant(CmsDoc):
                 "orchestrator.webhook_url": "${ENV.dgc.webhook_url.korc_webhook}",
                 "intent.kcb_show_tx.tx_merchant_enabled":"true",
                 "intent.kcb_show_tx.default_days_back":"30",
+		 "appcore.api.supported.methods": "accounts,bank_locations,bank_offers,card,categories,credit_profile,entitlements,holdings,merchants,payees,portfolio_allocations,products,reports,securities,settings,statements,transactions,user_subscription_status"
             },
             'endpoints': {
                 'iapi': {'secret': _id},
