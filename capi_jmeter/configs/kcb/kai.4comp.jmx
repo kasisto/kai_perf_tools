@@ -253,8 +253,8 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-1712627632">
-            <stringProp name="49741">250</stringProp>
+          <collectionProp name="1823449796">
+            <stringProp name="1691">50</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="53430">600</stringProp>
             <stringProp name="1509345">1200</stringProp>
@@ -336,7 +336,7 @@
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-            <stringProp name="filename">Authenticated_questions.faqonly.csv</stringProp>
+            <stringProp name="filename">Authenticated_questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
@@ -367,7 +367,10 @@
             &quot;time_zone&quot;: &quot;America/New_York&quot;,&#xd;
             &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
         },&#xd;
-        &quot;api_version&quot;: &quot;4.1&quot;&#xd;
+        &quot;api_version&quot;: &quot;4.1&quot;,&#xd;
+        &quot;extra&quot;: {&#xd;
+            &quot;debug&quot;: true&#xd;
+        }&#xd;
     },&#xd;
     &quot;type&quot;: &quot;TEXT&quot;,&#xd;
     &quot;payload&quot;: {&#xd;
@@ -396,6 +399,15 @@
           <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
             <stringProp name="ConstantTimer.delay">5000</stringProp>
           </ConstantTimer>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.current_intent</stringProp>
+            <stringProp name="EXPECTED_VALUE">${label}</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -1194,7 +1206,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
+        <stringProp name="filename">../OutPut/aggtree</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
