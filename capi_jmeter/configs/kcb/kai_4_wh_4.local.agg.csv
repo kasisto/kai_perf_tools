@@ -1,4 +1,0 @@
-Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
-kbb_cashposition_summary,339,480,148,1531,2205,3942,12,5974,3.835%,.27419,0.91,0.27
-AUTHENTICATE,23,1342,1359,1494,1663,1972,1065,1972,0.000%,.01951,0.01,0.02
-TOTAL,362,535,149,1531,2155,3937,12,5974,3.591%,.29280,0.92,0.29
