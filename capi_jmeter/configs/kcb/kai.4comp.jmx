@@ -50,10 +50,6 @@
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Minimum Response Time in Milliseconds" enabled="true">
-        <stringProp name="DurationAssertion.duration">${__P(min_duration,)}</stringProp>
-      </DurationAssertion>
-      <hashTree/>
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
         <collectionProp name="HeaderManager.headers">
           <elementProp name="Connection" elementType="Header">
@@ -62,7 +58,7 @@
           </elementProp>
           <elementProp name="secret" elementType="Header">
             <stringProp name="Header.name">secret</stringProp>
-            <stringProp name="Header.value">7ce23d7e-83bf-4120-a3cf-59c2e692f330</stringProp>
+            <stringProp name="Header.value">${__P(assistant_secret,)} </stringProp>
           </elementProp>
           <elementProp name="Accept" elementType="Header">
             <stringProp name="Header.name">Accept</stringProp>
@@ -90,7 +86,7 @@
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">assistant_name</stringProp>
-            <stringProp name="Header.value">jpmc-en-us</stringProp>
+            <stringProp name="Header.value">${__P(assistant_name,)}</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">assistant_target</stringProp>
@@ -257,11 +253,11 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated_questions" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="896473429">
-            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
+          <collectionProp name="1823449796">
+            <stringProp name="1691">50</stringProp>
             <stringProp name="50">2</stringProp>
-            <stringProp name="1567">10</stringProp>
-            <stringProp name="1572771">3600</stringProp>
+            <stringProp name="53430">600</stringProp>
+            <stringProp name="1509345">1200</stringProp>
             <stringProp name="1567">10</stringProp>
           </collectionProp>
         </collectionProp>
@@ -288,32 +284,8 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-  &quot;context&quot;: {&#xd;
-    &quot;device&quot;: {&#xd;
-      &quot;type&quot;: &quot;device_type&quot;,&#xd;
-      &quot;os&quot;: &quot;device_os&quot;,&#xd;
-      &quot;model&quot;: &quot;device_model&quot;,&#xd;
-      &quot;id&quot;: &quot;device_id&quot;&#xd;
-    },&#xd;
-    &quot;platform&quot;: {&#xd;
-      &quot;name&quot;: &quot;platform_name&quot;,&#xd;
-      &quot;conversation_id&quot;: &quot;conversation_id&quot;,&#xd;
-      &quot;session_id&quot; : &quot;ext_session_id&quot;,&#xd;
-      &quot;version&quot;: &quot;platform_version&quot;,&#xd;
-      &quot;user_id&quot;: &quot;platform_user_id&quot;&#xd;
-    },&#xd;
-    &quot;user&quot;: {&#xd;
-&#xd;
-    },&#xd;
-    &quot;api_version&quot; : &quot;4.1&quot;&#xd;
-  },&#xd;
-  &#xd;
-  &quot;type&quot; : &quot;ENTER_TOKEN&quot;,&#xd;
-  &quot;payload&quot;: { &#xd;
-	    &quot;token&quot; : &quot;tokenJPMC&quot;&#xd;
-  }&#xd;
-}</stringProp>
+                <stringProp name="Argument.value">{&quot;context&quot;:{&quot;device&quot;:{&quot;type&quot;:&quot;web&quot;,&quot;os&quot;:&quot;Mac/iOS&quot;,&quot;model&quot;:&quot;Unknown&quot;,&quot;id&quot;:&quot;&quot;},&quot;platform&quot;:{&quot;name&quot;:&quot;webview&quot;,&quot;conversation_id&quot;:&quot;&quot;,&quot;session_id&quot;:null,&quot;version&quot;:&quot;1.34&quot;,&quot;user_id&quot;:&quot;admin&quot;},&quot;user&quot;:{&quot;time_zone&quot;:&quot;America/New_York&quot;,&quot;session_id&quot;:&quot;&quot;},&quot;api_version&quot;:&quot;4.1&quot;},&quot;type&quot;:&quot;ENTER_TOKEN&quot;,&quot;payload&quot;:{&quot;token&quot;:&quot;tokenJPMC&quot;}}&#xd;
+</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -360,11 +332,11 @@
         <hashTree/>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">15</stringProp>
+          <stringProp name="LoopController.loops">19</stringProp>
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-            <stringProp name="filename">./Authenticated_questions.csv</stringProp>
+            <stringProp name="filename">Authenticated_questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
@@ -395,7 +367,10 @@
             &quot;time_zone&quot;: &quot;America/New_York&quot;,&#xd;
             &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
         },&#xd;
-        &quot;api_version&quot;: &quot;4.1&quot;&#xd;
+        &quot;api_version&quot;: &quot;4.1&quot;,&#xd;
+        &quot;extra&quot;: {&#xd;
+            &quot;debug&quot;: true&#xd;
+        }&#xd;
     },&#xd;
     &quot;type&quot;: &quot;TEXT&quot;,&#xd;
     &quot;payload&quot;: {&#xd;
@@ -422,8 +397,17 @@
           </HTTPSamplerProxy>
           <hashTree/>
           <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">3000</stringProp>
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
           </ConstantTimer>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.current_intent</stringProp>
+            <stringProp name="EXPECTED_VALUE">${label}</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -1222,7 +1206,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../OutPut/ResultTree.csv</stringProp>
+        <stringProp name="filename">../OutPut/aggtree</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>

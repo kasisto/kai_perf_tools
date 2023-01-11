@@ -11,10 +11,3 @@ what's the current available balance,kbb_cashposition_summary
 USD,kbb_cashposition_summary
 What is my cash position?,kbb_cashposition_summary
 USD,kbb_cashposition_summary
-Can you tell me if a $800 wire for account account 6814 went through between 9/06 and 9/12?,kbb_txinquiry
-Can you tell me if a wire went through?,kbb_txinquiry
-Can you tell me if a wire for acct# 6814 to an amount between 750 and 850 went through on 9/8?,kbb_txinquiry
-run entitlements report,entitlements_report
-run a report,kbb_reports_run
-cash,kbb_reports_run
-edi,kbb_reports_run

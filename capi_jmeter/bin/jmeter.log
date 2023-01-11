@@ -1,75 +1,1332 @@
-2021-03-30 09:47:41,227 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2021-03-30 09:47:41,247 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2021-03-30 09:47:41,247 INFO o.a.j.JMeter: Version 5.2.1
-2021-03-30 09:47:41,247 INFO o.a.j.JMeter: java.version=1.8.0_192
-2021-03-30 09:47:41,247 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2021-03-30 09:47:41,248 INFO o.a.j.JMeter: os.name=Mac OS X
-2021-03-30 09:47:41,248 INFO o.a.j.JMeter: os.arch=x86_64
-2021-03-30 09:47:41,248 INFO o.a.j.JMeter: os.version=10.15.7
-2021-03-30 09:47:41,248 INFO o.a.j.JMeter: file.encoding=UTF-8
-2021-03-30 09:47:41,248 INFO o.a.j.JMeter: java.awt.headless=null
-2021-03-30 09:47:41,248 INFO o.a.j.JMeter: Max memory     =1073741824
-2021-03-30 09:47:41,248 INFO o.a.j.JMeter: Available Processors =8
-2021-03-30 09:47:41,252 INFO o.a.j.JMeter: Default Locale=English (EN)
-2021-03-30 09:47:41,252 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2021-03-30 09:47:41,252 INFO o.a.j.JMeter: JMeterHome=/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter
-2021-03-30 09:47:41,252 INFO o.a.j.JMeter: user.dir  =/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin
-2021-03-30 09:47:41,253 INFO o.a.j.JMeter: PWD       =/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin
-2021-03-30 09:47:41,254 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Daniels-MacBook-Pro.local FullName: localhost
-2021-03-30 09:47:42,402 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2021-03-30 09:47:42,418 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.apple.laf.AquaLookAndFeel [Darcula]
-2021-03-30 09:47:42,419 INFO o.a.j.JMeter: Setting LAF to: com.apple.laf.AquaLookAndFeel
-2021-03-30 09:47:42,421 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2021-03-30 09:47:43,226 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-df6e28fb1d4c61408825ef72bc0a140b-gui
-2021-03-30 09:47:44,387 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-graphs-additional=2.0, jpgc-functions=2.1, jpgc-casutg=2.9, jpgc-dummy=0.4, jpgc-filterresults=2.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, bzm-random-csv=0.6, jpgc-synthesis=2.2, jpgc-tst=2.5, jpgc-csvars=0.1, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1, jpgc-standard=2.0]
-2021-03-30 09:47:44,396 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager, bzm-random-csv]
-2021-03-30 09:47:44,708 WARN o.a.j.g.ObjectTableModel: Header count=13 but classes count=11
-2021-03-30 09:47:44,709 WARN o.a.j.g.ObjectTableModel: Header count=13 but writeFunctor count=11
-2021-03-30 09:47:44,915 INFO o.a.j.u.BSFTestElement: Registering JMeter version of JavaScript engine as work-round for BSF-22
-2021-03-30 09:47:45,795 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2021-03-30 09:47:45,796 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin/proxyserver.jks
-2021-03-30 09:47:45,937 INFO o.a.j.s.FileServer: Default base='/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/bin'
-2021-03-30 09:47:46,209 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are END times
-2021-03-30 09:47:46,209 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2021-03-30 09:47:46,209 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2021-03-30 09:47:46,209 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2021-03-30 09:48:16,110 INFO o.a.j.g.a.Load: Loading file: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/kcb/kai.jmx
-2021-03-30 09:48:16,110 INFO o.a.j.s.FileServer: Set new base='/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/kcb'
-2021-03-30 09:48:16,223 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2021-03-30 09:48:16,261 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2021-03-30 09:48:16,267 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2021-03-30 09:48:16,271 INFO o.a.j.s.SaveService: Loading file: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/kcb/kai.jmx
-2021-03-30 09:48:16,398 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
-2021-03-30 09:48:17,060 INFO o.a.j.s.FileServer: Set new base='/Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/kcb'
-2021-03-30 09:48:25,833 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2021-03-30 09:48:25,834 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2021-03-30 09:48:25,834 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2021-03-30 09:48:25,847 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2021-03-30 09:48:25,988 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : NBT_TEST
-2021-03-30 09:48:25,988 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group NBT_TEST.
-2021-03-30 09:48:25,988 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2021-03-30 09:48:25,989 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
-2021-03-30 09:48:25,990 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
-2021-03-30 09:48:25,990 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2021-03-30 09:48:35,991 INFO o.a.j.t.JMeterThread: Thread started: NBT_TEST 1-1
-2021-03-30 09:48:35,993 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/token_nbt_file.csv Alias: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/token_nbt_file.csv@1723201712
-2021-03-30 09:48:36,000 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Daniels-MacBook-Pro.local
-2021-03-30 09:48:36,003 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2021-03-30 09:48:36,124 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
-2021-03-30 09:48:36,126 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
-2021-03-30 09:48:36,126 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
-2021-03-30 09:48:36,163 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
-2021-03-30 09:48:36,164 INFO o.a.j.u.SSLManager: KeyStore created OK
-2021-03-30 09:48:36,164 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
-2021-03-30 09:48:40,583 INFO o.a.j.f.FileWrapper: Attaching /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv
-2021-03-30 09:48:40,583 INFO o.a.j.f.FileWrapper: Opening /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv as /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv
-2021-03-30 09:48:40,584 INFO o.a.j.s.FileServer: Stored: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv
-2021-03-30 09:48:40,586 INFO o.a.j.f.FileWrapper: Saved /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv as /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv delimiter=<,>
-2021-03-30 09:48:40,586 INFO o.a.j.f.FileWrapper: Stored /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv as /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/tokenKCBHD.csv
-2021-03-30 09:48:57,291 INFO o.a.j.g.a.Start: Stopping test
-2021-03-30 09:48:57,303 INFO o.a.j.t.JMeterThread: Stopping: NBT_TEST 1-1
-2021-03-30 09:48:57,303 WARN o.a.j.t.JMeterThread: Interrupting: NBT_TEST 1-1 sampler: ${token}
-2021-03-30 09:48:57,308 INFO o.a.j.t.JMeterThread: Thread finished: NBT_TEST 1-1
-2021-03-30 09:48:57,309 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2021-03-30 09:48:57,309 INFO o.a.j.s.FileServer: Close: /Users/danieltadesse/kasisto/kai_perf_tools/capi_jmeter/configs/common/token_nbt_file.csv@1723201712
-2021-03-30 09:48:57,310 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2022-09-26 21:00:11,020 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2022-09-26 21:00:11,035 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2022-09-26 21:00:11,036 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2022-09-26 21:00:11,036 INFO o.a.j.JMeter: Loading additional properties from: ../configs/kcb/jpmcqa.properties
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: Version 5.2.1
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: java.version=1.8.0_301
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: os.name=Windows Server 2019
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: os.arch=amd64
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: os.version=10.0
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: file.encoding=Cp1252
+2022-09-26 21:00:11,040 INFO o.a.j.JMeter: java.awt.headless=null
+2022-09-26 21:00:11,041 INFO o.a.j.JMeter: Max memory     =3749183488
+2022-09-26 21:00:11,041 INFO o.a.j.JMeter: Available Processors =4
+2022-09-26 21:00:11,045 INFO o.a.j.JMeter: Default Locale=English (United States)
+2022-09-26 21:00:11,045 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2022-09-26 21:00:11,045 INFO o.a.j.JMeter: JMeterHome=C:\workspace\kasisto\kai_perf_tools\capi_jmeter
+2022-09-26 21:00:11,045 INFO o.a.j.JMeter: user.dir  =C:\workspace\kasisto\kai_perf_tools\capi_jmeter\bin
+2022-09-26 21:00:11,046 INFO o.a.j.JMeter: PWD       =C:\workspace\kasisto\kai_perf_tools\capi_jmeter\bin
+2022-09-26 21:00:11,049 INFO o.a.j.JMeter: IP: 10.10.6.210 Name: EC2AMAZ-7NHI52T FullName: 10.10.6.210
+2022-09-26 21:00:11,215 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2022-09-26 21:00:11,238 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2022-09-26 21:00:11,238 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2022-09-26 21:00:11,302 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2022-09-26 21:00:12,463 INFO o.j.r.JARSourceHTTP: Found cached repo
+2022-09-26 21:00:12,767 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-graphs-additional=2.0, jpgc-functions=2.1, jpgc-casutg=2.9, jpgc-dummy=0.4, jpgc-filterresults=2.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, bzm-random-csv=0.6, jpgc-synthesis=2.2, jpgc-tst=2.5, jpgc-csvars=0.1, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1, jpgc-standard=2.0]
+2022-09-26 21:00:12,769 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-casutg, jpgc-plugins-manager, bzm-random-csv]
+2022-09-26 21:00:13,773 WARN o.a.j.g.ObjectTableModel: Header count=13 but classes count=11
+2022-09-26 21:00:13,774 WARN o.a.j.g.ObjectTableModel: Header count=13 but writeFunctor count=11
+2022-09-26 21:00:14,633 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-09-26 21:00:14,633 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-09-26 21:00:14,634 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-09-26 21:00:14,634 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-09-26 21:00:14,634 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-09-26 21:00:14,634 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-09-26 21:00:14,979 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2022-09-26 21:00:14,980 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file C:\workspace\kasisto\kai_perf_tools\capi_jmeter\bin\proxyserver.jks
+2022-09-26 21:00:15,161 INFO o.a.j.s.FileServer: Default base='C:\workspace\kasisto\kai_perf_tools\capi_jmeter\bin'
+2022-09-26 21:00:15,666 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-09-26 21:00:15,666 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-09-26 21:00:15,667 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-09-26 21:00:15,667 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-09-26 21:00:21,833 INFO o.a.j.g.a.Load: Loading file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\kai.4comp.jmx
+2022-09-26 21:00:21,833 INFO o.a.j.s.FileServer: Set new base='C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb'
+2022-09-26 21:00:21,958 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-09-26 21:00:21,966 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-09-26 21:00:21,968 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2022-09-26 21:00:21,972 INFO o.a.j.s.SaveService: Loading file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\kai.4comp.jmx
+2022-09-26 21:00:22,190 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2022-09-26 21:00:22,323 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2022-09-26 21:00:22,323 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2022-09-26 21:00:23,084 INFO o.a.j.s.FileServer: Set new base='C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb'
+2022-09-26 21:00:30,016 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2022-09-26 21:00:30,017 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2022-09-26 21:00:30,017 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2022-09-26 21:00:30,027 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:30,031 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:30,036 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2022-09-26 21:00:30,318 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Authenticated_questions
+2022-09-26 21:00:30,319 INFO o.a.j.e.StandardJMeterEngine: Starting 250 threads for group Authenticated_questions.
+2022-09-26 21:00:30,320 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2022-09-26 21:00:30,321 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 250
+2022-09-26 21:00:30,424 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2022-09-26 21:00:30,425 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2022-09-26 21:00:34,721 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-250
+2022-09-26 21:00:34,736 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = EC2AMAZ-7NHI52T
+2022-09-26 21:00:34,742 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2022-09-26 21:00:34,783 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2022-09-26 21:00:34,785 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2022-09-26 21:00:34,785 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2022-09-26 21:00:34,788 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2022-09-26 21:00:34,789 INFO o.a.j.u.SSLManager: KeyStore created OK
+2022-09-26 21:00:34,789 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2022-09-26 21:00:36,363 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:36,364 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:37,122 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-249
+2022-09-26 21:00:38,295 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:38,295 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:39,521 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-248
+2022-09-26 21:00:40,900 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:40,900 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:41,922 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-247
+2022-09-26 21:00:43,276 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:43,277 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:44,321 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-246
+2022-09-26 21:00:45,477 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:45,477 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:46,721 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-245
+2022-09-26 21:00:47,676 INFO o.a.j.g.a.Start: Stopping test
+2022-09-26 21:00:47,683 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-92
+2022-09-26 21:00:47,683 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-99
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-82
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-180
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-99
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-160
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-184
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-117
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-99
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-37
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-214
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-194
+2022-09-26 21:00:47,685 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-164
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-193
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-200
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-29
+2022-09-26 21:00:47,685 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-249
+2022-09-26 21:00:47,685 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,684 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-92
+2022-09-26 21:00:47,688 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-92
+2022-09-26 21:00:47,688 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,685 WARN o.a.j.t.JMeterThread: Interrupting: Authenticated_questions 1-249 sampler: ${label}
+2022-09-26 21:00:47,689 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,688 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-164
+2022-09-26 21:00:47,689 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-164
+2022-09-26 21:00:47,689 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,687 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-29
+2022-09-26 21:00:47,690 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,690 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-29
+2022-09-26 21:00:47,690 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,690 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-214
+2022-09-26 21:00:47,691 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-214
+2022-09-26 21:00:47,691 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,690 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-37
+2022-09-26 21:00:47,691 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-37
+2022-09-26 21:00:47,691 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-194
+2022-09-26 21:00:47,694 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,695 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,696 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-194
+2022-09-26 21:00:47,696 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,696 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-180
+2022-09-26 21:00:47,697 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-180
+2022-09-26 21:00:47,697 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,697 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-160
+2022-09-26 21:00:47,697 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-82
+2022-09-26 21:00:47,697 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-184
+2022-09-26 21:00:47,698 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-82
+2022-09-26 21:00:47,698 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-160
+2022-09-26 21:00:47,698 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,699 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-184
+2022-09-26 21:00:47,699 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,699 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,702 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,703 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,703 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,706 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,708 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,708 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,709 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-193
+2022-09-26 21:00:47,709 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-193
+2022-09-26 21:00:47,709 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,710 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,710 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,707 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-200
+2022-09-26 21:00:47,712 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-200
+2022-09-26 21:00:47,712 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,707 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-117
+2022-09-26 21:00:47,716 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-117
+2022-09-26 21:00:47,716 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,717 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,717 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,718 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-145
+2022-09-26 21:00:47,719 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-145
+2022-09-26 21:00:47,719 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-145
+2022-09-26 21:00:47,719 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,719 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-248
+2022-09-26 21:00:47,720 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-249
+2022-09-26 21:00:47,720 WARN o.a.j.t.JMeterThread: Interrupting: Authenticated_questions 1-248 sampler: ${label}
+2022-09-26 21:00:47,720 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,723 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-187
+2022-09-26 21:00:47,723 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-81
+2022-09-26 21:00:47,723 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-18
+2022-09-26 21:00:47,723 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-152
+2022-09-26 21:00:47,723 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-95
+2022-09-26 21:00:47,724 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-22
+2022-09-26 21:00:47,724 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-43
+2022-09-26 21:00:47,724 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-218
+2022-09-26 21:00:47,724 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-103
+2022-09-26 21:00:47,724 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-23
+2022-09-26 21:00:47,724 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-52
+2022-09-26 21:00:47,724 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-16
+2022-09-26 21:00:47,725 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-21
+2022-09-26 21:00:47,725 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-159
+2022-09-26 21:00:47,725 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-121
+2022-09-26 21:00:47,725 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-119
+2022-09-26 21:00:47,725 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-209
+2022-09-26 21:00:47,729 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-81
+2022-09-26 21:00:47,729 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-70
+2022-09-26 21:00:47,729 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-16
+2022-09-26 21:00:47,729 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-16
+2022-09-26 21:00:47,730 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,729 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-18
+2022-09-26 21:00:47,730 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-18
+2022-09-26 21:00:47,730 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,731 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,731 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,731 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-209
+2022-09-26 21:00:47,731 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-209
+2022-09-26 21:00:47,729 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-95
+2022-09-26 21:00:47,733 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-95
+2022-09-26 21:00:47,732 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-121
+2022-09-26 21:00:47,733 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,733 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-121
+2022-09-26 21:00:47,733 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,733 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,728 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-152
+2022-09-26 21:00:47,734 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,728 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-22
+2022-09-26 21:00:47,728 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-43
+2022-09-26 21:00:47,734 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-22
+2022-09-26 21:00:47,735 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,735 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-43
+2022-09-26 21:00:47,728 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-218
+2022-09-26 21:00:47,728 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-103
+2022-09-26 21:00:47,727 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-23
+2022-09-26 21:00:47,735 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-218
+2022-09-26 21:00:47,727 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-52
+2022-09-26 21:00:47,735 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,727 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-248
+2022-09-26 21:00:47,735 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-103
+2022-09-26 21:00:47,738 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,735 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,738 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-52
+2022-09-26 21:00:47,738 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,734 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-152
+2022-09-26 21:00:47,732 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-119
+2022-09-26 21:00:47,738 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,738 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,732 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-21
+2022-09-26 21:00:47,739 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-119
+2022-09-26 21:00:47,739 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,732 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-159
+2022-09-26 21:00:47,732 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-187
+2022-09-26 21:00:47,739 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-159
+2022-09-26 21:00:47,739 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-187
+2022-09-26 21:00:47,739 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,729 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-81
+2022-09-26 21:00:47,740 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,740 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-165
+2022-09-26 21:00:47,739 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-56
+2022-09-26 21:00:47,739 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-21
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-88
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-70
+2022-09-26 21:00:47,740 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-165
+2022-09-26 21:00:47,738 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-70
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-165
+2022-09-26 21:00:47,740 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,740 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-56
+2022-09-26 21:00:47,741 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-56
+2022-09-26 21:00:47,741 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,741 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-88
+2022-09-26 21:00:47,741 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-88
+2022-09-26 21:00:47,738 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,738 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,738 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-23
+2022-09-26 21:00:47,741 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,740 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-42
+2022-09-26 21:00:47,742 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-114
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-120
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-14
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-57
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-13
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-42
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-114
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-42
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-120
+2022-09-26 21:00:47,742 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,743 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-114
+2022-09-26 21:00:47,743 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-57
+2022-09-26 21:00:47,743 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-14
+2022-09-26 21:00:47,743 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-13
+2022-09-26 21:00:47,743 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-14
+2022-09-26 21:00:47,743 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-57
+2022-09-26 21:00:47,743 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,743 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-144
+2022-09-26 21:00:47,743 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-179
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-237
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-242
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-133
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-143
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-238
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-162
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-45
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-134
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-154
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-179
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-30
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-204
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-108
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-237
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-220
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-128
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-172
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-39
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-237
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-179
+2022-09-26 21:00:47,745 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-242
+2022-09-26 21:00:47,746 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-242
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-133
+2022-09-26 21:00:47,746 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,746 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-133
+2022-09-26 21:00:47,746 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,746 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-143
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-162
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-143
+2022-09-26 21:00:47,747 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-162
+2022-09-26 21:00:47,747 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-45
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-134
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-134
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-45
+2022-09-26 21:00:47,748 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,748 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-154
+2022-09-26 21:00:47,748 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-30
+2022-09-26 21:00:47,748 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-154
+2022-09-26 21:00:47,748 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-30
+2022-09-26 21:00:47,748 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,748 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,748 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-204
+2022-09-26 21:00:47,749 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-204
+2022-09-26 21:00:47,749 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-108
+2022-09-26 21:00:47,749 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,749 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-108
+2022-09-26 21:00:47,749 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-220
+2022-09-26 21:00:47,749 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-128
+2022-09-26 21:00:47,749 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-172
+2022-09-26 21:00:47,750 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-128
+2022-09-26 21:00:47,750 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,750 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-172
+2022-09-26 21:00:47,750 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,750 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-39
+2022-09-26 21:00:47,750 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-220
+2022-09-26 21:00:47,742 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-120
+2022-09-26 21:00:47,750 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,750 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,749 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,751 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-39
+2022-09-26 21:00:47,747 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-238
+2022-09-26 21:00:47,751 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,745 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,751 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-238
+2022-09-26 21:00:47,751 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,745 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-211
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-144
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-97
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-243
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-71
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-169
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-96
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-122
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-144
+2022-09-26 21:00:47,752 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,752 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-155
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-4
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-229
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-191
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-115
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-182
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-58
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-116
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-1
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-61
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-87
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-5
+2022-09-26 21:00:47,753 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-142
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-106
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-212
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-199
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-9
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-85
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-188
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-173
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-240
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-27
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-217
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-101
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-78
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-15
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-189
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-171
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-47
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-20
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-137
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-235
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-65
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-94
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-55
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-213
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-3
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-140
+2022-09-26 21:00:47,755 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-31
+2022-09-26 21:00:47,756 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-167
+2022-09-26 21:00:47,756 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-84
+2022-09-26 21:00:47,756 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-206
+2022-09-26 21:00:47,757 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-222
+2022-09-26 21:00:47,757 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-105
+2022-09-26 21:00:47,754 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-211
+2022-09-26 21:00:47,757 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-211
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-8
+2022-09-26 21:00:47,758 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-66
+2022-09-26 21:00:47,744 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-13
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-234
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-148
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-246
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-138
+2022-09-26 21:00:47,758 WARN o.a.j.t.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended.
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-132
+2022-09-26 21:00:47,759 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-246
+2022-09-26 21:00:47,759 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-126
+2022-09-26 21:00:47,759 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-35
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-2
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-225
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-73
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-90
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-107
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-223
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-149
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-233
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-44
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-216
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-202
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-158
+2022-09-26 21:00:47,758 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-97
+2022-09-26 21:00:47,761 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-97
+2022-09-26 21:00:47,760 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-205
+2022-09-26 21:00:47,761 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-113
+2022-09-26 21:00:47,761 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-175
+2022-09-26 21:00:47,761 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-228
+2022-09-26 21:00:47,761 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-98
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-76
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-181
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-25
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-183
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-46
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-125
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-59
+2022-09-26 21:00:47,762 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-141
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-243
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-96
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-243
+2022-09-26 21:00:47,763 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,763 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-122
+2022-09-26 21:00:47,764 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-122
+2022-09-26 21:00:47,764 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,764 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-155
+2022-09-26 21:00:47,765 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-155
+2022-09-26 21:00:47,765 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,765 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-4
+2022-09-26 21:00:47,766 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-4
+2022-09-26 21:00:47,766 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,766 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-229
+2022-09-26 21:00:47,767 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-229
+2022-09-26 21:00:47,767 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,768 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-191
+2022-09-26 21:00:47,769 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-191
+2022-09-26 21:00:47,769 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,769 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-115
+2022-09-26 21:00:47,769 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-182
+2022-09-26 21:00:47,769 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-182
+2022-09-26 21:00:47,770 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,770 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-58
+2022-09-26 21:00:47,770 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-115
+2022-09-26 21:00:47,770 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,770 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-58
+2022-09-26 21:00:47,771 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,771 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-1
+2022-09-26 21:00:47,771 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-116
+2022-09-26 21:00:47,771 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-116
+2022-09-26 21:00:47,772 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-61
+2022-09-26 21:00:47,772 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,772 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-61
+2022-09-26 21:00:47,772 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,773 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-5
+2022-09-26 21:00:47,773 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-87
+2022-09-26 21:00:47,773 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-5
+2022-09-26 21:00:47,773 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,773 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-87
+2022-09-26 21:00:47,773 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,774 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-142
+2022-09-26 21:00:47,774 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-106
+2022-09-26 21:00:47,774 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-142
+2022-09-26 21:00:47,774 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,775 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-212
+2022-09-26 21:00:47,774 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-106
+2022-09-26 21:00:47,775 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,775 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-199
+2022-09-26 21:00:47,776 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-199
+2022-09-26 21:00:47,776 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-85
+2022-09-26 21:00:47,776 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,775 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-9
+2022-09-26 21:00:47,776 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-188
+2022-09-26 21:00:47,776 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-173
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-101
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-78
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-171
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-47
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-171
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-47
+2022-09-26 21:00:47,778 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,778 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,778 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-78
+2022-09-26 21:00:47,778 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,778 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-137
+2022-09-26 21:00:47,778 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-20
+2022-09-26 21:00:47,778 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-20
+2022-09-26 21:00:47,776 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-217
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-27
+2022-09-26 21:00:47,782 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-27
+2022-09-26 21:00:47,782 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,782 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,758 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,782 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-188
+2022-09-26 21:00:47,782 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-217
+2022-09-26 21:00:47,782 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,783 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-94
+2022-09-26 21:00:47,783 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-240
+2022-09-26 21:00:47,783 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-240
+2022-09-26 21:00:47,783 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-94
+2022-09-26 21:00:47,783 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,783 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-9
+2022-09-26 21:00:47,783 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-8
+2022-09-26 21:00:47,784 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,784 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-8
+2022-09-26 21:00:47,784 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-101
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-15
+2022-09-26 21:00:47,784 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-167
+2022-09-26 21:00:47,784 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-167
+2022-09-26 21:00:47,785 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-15
+2022-09-26 21:00:47,785 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-46
+2022-09-26 21:00:47,787 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,787 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-46
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-66
+2022-09-26 21:00:47,787 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,787 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-66
+2022-09-26 21:00:47,787 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-107
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-126
+2022-09-26 21:00:47,788 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-107
+2022-09-26 21:00:47,788 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,788 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-126
+2022-09-26 21:00:47,788 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-84
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-140
+2022-09-26 21:00:47,789 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-140
+2022-09-26 21:00:47,789 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-84
+2022-09-26 21:00:47,789 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-96
+2022-09-26 21:00:47,789 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,789 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-125
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-59
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-183
+2022-09-26 21:00:47,789 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-59
+2022-09-26 21:00:47,789 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,790 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-183
+2022-09-26 21:00:47,790 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-169
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-25
+2022-09-26 21:00:47,790 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-169
+2022-09-26 21:00:47,790 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,791 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-25
+2022-09-26 21:00:47,791 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-181
+2022-09-26 21:00:47,792 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-181
+2022-09-26 21:00:47,792 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,781 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-76
+2022-09-26 21:00:47,793 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-76
+2022-09-26 21:00:47,793 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-113
+2022-09-26 21:00:47,793 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-113
+2022-09-26 21:00:47,793 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-98
+2022-09-26 21:00:47,794 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-98
+2022-09-26 21:00:47,794 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-175
+2022-09-26 21:00:47,795 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-175
+2022-09-26 21:00:47,795 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-228
+2022-09-26 21:00:47,796 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-228
+2022-09-26 21:00:47,796 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-205
+2022-09-26 21:00:47,796 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-205
+2022-09-26 21:00:47,797 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-158
+2022-09-26 21:00:47,797 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-158
+2022-09-26 21:00:47,797 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-202
+2022-09-26 21:00:47,798 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-202
+2022-09-26 21:00:47,798 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-233
+2022-09-26 21:00:47,799 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-233
+2022-09-26 21:00:47,799 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-216
+2022-09-26 21:00:47,800 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-216
+2022-09-26 21:00:47,800 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-44
+2022-09-26 21:00:47,801 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-44
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-149
+2022-09-26 21:00:47,801 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,801 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-149
+2022-09-26 21:00:47,801 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-223
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-90
+2022-09-26 21:00:47,801 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-223
+2022-09-26 21:00:47,801 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-225
+2022-09-26 21:00:47,801 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-90
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-73
+2022-09-26 21:00:47,802 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,802 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-225
+2022-09-26 21:00:47,802 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-73
+2022-09-26 21:00:47,780 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-2
+2022-09-26 21:00:47,802 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-148
+2022-09-26 21:00:47,802 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-2
+2022-09-26 21:00:47,802 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-148
+2022-09-26 21:00:47,802 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-35
+2022-09-26 21:00:47,802 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-35
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-138
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-132
+2022-09-26 21:00:47,803 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-132
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-234
+2022-09-26 21:00:47,803 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,803 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-234
+2022-09-26 21:00:47,803 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-105
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-206
+2022-09-26 21:00:47,803 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-105
+2022-09-26 21:00:47,803 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,803 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-206
+2022-09-26 21:00:47,804 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-222
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-31
+2022-09-26 21:00:47,804 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-31
+2022-09-26 21:00:47,804 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-222
+2022-09-26 21:00:47,804 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-3
+2022-09-26 21:00:47,804 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,804 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-3
+2022-09-26 21:00:47,805 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-213
+2022-09-26 21:00:47,779 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-55
+2022-09-26 21:00:47,805 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-55
+2022-09-26 21:00:47,805 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-213
+2022-09-26 21:00:47,778 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-65
+2022-09-26 21:00:47,805 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,805 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,778 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-137
+2022-09-26 21:00:47,778 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-235
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-189
+2022-09-26 21:00:47,806 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-235
+2022-09-26 21:00:47,806 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-189
+2022-09-26 21:00:47,806 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,806 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,777 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-173
+2022-09-26 21:00:47,776 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-85
+2022-09-26 21:00:47,775 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-212
+2022-09-26 21:00:47,806 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,771 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-1
+2022-09-26 21:00:47,762 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-71
+2022-09-26 21:00:47,806 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,806 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,806 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-71
+2022-09-26 21:00:47,807 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,806 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,806 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,805 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-65
+2022-09-26 21:00:47,803 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-138
+2022-09-26 21:00:47,803 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,807 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,802 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,807 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,807 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,807 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-125
+2022-09-26 21:00:47,807 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-141
+2022-09-26 21:00:47,806 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-60
+2022-09-26 21:00:47,807 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-141
+2022-09-26 21:00:47,808 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-17
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-60
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-226
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-60
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-33
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-50
+2022-09-26 21:00:47,808 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-17
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-226
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-17
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-226
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-33
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-50
+2022-09-26 21:00:47,809 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-50
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-33
+2022-09-26 21:00:47,808 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-100
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-51
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-219
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-6
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-195
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-151
+2022-09-26 21:00:47,809 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,809 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-100
+2022-09-26 21:00:47,810 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-51
+2022-09-26 21:00:47,810 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-51
+2022-09-26 21:00:47,810 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,810 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-195
+2022-09-26 21:00:47,811 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-195
+2022-09-26 21:00:47,811 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,811 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-151
+2022-09-26 21:00:47,809 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-11
+2022-09-26 21:00:47,809 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,811 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-151
+2022-09-26 21:00:47,811 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,812 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-74
+2022-09-26 21:00:47,810 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-6
+2022-09-26 21:00:47,812 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-102
+2022-09-26 21:00:47,812 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-190
+2022-09-26 21:00:47,812 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-80
+2022-09-26 21:00:47,812 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-6
+2022-09-26 21:00:47,812 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-250
+2022-09-26 21:00:47,812 WARN o.a.j.t.JMeterThread: Interrupting: Authenticated_questions 1-250 sampler: ${label}
+2022-09-26 21:00:47,812 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-11
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,810 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-100
+2022-09-26 21:00:47,816 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-74
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-11
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,820 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-74
+2022-09-26 21:00:47,810 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-219
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,820 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-219
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,819 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,816 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,815 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-80
+2022-09-26 21:00:47,815 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,812 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,821 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-80
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,820 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,821 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,815 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-102
+2022-09-26 21:00:47,823 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,823 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,823 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,823 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,823 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,823 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,825 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,826 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,826 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,826 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-190
+2022-09-26 21:00:47,826 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-190
+2022-09-26 21:00:47,826 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,827 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,828 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,829 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,829 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,829 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,829 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,831 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,832 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,832 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,832 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-102
+2022-09-26 21:00:47,832 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,832 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-93
+2022-09-26 21:00:47,832 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-198
+2022-09-26 21:00:47,832 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-89
+2022-09-26 21:00:47,832 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-178
+2022-09-26 21:00:47,833 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-185
+2022-09-26 21:00:47,833 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-123
+2022-09-26 21:00:47,833 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-231
+2022-09-26 21:00:47,833 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-36
+2022-09-26 21:00:47,834 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,834 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,834 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,835 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,835 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,835 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,836 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-110
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-38
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-63
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-54
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-231
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-32
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-245
+2022-09-26 21:00:47,837 WARN o.a.j.t.JMeterThread: Interrupting: Authenticated_questions 1-245 sampler: AUTHENTICATE
+2022-09-26 21:00:47,838 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-36
+2022-09-26 21:00:47,838 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-36
+2022-09-26 21:00:47,838 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-185
+2022-09-26 21:00:47,838 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-185
+2022-09-26 21:00:47,838 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-110
+2022-09-26 21:00:47,839 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-110
+2022-09-26 21:00:47,838 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-38
+2022-09-26 21:00:47,839 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-38
+2022-09-26 21:00:47,839 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-63
+2022-09-26 21:00:47,839 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-63
+2022-09-26 21:00:47,839 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-32
+2022-09-26 21:00:47,840 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-32
+2022-09-26 21:00:47,839 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-54
+2022-09-26 21:00:47,840 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-54
+2022-09-26 21:00:47,840 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-123
+2022-09-26 21:00:47,841 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-178
+2022-09-26 21:00:47,841 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-123
+2022-09-26 21:00:47,841 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-178
+2022-09-26 21:00:47,837 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-231
+2022-09-26 21:00:47,841 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-89
+2022-09-26 21:00:47,841 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-89
+2022-09-26 21:00:47,842 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,842 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-198
+2022-09-26 21:00:47,842 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-93
+2022-09-26 21:00:47,842 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-198
+2022-09-26 21:00:47,842 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-93
+2022-09-26 21:00:47,843 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,843 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,843 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,844 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,845 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,846 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-250
+2022-09-26 21:00:47,847 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,852 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,852 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,852 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,848 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,847 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,859 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,860 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,861 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,863 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,865 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,866 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,866 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,867 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,867 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,868 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,868 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,869 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,869 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,870 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-245
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,848 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,851 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,850 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,848 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,850 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,850 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,850 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,848 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,870 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-131
+2022-09-26 21:00:47,865 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,865 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-153
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-64
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-79
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-208
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-24
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-118
+2022-09-26 21:00:47,864 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-161
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-91
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-109
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-174
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-247
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-153
+2022-09-26 21:00:47,884 WARN o.a.j.t.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended.
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-153
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-247
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-136
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-147
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-28
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-104
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-7
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-210
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-135
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-48
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-170
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-67
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-166
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-186
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-72
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-41
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-207
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-10
+2022-09-26 21:00:47,885 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-230
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-26
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-83
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-19
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-168
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-146
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-40
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-64
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-127
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-150
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-224
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-79
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-208
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-208
+2022-09-26 21:00:47,887 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,864 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-118
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-161
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-161
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-118
+2022-09-26 21:00:47,887 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-91
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-109
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-109
+2022-09-26 21:00:47,887 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-91
+2022-09-26 21:00:47,887 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,888 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-174
+2022-09-26 21:00:47,888 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,888 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-174
+2022-09-26 21:00:47,888 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,888 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-147
+2022-09-26 21:00:47,888 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-136
+2022-09-26 21:00:47,889 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-136
+2022-09-26 21:00:47,889 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-28
+2022-09-26 21:00:47,889 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,889 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-104
+2022-09-26 21:00:47,890 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-104
+2022-09-26 21:00:47,890 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,890 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-7
+2022-09-26 21:00:47,890 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-210
+2022-09-26 21:00:47,890 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-135
+2022-09-26 21:00:47,890 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-135
+2022-09-26 21:00:47,890 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,891 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-48
+2022-09-26 21:00:47,891 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-170
+2022-09-26 21:00:47,891 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-170
+2022-09-26 21:00:47,891 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-48
+2022-09-26 21:00:47,891 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,892 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,892 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-67
+2022-09-26 21:00:47,892 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-166
+2022-09-26 21:00:47,892 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-67
+2022-09-26 21:00:47,892 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-166
+2022-09-26 21:00:47,892 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,892 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,893 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-186
+2022-09-26 21:00:47,893 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-72
+2022-09-26 21:00:47,893 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-72
+2022-09-26 21:00:47,893 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,893 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-186
+2022-09-26 21:00:47,893 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,893 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-41
+2022-09-26 21:00:47,893 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-207
+2022-09-26 21:00:47,894 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-41
+2022-09-26 21:00:47,894 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,894 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-207
+2022-09-26 21:00:47,894 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-10
+2022-09-26 21:00:47,894 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-10
+2022-09-26 21:00:47,894 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,895 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-230
+2022-09-26 21:00:47,895 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-83
+2022-09-26 21:00:47,895 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-230
+2022-09-26 21:00:47,895 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,895 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-168
+2022-09-26 21:00:47,896 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-168
+2022-09-26 21:00:47,896 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,896 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-146
+2022-09-26 21:00:47,896 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-146
+2022-09-26 21:00:47,896 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,896 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-40
+2022-09-26 21:00:47,897 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-127
+2022-09-26 21:00:47,897 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-40
+2022-09-26 21:00:47,897 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,897 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-127
+2022-09-26 21:00:47,897 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-150
+2022-09-26 21:00:47,897 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,897 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-150
+2022-09-26 21:00:47,898 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,864 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,898 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,864 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,858 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,906 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-28
+2022-09-26 21:00:47,906 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,857 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,857 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,857 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,857 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,856 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,856 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,855 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,855 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,855 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,898 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-224
+2022-09-26 21:00:47,908 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-224
+2022-09-26 21:00:47,908 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,895 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-19
+2022-09-26 21:00:47,908 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-19
+2022-09-26 21:00:47,908 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,895 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-83
+2022-09-26 21:00:47,909 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,895 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-26
+2022-09-26 21:00:47,909 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-26
+2022-09-26 21:00:47,909 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,894 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,890 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-210
+2022-09-26 21:00:47,909 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-7
+2022-09-26 21:00:47,910 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,909 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,889 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-147
+2022-09-26 21:00:47,910 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-24
+2022-09-26 21:00:47,911 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-24
+2022-09-26 21:00:47,911 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-79
+2022-09-26 21:00:47,911 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,886 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-124
+2022-09-26 21:00:47,911 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-49
+2022-09-26 21:00:47,911 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-86
+2022-09-26 21:00:47,911 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-196
+2022-09-26 21:00:47,911 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-77
+2022-09-26 21:00:47,911 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-244
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-139
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-75
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-12
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-68
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-130
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-69
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-201
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-197
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-176
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-177
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-156
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-232
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-163
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-192
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-203
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-215
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-111
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-157
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-239
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-129
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-236
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-241
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-53
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-112
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-34
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-227
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-221
+2022-09-26 21:00:47,912 INFO o.a.j.t.JMeterThread: Stopping: Authenticated_questions 1-62
+2022-09-26 21:00:47,913 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-64
+2022-09-26 21:00:47,913 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,913 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-124
+2022-09-26 21:00:47,914 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-124
+2022-09-26 21:00:47,914 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,913 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-49
+2022-09-26 21:00:47,914 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-49
+2022-09-26 21:00:47,915 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,915 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-86
+2022-09-26 21:00:47,915 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-196
+2022-09-26 21:00:47,916 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-196
+2022-09-26 21:00:47,916 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,916 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-77
+2022-09-26 21:00:47,917 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-77
+2022-09-26 21:00:47,917 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,917 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-244
+2022-09-26 21:00:47,918 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-244
+2022-09-26 21:00:47,918 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,919 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-139
+2022-09-26 21:00:47,919 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-139
+2022-09-26 21:00:47,919 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,920 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-75
+2022-09-26 21:00:47,920 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-75
+2022-09-26 21:00:47,920 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,921 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-12
+2022-09-26 21:00:47,921 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-12
+2022-09-26 21:00:47,921 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,922 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-68
+2022-09-26 21:00:47,922 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-68
+2022-09-26 21:00:47,922 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,923 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-130
+2022-09-26 21:00:47,923 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-201
+2022-09-26 21:00:47,923 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-201
+2022-09-26 21:00:47,923 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-130
+2022-09-26 21:00:47,923 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,923 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,923 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-197
+2022-09-26 21:00:47,924 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-176
+2022-09-26 21:00:47,924 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-197
+2022-09-26 21:00:47,924 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,924 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-176
+2022-09-26 21:00:47,924 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,924 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-177
+2022-09-26 21:00:47,924 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-177
+2022-09-26 21:00:47,925 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,925 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-156
+2022-09-26 21:00:47,925 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-232
+2022-09-26 21:00:47,925 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-156
+2022-09-26 21:00:47,925 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,925 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-232
+2022-09-26 21:00:47,926 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,925 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-163
+2022-09-26 21:00:47,926 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-163
+2022-09-26 21:00:47,926 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,926 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-192
+2022-09-26 21:00:47,926 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-192
+2022-09-26 21:00:47,926 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,926 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-203
+2022-09-26 21:00:47,927 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-203
+2022-09-26 21:00:47,927 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,927 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-215
+2022-09-26 21:00:47,927 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-215
+2022-09-26 21:00:47,927 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,927 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-111
+2022-09-26 21:00:47,927 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-111
+2022-09-26 21:00:47,928 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-157
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-239
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-239
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-157
+2022-09-26 21:00:47,928 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,928 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-129
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-129
+2022-09-26 21:00:47,928 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-236
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-241
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-241
+2022-09-26 21:00:47,928 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-236
+2022-09-26 21:00:47,929 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,929 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,929 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-53
+2022-09-26 21:00:47,929 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-112
+2022-09-26 21:00:47,929 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-53
+2022-09-26 21:00:47,929 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,929 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-112
+2022-09-26 21:00:47,930 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,930 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-227
+2022-09-26 21:00:47,930 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-221
+2022-09-26 21:00:47,930 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-221
+2022-09-26 21:00:47,930 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-227
+2022-09-26 21:00:47,930 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,930 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,930 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-62
+2022-09-26 21:00:47,885 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,931 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-62
+2022-09-26 21:00:47,931 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,931 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-86
+2022-09-26 21:00:47,931 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,884 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-131
+2022-09-26 21:00:47,929 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-34
+2022-09-26 21:00:47,931 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-131
+2022-09-26 21:00:47,932 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,932 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-34
+2022-09-26 21:00:47,932 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,923 INFO o.a.j.t.JMeterThread: Thread started: Authenticated_questions 1-69
+2022-09-26 21:00:47,932 INFO o.a.j.t.JMeterThread: Thread finished: Authenticated_questions 1-69
+2022-09-26 21:00:47,932 INFO c.b.c.RandomCSVReader: Start reading the file: C:\workspace\kasisto\kai_perf_tools\capi_jmeter\configs\kcb\Authenticated_questions.faqonly.csv
+2022-09-26 21:00:47,943 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,943 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,943 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,944 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,944 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,944 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,944 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,945 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,946 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,946 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,946 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,949 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,949 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,950 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,950 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,951 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,952 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,952 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,953 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,953 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,954 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,955 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,955 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,956 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,956 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,957 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,958 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,958 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,959 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,959 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,960 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,961 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,961 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,962 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,962 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,962 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,964 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,964 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,964 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,964 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,964 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,964 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,964 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,965 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,965 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,968 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,969 INFO c.b.c.RandomCSVReader: Reading finished. Found 8 records in your csv file
+2022-09-26 21:00:47,995 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2022-09-26 21:00:47,997 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

@@ -1,0 +1,3 @@
+ask_kai,intent_name,label
+What is my open ledger balance,kbb_cashposition_summary,kbb_cashposition_summary
+Can you tell me if a wire for acct# 6814 to an amount between 750 and 850 went through on 9/8?,kbb_transactioninquiry,kbb_transactioninquiry
