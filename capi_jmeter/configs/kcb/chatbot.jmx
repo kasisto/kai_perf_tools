@@ -1,0 +1,2508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Chat bot new" enabled="true"/>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_T_P" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_userIdMask" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;user_id&quot;:&quot;${UserName}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/virtualassistant/dataproducer/userIdMask</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_event_PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+def responseHeader = prev.getResponseHeaders();
+
+response = prev.getResponseDataAsString();
+def slurper = new JsonSlurper();
+def responseJson = slurper.parseText(response);
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful())
+{
+	if(responseData.contains(&quot;session_id&quot;))
+	{
+		def session_id = responseData =~ /&quot;session_id&quot;:&quot;(.*?)&quot;/;
+		if (session_id.size() &gt; 0)
+		{
+			vars.put(&quot;session_id&quot;, &quot;&quot; + session_id[0][1]);
+		}
+
+		vars.put(&quot;ContinueChat&quot;,&quot;true&quot;);
+		vars.put(&quot;ChatQuestionIterationCount&quot;,&quot;0&quot;);
+		vars.put(&quot;QuickReplyCount&quot;,&quot;0&quot;);
+	}
+
+	if(responseData.contains(&quot;enc_user_id&quot;))
+          {
+		def enc_user_id = responseJson.enc_user_id;
+		def userid = responseJson.user_id;
+
+		log.info(&quot;userid :&quot;+userid);
+		vars.put(&quot;c_user_id&quot;, userid);	
+		
+		vars.put(&quot;enc_user_id&quot;,enc_user_id);
+            
+		  log.info(&quot;==================== Can you tell me the User ID &quot; + vars.get(&quot;enc_user_id&quot;));
+
+          }
+//
+//	if (responseData.contains(&quot;enc_user_id&quot;))
+//
+//	def enc_user_id = responseData =~ /&quot;enc_user_id&quot;:&quot;(.*?)&quot;/;
+//
+//			vars.put(&quot;enc_user_id&quot;, + enc_user_id[0][1]);
+//			//vars.put(&quot;enc_user_id&quot;, + enc_user_id);
+//
+//			log.info(&quot;################### accessId&quot;, + vars.get(&quot;enc_user_id&quot;));
+		
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">4000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_retrieveUserLoginDataFromCache" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/angcore/retrieveUserLoginDataFromCache</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_event_PostProcessor" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+def responseHeader = prev.getResponseHeaders();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(responseData.contains(&quot;session_id&quot;)){
+		def session_id = responseData =~ /&quot;session_id&quot;:&quot;(.*?)&quot;/;
+		if (session_id.size() &gt; 0)
+		{
+			vars.put(&quot;session_id&quot;, &quot;&quot; + session_id[0][1]);
+		}
+
+		vars.put(&quot;ContinueChat&quot;,&quot;true&quot;);
+		vars.put(&quot;ChatQuestionIterationCount&quot;,&quot;0&quot;);
+		vars.put(&quot;QuickReplyCount&quot;,&quot;0&quot;);
+
+	}
+
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">4000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_va" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;accessId&quot;:&quot;${enc_user_id}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/virtualassistant/dataproducer/explore/va</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_event_PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+def responseHeader = prev.getResponseHeaders();
+vars.put(&quot;saUser&quot;,&quot;false&quot;);
+vars.put(&quot;ISsaUser&quot;,&quot;NONSA&quot;);
+
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(responseData.contains(&quot;session_id&quot;)){
+		def session_id = responseData =~ /&quot;session_id&quot;:&quot;(.*?)&quot;/;
+		if (session_id.size() &gt; 0)
+		{
+			vars.put(&quot;session_id&quot;, &quot;&quot; + session_id[0][1]);
+		}
+
+		vars.put(&quot;ContinueChat&quot;,&quot;true&quot;);
+		vars.put(&quot;ChatQuestionIterationCount&quot;,&quot;0&quot;);
+		vars.put(&quot;QuickReplyCount&quot;,&quot;0&quot;);
+
+	}
+
+	if(responseData.contains(&quot;trx_entitle\&quot;:true&quot;)){
+		vars.put(&quot;saUser&quot;,&quot;true&quot;);
+		vars.put(&quot;ISsaUser&quot;,&quot;SA&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">4000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_event" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:null,&quot;name&quot;:&quot;&quot;},&quot;platform&quot;:{},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;ENTER_COOKIE&quot;,&quot;payload&quot;:{&quot;cookie_name&quot;:&quot;${CONFIG.capi_auth_cookie_name}&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/virtualassistant/api/event</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_event_PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+def responseHeader = prev.getResponseHeaders();
+
+vars.put(&quot;ContinueChat&quot;,&quot;false&quot;);
+vars.put(&quot;ChatQuestionIterationCount&quot;,&quot;0&quot;);
+vars.put(&quot;QuickReplyCount&quot;,&quot;0&quot;);
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful())
+{
+	if(responseData.contains(&quot;session_id&quot;))
+	{
+		def session_id = responseData =~ /&quot;session_id&quot;:&quot;(.*?)&quot;/;
+		if (session_id.size() &gt; 0)
+		{
+			vars.put(&quot;session_id&quot;, &quot;&quot; + session_id[0][1]);
+			vars.put(&quot;ContinueChat&quot;,&quot;true&quot;);
+			vars.put(&quot;ChatQuestionIterationCount&quot;,&quot;0&quot;);
+			vars.put(&quot;QuickReplyCount&quot;,&quot;0&quot;);
+		}
+		else
+		{
+			setExecutionFailedOrBlocked(prev, vars, &quot;No Session Id Available&quot;, &quot;FAILED&quot;);
+		}
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">4000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+              <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_event" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:null,&quot;name&quot;:&quot;&quot;},&quot;platform&quot;:{},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;ENTER_COOKIE&quot;,&quot;payload&quot;:{&quot;cookie_name&quot;:&quot;cstoken&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/virtualassistant/api/event</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_LoadVirtualAssistant_S_P_event_PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+def responseHeader = prev.getResponseHeaders();
+
+vars.put(&quot;ContinueChat&quot;,&quot;false&quot;);
+vars.put(&quot;ChatQuestionIterationCount&quot;,&quot;0&quot;);
+vars.put(&quot;QuickReplyCount&quot;,&quot;0&quot;);
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful())
+{
+	if(responseData.contains(&quot;session_id&quot;))
+	{
+		def session_id = responseData =~ /&quot;session_id&quot;:&quot;(.*?)&quot;/;
+		if (session_id.size() &gt; 0)
+		{
+			vars.put(&quot;session_id&quot;, &quot;&quot; + session_id[0][1]);
+			vars.put(&quot;ContinueChat&quot;,&quot;true&quot;);
+			vars.put(&quot;ChatQuestionIterationCount&quot;,&quot;0&quot;);
+			vars.put(&quot;QuickReplyCount&quot;,&quot;0&quot;);
+		}
+		else
+		{
+			setExecutionFailedOrBlocked(prev, vars, &quot;No Session Id Available&quot;, &quot;FAILED&quot;);
+		}
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">4000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+              <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If isPreviousActionSuccess : Send Message" enabled="true">
+          <stringProp name="IfController.condition">${isPreviousActionSuccess}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Transaction Services controller" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${ReferenceId}&quot; !== &quot;&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+          </IfController>
+          <hashTree>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_T_P" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">false</boolProp>
+            </TransactionController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_S_P_transactionStatusMessage" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;},&quot;platform&quot;:{&quot;user_id&quot;:&quot;${c_user_id}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;transaction status&quot;}}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                    </elementProp>
+                    <elementProp name="Origin" elementType="Header">
+                      <stringProp name="Header.name">Origin</stringProp>
+                      <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">*/*</stringProp>
+                    </elementProp>
+                    <elementProp name="X-Requested-With" elementType="Header">
+                      <stringProp name="Header.name">X-Requested-With</stringProp>
+                      <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Type" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesRequest_S_P_message_PostProcessor" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  <stringProp name="RandomTimer.range">4000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                  <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_S_P_TransactionServicesReferenceIdmessage" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;},&quot;platform&quot;:{&quot;user_id&quot;:&quot;${c_user_id}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;Ref ID ${ReferenceId}&quot;}}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                    </elementProp>
+                    <elementProp name="Origin" elementType="Header">
+                      <stringProp name="Header.name">Origin</stringProp>
+                      <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">*/*</stringProp>
+                    </elementProp>
+                    <elementProp name="X-Requested-With" elementType="Header">
+                      <stringProp name="Header.name">X-Requested-With</stringProp>
+                      <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Type" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_S_P_message_PostProcessor" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  <stringProp name="RandomTimer.range">4000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                  <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>50.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_RunBankStatement_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_Statement_S_P_RunBankStatement" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;},&quot;platform&quot;:{&quot;user_id&quot;:&quot;${c_user_id}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;run bank statement&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_Statement_S_P_RunBankStatement_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+	else if(!responseData.contains(&quot;How to View &amp; Download a Bank Statement:&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Didn&apos;t get proper response&quot;, &quot;BLOCKED&quot;);
+	}
+	
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_RunBillingStatement_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_Statement_S_P_RunBilling" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;},&quot;platform&quot;:{&quot;user_id&quot;:&quot;${c_user_id}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;run billing&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_Statement_S_P_RunBilling_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+	else if(!responseData.contains(&quot;How to View &amp; Download a Bank Statement:&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Didn&apos;t get proper response&quot;, &quot;BLOCKED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>25.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesAmountAndDate_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesAmountAndDate_S_P_transactionStatusMessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;,&quot;meta_fields&quot;:[{&quot;key&quot;:&quot;hasFlag&quot;,&quot;value&quot;:&quot;ITC&quot;},{&quot;key&quot;:&quot;global_search&quot;,&quot;value&quot;:&quot;${__P(IsGlobalSearch)}&quot;},{&quot;key&quot;:&quot;admin&quot;,&quot;value&quot;:&quot;${saUser}&quot;}]},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;transaction status&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesRequest_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesAmountAndDate_S_P_TransactionServicesAmountAndDatemessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;,&quot;meta_fields&quot;:[{&quot;key&quot;:&quot;hasFlag&quot;,&quot;value&quot;:&quot;ITC&quot;},{&quot;key&quot;:&quot;global_search&quot;,&quot;value&quot;:&quot;${__P(IsGlobalSearch)}&quot;},{&quot;key&quot;:&quot;admin&quot;,&quot;value&quot;:&quot;${saUser}&quot;}]},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;amount ${AmountRange} on ${FromDate}&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>25.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesAccountAndDate_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesAccountAndDate_S_P_transactionStatusMessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;,&quot;meta_fields&quot;:[{&quot;key&quot;:&quot;hasFlag&quot;,&quot;value&quot;:&quot;ITC&quot;},{&quot;key&quot;:&quot;global_search&quot;,&quot;value&quot;:&quot;${__P(IsGlobalSearch)}&quot;},{&quot;key&quot;:&quot;admin&quot;,&quot;value&quot;:&quot;${saUser}&quot;}]},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;transaction status&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesRequest_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesAccountAndDate_S_P_TransactionServicesAccountAndDatemessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;trans for acct ${accountNo} date ${FromDate}&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>25.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesDate_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesDate_S_P_transactionStatusMessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;,&quot;meta_fields&quot;:[{&quot;key&quot;:&quot;hasFlag&quot;,&quot;value&quot;:&quot;ITC&quot;},{&quot;key&quot;:&quot;global_search&quot;,&quot;value&quot;:&quot;${__P(IsGlobalSearch)}&quot;},{&quot;key&quot;:&quot;admin&quot;,&quot;value&quot;:&quot;${saUser}&quot;}]},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;transaction status&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesRequest_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesDate_S_P_TransactionServicesDatemessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;,&quot;meta_fields&quot;:[{&quot;key&quot;:&quot;hasFlag&quot;,&quot;value&quot;:&quot;ITC&quot;},{&quot;key&quot;:&quot;global_search&quot;,&quot;value&quot;:&quot;${__P(IsGlobalSearch)}&quot;},{&quot;key&quot;:&quot;admin&quot;,&quot;value&quot;:&quot;${saUser}&quot;}]},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;wire status date ${FromDate}&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>25.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesForm_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesForm_S_P_transactionStatusMessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;,&quot;meta_fields&quot;:[{&quot;key&quot;:&quot;hasFlag&quot;,&quot;value&quot;:&quot;ITC&quot;},{&quot;key&quot;:&quot;global_search&quot;,&quot;value&quot;:&quot;${__P(IsGlobalSearch)}&quot;},{&quot;key&quot;:&quot;admin&quot;,&quot;value&quot;:&quot;${saUser}&quot;}]},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;transaction status&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesRequest_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesForm_S_P_TransactionServicesFormmessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;trans for acct ${accountNo} date ${FromDate} amount ${AmountRange}&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_TransactionServicesReferenceId_S_P_message_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>2.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_CashpositionCalls_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_CashpositionCalls_S_P_CashpositionMessage" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;,&quot;meta_fields&quot;:[{&quot;key&quot;:&quot;hasFlag&quot;,&quot;value&quot;:&quot;ITC&quot;},{&quot;key&quot;:&quot;global_search&quot;,&quot;value&quot;:&quot;${__P(IsGlobalSearch)}&quot;},{&quot;key&quot;:&quot;admin&quot;,&quot;value&quot;:&quot;${saUser}&quot;}]},&quot;platform&quot;:{&quot;user_id&quot;:&quot;INTERNAL_USER_${UserName}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;TEXT&quot;,&quot;payload&quot;:{&quot;text&quot;:&quot;${cashpositionQuestion}&quot;}}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_CashpositionCalls_S_P_CashpositionMessage_PostProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_CashpositionCalls_S_P_CashpositionMessage_PreProcessor" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">String[] a= [&quot;Current balance in USD&quot; , &quot;Prior Day balance&quot; , &quot;Current balance for account &quot; + vars.get(&quot;accountNo&quot;)];
+Random rnd= new Random();
+
+
+vars.put(&quot;cashpositionQuestion&quot; , a[rnd.nextInt(a.length)]);
+
+log.info(&quot;cashpositionQuestion &quot; + vars.get(&quot;cashpositionQuestion&quot;));</stringProp>
+                  </JSR223PreProcessor>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+            <stringProp name="WhileController.condition">${ContinueChat}</stringProp>
+          </WhileController>
+          <hashTree>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CS Questions Data File" enabled="true">
+              <stringProp name="filename">VirtualAssistantChatQuestions.csv</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames">ChatQuestion</stringProp>
+              <stringProp name="delimiter">\t</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+            </CSVDataSet>
+            <hashTree/>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_FAQs_T_P" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">false</boolProp>
+            </TransactionController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_FAQs_S_P_message" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;context&quot;:{&quot;user&quot;:{&quot;session_id&quot;:&quot;${session_id}&quot;},&quot;platform&quot;:{&quot;user_id&quot;:&quot;${c_user_id}&quot;,&quot;name&quot;:&quot;&quot;},&quot;device&quot;:{},&quot;api_version&quot;:&quot;3.2&quot;},&quot;type&quot;:&quot;${ChatMessageType}&quot;,&quot;payload&quot;:{&quot;${ChatMessagePayloadType}&quot;:&quot;${ChatMessage}&quot;}}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/virtualassistant/api/user_message</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                    </elementProp>
+                    <elementProp name="Origin" elementType="Header">
+                      <stringProp name="Header.name">Origin</stringProp>
+                      <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">*/*</stringProp>
+                    </elementProp>
+                    <elementProp name="X-Requested-With" elementType="Header">
+                      <stringProp name="Header.name">X-Requested-With</stringProp>
+                      <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Type" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+                <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_FAQs_S_P_message_PreProcessor" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">def ChatMessage = vars.get(&quot;ChatMessage&quot;);
+def saUser = vars.get(&quot;saUser&quot;);
+def ChatQuestionIterationCount = Integer.parseInt(vars.get(&quot;ChatQuestionIterationCount&quot;));
+
+if(&quot;true&quot;.equals(saUser) &amp;&amp; ChatQuestionIterationCount==0) {
+	vars.put(&quot;ChatMessage&quot;, &quot;exp_va_admin&quot;);
+
+	vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+	vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+}
+
+if(ChatMessage == null || &quot;null&quot;.equals(ChatMessage)){
+	vars.put(&quot;ChatMessage&quot;, vars.get(&quot;ChatQuestion&quot;))
+	vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+	vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+
+	if(&quot;true&quot;.equals(saUser)) {
+		vars.put(&quot;ChatMessage&quot;, &quot;exp_va_admin&quot;);
+	}
+}
+
+ChatMessage = vars.get(&quot;ChatMessage&quot;);
+
+if(ChatMessage.contains(&quot;/&quot;) &amp;&amp; ChatMessage.contains(&quot;+&quot;) ){
+	vars.put(&quot;ChatMessageType&quot;, &quot;POSTBACK&quot;);
+	vars.put(&quot;ChatMessagePayloadType&quot;, &quot;state&quot;);
+}
+else {
+	vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+	vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+}
+
+
+vars.put(&quot;ChatQuestionIterationCount&quot;, &quot;&quot;+(ChatQuestionIterationCount+1));</stringProp>
+                </JSR223PreProcessor>
+                <hashTree/>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_FAQs_S_P_message_PostProcessor" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">
+import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+vars.put(&quot;hasFAQVideo&quot;, &quot;false&quot;);
+vars.put(&quot;FAQVideoId&quot;, &quot;&quot;);
+
+vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+
+def saUser = vars.get(&quot;saUser&quot;);
+def ChatQuestionIterationCount = Integer.parseInt(vars.get(&quot;ChatQuestionIterationCount&quot;));
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+	else {
+		def slurper = new JsonSlurper();
+		def responseJson = slurper.parseText(responseData);
+		//def payload = responseData =~ /&quot;type&quot;:&quot;(?:POSTBACK|postback|TEXT)&quot;.*?&quot;payload&quot;:&quot;(.*?)&quot;/;
+		//def payload = responseData =~ /&quot;type&quot;:&quot;(?:POSTBACK|postback|TEXT)&quot;.*?&quot;label&quot;:&quot;(.*?)&quot;/;
+		//log.info(&quot;&quot; + payload[0]);
+
+		if(responseJson[&quot;message_contents&quot;] ==null || responseJson[&quot;message_contents&quot;].size() &lt;=0){
+			setExecutionFailedOrBlocked(prev, vars, &quot;No Message Content Available&quot;, &quot;FAILED&quot;);
+		}
+		else {
+			if(responseData.contains(&quot;\&quot;payload\&quot;:\&quot;FAQVIDEO &quot;)){
+				def faqVideoId = responseData =~ /&quot;payload&quot;:&quot;FAQVIDEO (.*?)&quot;/;
+				
+				vars.put(&quot;hasFAQVideo&quot;, &quot;true&quot;);
+				vars.put(&quot;FAQVideoId&quot;, faqVideoId[0][1]);
+			}
+			
+			/*if(responseData.contains(&quot;How-to Video&quot;)){
+				vars.put(&quot;ChatMessage&quot;, &quot;How-to Video&quot;);
+			}
+			else *///if(payload.getCount() &gt; 0){
+			if(responseData.contains(&quot;\&quot;type\&quot;:\&quot;CONTAINER\&quot;&quot;) &amp;&amp; responseData.contains(&quot;\&quot;type\&quot;:\&quot;POSTBACK\&quot;,\&quot;payload&quot;)){
+				def payload = responseData =~ /&quot;type&quot;:&quot;CARD&quot;,&quot;payload&quot;:\{.*?&quot;buttons&quot;:\[\{&quot;type&quot;:&quot;POSTBACK&quot;,&quot;payload&quot;:&quot;(.*?)&quot;/;
+
+				
+
+				if(payload.getCount() == 0){
+					log.info(&quot;Container response ========================= &quot; + responseData);
+					setExecutionFailedOrBlocked(prev, vars, &quot;No Cards available in container&quot;, &quot;FAILED&quot;);
+				}
+
+				Random random = new Random();
+				def randomValue = random.nextInt(payload.getCount()) ;
+
+				vars.put(&quot;ChatMessageType&quot;, &quot;POSTBACK&quot;);
+				vars.put(&quot;ChatMessagePayloadType&quot;, &quot;state&quot;);
+				
+				vars.put(&quot;ChatMessage&quot;, payload[randomValue-1][1]);
+				
+				log.info(&quot;Container payload ========================= &quot; + payload[randomValue-1][0]);
+
+				//vars.put(&quot;FAQVideoId&quot;, faqVideoId[0][1]);
+				
+			}
+			else if(responseJson[&quot;quick_replies&quot;] != null){
+				
+				def quickReplySize = responseJson[&quot;quick_replies&quot;].size();
+				Random random = new Random();
+				def randomValue = random.nextInt(quickReplySize) ;
+
+				def quickReplyobject = responseJson[&quot;quick_replies&quot;][randomValue-1];
+				
+
+				if(&quot;POSTBACK&quot;.equals(quickReplyobject.type)){
+					vars.put(&quot;ChatMessageType&quot;, &quot;POSTBACK&quot;);
+					vars.put(&quot;ChatMessagePayloadType&quot;, &quot;state&quot;);
+				}
+				vars.put(&quot;ChatMessage&quot;, quickReplyobject.payload);
+				
+				//vars.put(&quot;ChatMessage&quot;, payload[randomValue-1][1]);
+				//responseJson.quick_replies
+				def QuickReplyCount = Integer.parseInt(vars.get(&quot;QuickReplyCount&quot;));
+				
+				if(QuickReplyCount&gt;=7){
+					vars.put(&quot;ChatMessage&quot;, &quot;Start Over&quot;)
+					vars.put(&quot;QuickReplyCount&quot;, &quot;0&quot;)
+					vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+					vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+				}
+				vars.put(&quot;QuickReplyCount&quot;, &quot;&quot; + (QuickReplyCount + 1))
+			}
+			else if(responseData.contains(&quot;Can you tell me the User ID&quot;)){
+				def QuickReplyCount = Integer.parseInt(vars.get(&quot;QuickReplyCount&quot;));
+				vars.put(&quot;QuickReplyCount&quot;, &quot;&quot; + (QuickReplyCount + 1));
+				
+				vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+				vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+				
+				//log.info(&quot;==================== Can you tell me the User ID&quot;);
+				
+				if(&quot;true&quot;.equals(saUser)) {
+
+					String[] mystring = [&quot;vbperfuser4&quot;,&quot;user4&quot;,&quot;vbperf*&quot;];
+					
+					int idx = new Random().nextInt(mystring.length);
+					String randomSAUser = (mystring [idx]);
+
+					vars.put(&quot;ChatMessage&quot;, randomSAUser);
+					//log.info(&quot;==================== Can you tell me the User ID &quot; + randomSAUser);
+				}
+				else {
+					vars.put(&quot;ChatMessage&quot;, vars.get(&quot;UserName&quot;));
+				}
+				
+			}
+			else if(responseData.contains(&quot;Great. I&apos;m ready for your feedback.&quot;) || responseData.contains(&quot;Could you share what didn&apos;t work for you&quot;)){
+				def QuickReplyCount = Integer.parseInt(vars.get(&quot;QuickReplyCount&quot;));
+				vars.put(&quot;QuickReplyCount&quot;, &quot;&quot; + (QuickReplyCount + 1))
+				vars.put(&quot;ChatMessage&quot;, &quot;this is not the one which i was checking&quot;)
+								
+				vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+				vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+			}
+			else //if(responseData.contains(&quot;How can I help&quot;) || &quot;Start Over&quot;.equals(vars.get(&quot;ChatMessage&quot;))){
+				{
+				vars.put(&quot;ChatMessage&quot;, &quot;null&quot;)
+				vars.put(&quot;QuickReplyCount&quot;, &quot;0&quot;)
+								
+				vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+				vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+			}
+//			else {
+//				vars.put(&quot;ChatMessage&quot;, &quot;Start Over&quot;)
+//				vars.put(&quot;QuickReplyCount&quot;, &quot;0&quot;)
+//				
+//								
+//				vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+//				vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+//			}
+		}	
+		
+		
+		
+		//log.info(&quot;ChatQuestionIterationCount &quot; +ChatQuestionIterationCount);
+		if(ChatQuestionIterationCount &gt;= 7)
+		{
+			vars.put(&quot;ContinueChat&quot;,&quot;false&quot;);
+		}
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+		if(vars.get(&quot;failureMessage&quot;).equals(&quot;440&quot;))
+		{
+				vars.put(&quot;ContinueChat&quot;,&quot;false&quot;);
+		}
+				vars.put(&quot;ChatMessage&quot;, &quot;Start Over&quot;);
+				vars.put(&quot;QuickReplyCount&quot;, &quot;0&quot;);										
+				vars.put(&quot;ChatMessageType&quot;, &quot;TEXT&quot;);
+				vars.put(&quot;ChatMessagePayloadType&quot;, &quot;text&quot;);
+	               vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  <stringProp name="RandomTimer.range">4000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                  <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="false">
+              <stringProp name="IfController.condition">${hasFAQVideo}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+            </IfController>
+            <hashTree>
+              <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="CommonServices_VirtualAssistant_VirtualAssistant_AlfrescoChat_T_P" enabled="true">
+                <boolProp name="TransactionController.includeTimers">false</boolProp>
+                <boolProp name="TransactionController.parent">false</boolProp>
+              </TransactionController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CommonServices_VirtualAssistant_VirtualAssistant_AlfrescoChat_S_P_AlfrescoHowTomessage" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.protocol">https</stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/cssupport/getAlfrescoContent?contentid=${FAQVideoId}</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                    <collectionProp name="HeaderManager.headers">
+                      <elementProp name="Referer" elementType="Header">
+                        <stringProp name="Header.name">Referer</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}/absolutepath/ang/VRSN201808031304/csui/</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Language" elementType="Header">
+                        <stringProp name="Header.name">Accept-Language</stringProp>
+                        <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+                      </elementProp>
+                      <elementProp name="Origin" elementType="Header">
+                        <stringProp name="Header.name">Origin</stringProp>
+                        <stringProp name="Header.value">https://${__P(ACCESS_DOMAIN,)}</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept" elementType="Header">
+                        <stringProp name="Header.name">Accept</stringProp>
+                        <stringProp name="Header.value">*/*</stringProp>
+                      </elementProp>
+                      <elementProp name="X-Requested-With" elementType="Header">
+                        <stringProp name="Header.name">X-Requested-With</stringProp>
+                        <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                      </elementProp>
+                      <elementProp name="Content-Type" elementType="Header">
+                        <stringProp name="Header.name">Content-Type</stringProp>
+                        <stringProp name="Header.value">application/json</stringProp>
+                      </elementProp>
+                      <elementProp name="Accept-Encoding" elementType="Header">
+                        <stringProp name="Header.name">Accept-Encoding</stringProp>
+                        <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                      </elementProp>
+                      <elementProp name="User-Agent" elementType="Header">
+                        <stringProp name="Header.name">User-Agent</stringProp>
+                        <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </HeaderManager>
+                  <hashTree/>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="CommonServices_VirtualAssistant_VirtualAssistant_AlfrescoChat_S_P_AlfrescoHowTomessage_PostProcessor" enabled="false">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonParserType;
+import groovy.json.JsonOutput;
+
+vars.put(&quot;isPreviousActionSuccess&quot;, &quot;true&quot;);
+def setExecutionFailedOrBlocked = props.get(&quot;setExecutionFailedOrBlocked&quot;);
+def responseData = prev.getResponseDataAsString();
+
+if(prev.isResponseCodeOK() &amp;&amp; prev.isSuccessful()){
+	if(!responseData.contains(&quot;{&quot;)){
+		setExecutionFailedOrBlocked(prev, vars, &quot;Unexpected Response&quot;, &quot;FAILED&quot;);
+	}
+}
+
+if((!prev.isSuccessful()) || (!vars.get(&quot;executionStatus&quot;).equals(&quot;Success&quot;)))
+{
+	vars.put(&quot;isPreviousActionSuccess&quot;, &quot;false&quot;);
+}
+</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="false">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    <stringProp name="RandomTimer.range">4000</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                  <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="VA Uniform Random Timer" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${__P(VA_CONSTANT_DELAY)}</stringProp>
+                    <stringProp name="RandomTimer.range">${__P(VA_DELAY_DEVIATION)}</stringProp>
+                  </UniformRandomTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+            <intProp name="calcMode">3</intProp>
+            <doubleProp>
+              <name>throughput</name>
+              <value>2100.0</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+          </ConstantThroughputTimer>
+          <hashTree/>
+          <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="false">
+            <intProp name="calcMode">3</intProp>
+            <doubleProp>
+              <name>throughput</name>
+              <value>420.0</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+          </ConstantThroughputTimer>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
