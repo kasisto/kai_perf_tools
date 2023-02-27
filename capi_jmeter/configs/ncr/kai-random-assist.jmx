@@ -261,7 +261,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random assistant" enabled="true">
-          <stringProp name="filename">C:\Users\testuser\Desktop\kai_perf_tools\capi_jmeter\configs\kcb\Assist.csv</stringProp>
+          <stringProp name="filename">${__P(basepath,)}/Assist.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>
@@ -327,7 +327,7 @@
   &#xd;
   &quot;type&quot; : &quot;ENTER_TOKEN&quot;,&#xd;
   &quot;payload&quot;: { &#xd;
-	    &quot;token&quot; : &quot;${token}&quot;&#xd;
+	    &quot;token&quot; : &quot;randprefix_${token}&quot;&#xd;
   }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -380,13 +380,13 @@
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-            <stringProp name="filename">C:\Users\testuser\Desktop\kai_perf_tools\capi_jmeter\configs\kcb\Unauthenticated_questions.csv</stringProp>
+            <stringProp name="filename">${__P(basepath,)}/Authenticated_questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
             <boolProp name="randomOrder">true</boolProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
-            <boolProp name="rewindOnTheEndOfList">true</boolProp>
+            <boolProp name="rewindOnTheEndOfList">false</boolProp>
             <boolProp name="independentListPerThread">true</boolProp>
           </com.blazemeter.jmeter.RandomCSVDataSetConfig>
           <hashTree/>
