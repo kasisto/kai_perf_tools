@@ -1,0 +1,13 @@
+ask_kai,label
+wellness snapshot,kcb_wellness_snapshot
+show my transaction from last two years,kcb_show_tx
+what is my balance,kcb_balance 
+how much have i spent last month?,kcb_summarize_tx 
+What can you do for me?,91_Capabilities_S_P
+what's my interest rate,kcb_interest_rate
+How can I make a payment? ,kcb_payment_execution
+Pay Person,kcb_payment_exec_1
+I want to speak to a person,69_LiveAgent_S
+dsafdsafffsfdsfd,vpaUnknown
+thank you,vpaThankyou
+this is shit,vpaProfanity
