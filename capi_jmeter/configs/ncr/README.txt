@@ -13,3 +13,8 @@ b. review tsv for authenticated user csv
 
 sh ./capi_jmeter/bin/jmeter.sh  -t ./capi_jmeter/configs/ncr/kai-random-assist.jmx -p ./capi_jmeter/configs/ncr/ncrstage.properties
 
+
+
+TODO:
+1. update authenticated.csv as it looks like an unauthenticated list
+2. Figure out why the create_csv_for_assistants doesn't provide actual secrets, but uses some fixed convention, rather than the ones in the existing env
