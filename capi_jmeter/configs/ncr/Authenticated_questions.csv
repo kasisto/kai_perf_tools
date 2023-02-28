@@ -1,8 +1,8 @@
-ask_kai,label
-What can you do?,faq1
-what is a 401K?,faq2
-Who are you?,faq3
-What is a mortgage?,faq4
-What is your name?,faq5
-401K what,faq6
-jhgjgjjhkh,faq7
+ask_kai,label,intent,sub_intent
+What can you do?,faq1,VpaGetAnswer,91_Capabilities_S_P
+what is a 401K?,faq2,VpaGetAnswer,kcb_kim_getdefinition
+Who are you?,faq3,VpaGetAnswer,97_WhatsABot_S_P
+What is a mortgage?,faq4,VpaGetAnswer,kcb_kim_getdefinition
+What is your name?,faq5,VpaGetAnswer,96_Name_S_P
+401K what,unknown1,VpaUnknownRequest,
+jhgjgjjhkh,unknown2,VpaUnknownRequest,
