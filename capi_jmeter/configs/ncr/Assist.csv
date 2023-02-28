@@ -25,7 +25,6 @@ cb-basics-kai-01740,prod,cfe22490-96bd-4c08-a143-0bbb803b7003
 cb-basics-kai-01740,stage,00f7b963-42db-46a2-bd4d-f4359607ec11
 cb-basics-kai-01743,prod,c8c6f75c-748d-4066-a592-149fdead2734
 cb-basics-kai-01743,stage,83af1932-daf6-4f73-9570-9343ff2d1686
-cb-basics-kai-03008,prod,99384e3d-c397-4c00-8ab5-20ba748a0235
 cb-basics-kai-03008,stage,5b6c9281-7da4-4d22-bdef-b5cb28174f9d
 cb-basics-kai-03099,prod,df6a54e8-82a3-11ec-a8a3-0242ac120002
 cb-basics-kai-03099,stage,06f4ee7e-82a4-11ec-a8a3-0242ac120002
@@ -53,7 +52,6 @@ cb-basics-kai-05528,prod,29f805fe-7904-11ec-90d6-0242ac120003
 cb-basics-kai-05528,stage,30ae6334-7904-11ec-90d6-0242ac120003
 cb-basics-kai-05529,prod,dcfd2624-8102-11ec-a8a3-0242ac120002
 cb-basics-kai-05529,stage,e78e8448-8102-11ec-a8a3-0242ac120002
-cb-basics-kai-05530,prod,0ce77e36-abb3-11ec-b909-0242ac120002
 cb-basics-kai-05530,stage,52be6c29-3906-421c-a0e9-bf783a8dc69b
 cb-basics-kai-05531,prod,ad511e22-21b6-11ec-9621-0242ac130002
 cb-basics-kai-05531,stage,c08971e2-21b6-11ec-9621-0242ac130002
@@ -65,8 +63,6 @@ cb-basics-kai-99999,prod,d0065368-5430-11ec-bf63-0242ac130002
 cb-basics-kai-99999,stage,d4831ade-5430-11ec-bf63-0242ac130002
 kasisto-testing-en-us-stage,prod,5cca87a2-56c4-11ec-bf63-0242ac133001
 kasisto-testing-en-us-stage,stage,6711aee8-56c4-11ec-bf63-0242ac140001
-kasisto_test,prod,118a39d0-99ce-438f-b171-8187b92e5e15
-kasisto_test,stage,f4c3154e-f8e9-11eb-9a03-0242ac130003
 kasisto_test_2,prod,kasisto_test_2-prodcapisecret
 kasisto_test_3,prod,kasisto_test_3-prodcapisecret
 ncr-en-us-prod,prod,118a39d0-99ce-438f-b171-8187b92e5e151
