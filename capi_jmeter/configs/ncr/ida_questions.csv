@@ -7,12 +7,12 @@ what is my balance,webhook3,kcb_balance,
 Start over,restart,VpaStartOver,
 how much have i spent last month?,webhook4,kcb_summarize_tx,
 Start over,restart,VpaStartOver,
-What can you do for me?,faq1,VpaGetAnswer,91_Capabilities_S_P
-what's my interest rate,faq2,VpaGetAnswer,kcb_interest_rate
-How can I make a payment?,faq3.1,VpaGetAnswer,kcb_payment_execution
+What can you do for me?,faq1,91_Capabilities_S_P,91_Capabilities_S_P
+what's my interest rate,faq2,kcb_interest_rate,kcb_interest_rate
+How can I make a payment?,faq3.1,kcb_payment_execution,kcb_payment_execution
 Pay Person,faq3.2,VpaGetAnswer,kcb_payment_execution
 Start over,restart,VpaStartOver,
-I want to speak to a person,faq10,VpaGetAnswer,69_LiveAgent_S
+I want to speak to a person,faq10,VpaGetA69_LiveAgent_S,nswer,69_LiveAgent_S
 dsafdsafffsfdsfd,unknown1,VpaUnknownRequest,
 thank you,vpa1,VpaThankYou,
 this is shit,vpa2,VpaProfanity,
