@@ -103,6 +103,8 @@ class BaseHelper:
             return ResponsesApi(header_overrides=header_overrides)
         if isinstance(data, str) and data.lower() == 'segments':
             return SegmentsApi(header_overrides=header_overrides)
+        if isinstance(data, str) and data.lower() == 'packaging':
+            return PackagingApi(header_overrides=header_overrides)
 
     def generate_csv(self):
         headers = ['assistant_name', 'assistant_target', 'secret']
