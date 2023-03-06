@@ -23,7 +23,7 @@ class CreateBasicPremiumAssistant(BaseHelper):
                 a = Assistant()
                 self.assistant_api.post(a)
                 a_pack_api = self.get_assistant_enabled_api('packaging', a)
-                replace = a_pack_api.replace(packages[k % 2]) # We have 2 packages so the logic here is check if i is odd or even
+                replace = a_pack_api.replace(packages[0])
                 autopub = self.assistant_api.post_with_autopublish(a, targets)
                 print(autopub, ' Autopublishing premium assistant')
         
