@@ -16,7 +16,7 @@ class CreateBasicPremiumAssistant(BaseHelper):
             print(f'Creating assistants for batch: {i}')
             for j in range(7):
                 a = Assistant()
-                basic_assistant = self.assistant_api.post_with_autopublish(a)
+                basic_assistant = self.assistant_api.post_with_autopublish(a, targets)
                 print(basic_assistant, ' Autopublishing basic assistant')
 
             for k in range(3):
