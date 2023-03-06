@@ -49,6 +49,6 @@ if __name__ == '__main__':
     targets = args.autopublish_to.split(',')
     helper.create_basic_and_premium_assistants(targets, n_basic, n_premium)
 
-    # Sample usage: python -m helpers.create_basic_premium_assistant --autopublish_to=stage,prod --batch=2
+    # Sample usage: python -m helpers.create_basic_premium_assistant --autopublish_to=stage,prod --batch=2 --basic=7 --premium=0
 
 
