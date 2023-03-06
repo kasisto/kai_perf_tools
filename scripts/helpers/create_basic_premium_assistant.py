@@ -20,7 +20,7 @@ class CreateBasicPremiumAssistant(BaseHelper):
                 print(basic_assistant, ' Autopublishing basic assistant')
 
             for k in range(n_premium):
-                a = Assistant('')
+                a = Assistant()
                 self.assistant_api.post(a)
                 a_pack_api = self.get_assistant_enabled_api('packaging', a)
                 replace = a_pack_api.replace(packages[k % 2]) # We have 2 packages so the logic here is check if i is odd or even
