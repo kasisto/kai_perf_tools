@@ -11,37 +11,41 @@ class CreateBasicPremiumAssistant(BaseHelper):
         
     def create_basic_and_premium_assistants(self, targets, n_basic, n_premium):
         package_dir = os.chdir('package')
-        packages = [i for i in os.listdir(package_dir) if 'package' in i]
+        packages = [i for i in os.listdir(package_dir) if 'package_for_premium' in i]
+        if not packages and n_premium:
+            print('No premium packages found, exiting...')
+            exit(1)
+
         for i in range(self.n):
-            print(f'Creating assistants for batch: {i}')
+            print(f'Creating assistants for batch: {i+1}')
             for j in range(n_basic):
                 a = Assistant()
                 basic_assistant = self.assistant_api.post_with_autopublish(a, targets)
-                print(basic_assistant, ' Autopublishing basic assistant')
+                print(basic_assistant, f'Autopublishing basic assistant: {a.name}')
 
             for k in range(n_premium):
                 a = Assistant()
                 self.assistant_api.post(a)
                 a_pack_api = self.get_assistant_enabled_api('packaging', a)
-                replace = a_pack_api.replace(packages[k % 2]) # We have 2 packages so the logic here is check if i is odd or even
-                print(f'Exporting {packages[k % 2]}')
+                print(f'Exporting {packages[k % len(packages)]}')
+                replace = a_pack_api.replace(packages[k % len(packages)])
                 autopub = self.assistant_api.post_with_autopublish(a, targets)
-                print(autopub, ' Autopublishing premium assistant')
+                print(autopub, f'Autopublishing premium assistant: {a.name}')
         
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--batch', type=int) # Number of batches of assistants to be created(7 basic, 3 premium)
+    parser.add_argument('--batch', type=int) # Number of batches of assistants to be created (7 basic, 3 premium)
     parser.add_argument('--autopublish_to') # Targets to autopublish
-    parser.add_argument('--basic', type=int) # Targets to autopublish
-    parser.add_argument('--premium', type=int) # Targets to autopublish
+    parser.add_argument('--basic', type=int) # Number of basic assistants to create
+    parser.add_argument('--premium', type=int) # Number of premium assistants to create
 
     parser.set_defaults(feature=False)
 
     args = parser.parse_args()
     n_batch = args.batch if args.batch else 1
     n_basic = args.basic if args.basic else 7
-    n_premium = args.premium if args.basic else 3
+    n_premium = args.premium if args.premium else 3
 
     helper = CreateBasicPremiumAssistant(n_batch)
     assistant_ids = []
