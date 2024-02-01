@@ -42,7 +42,9 @@ class BaseApi(object):
     def put(self, full_path, data, auth=('performance_test', 'pw')):
         return requests.put(full_path, headers=self.headers, data=data, auth=auth)
     
-
+    def get_response(self, full_path):
+        return requests.get(full_path, headers=self.headers)
+    
     def get(self, full_path):
         return requests.get(full_path, headers=self.headers).json()
     

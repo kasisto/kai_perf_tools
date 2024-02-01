@@ -4,7 +4,7 @@ from .base_api import BaseApi
 
 class PublishingApi(BaseApi):
     def __init__(self, header_overrides={}):
-        base_url = os.environ.get('URL')
+        self.base_url = os.environ.get('URL')
         if header_overrides:
             headers = header_overrides
         else:
@@ -14,7 +14,7 @@ class PublishingApi(BaseApi):
             }
 
         super().__init__(
-            f'{base_url}/kai/api/v1/publishing', 
+            f'{self.base_url}/kai/api/v1/publishing', 
             # os.environ.get('APPLICATION_SECRET'),
             headers
         )
@@ -29,3 +29,6 @@ class PublishingApi(BaseApi):
     
     def post_documents(self, target_name, pay, pub_by='automated_tests', sc=200): 
         return self.post(target_name, jsons.dumps(pay), 'documents', pub_by,sc) 
+
+    def get_versions(self, target_name):
+        return self.get(f'{self.base_url}/kai/api/v1/publishing/versions/?target_name={target_name}')
