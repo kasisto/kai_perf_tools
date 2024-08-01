@@ -41,8 +41,8 @@
           </collectionProp>
         </elementProp>
         <stringProp name="HTTPSampler.domain">${__P(server,)}</stringProp>
-        <stringProp name="HTTPSampler.port">${__P(port,)}</stringProp>
-        <stringProp name="HTTPSampler.protocol">${__P(protocol,)}</stringProp>
+        <stringProp name="HTTPSampler.port">${__P(port,8090)}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path">/kai/api/v2/capi/user_message</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
@@ -51,7 +51,7 @@
       </ConfigTestElement>
       <hashTree/>
       <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Minimum Response Time in Milliseconds" enabled="true">
-        <stringProp name="DurationAssertion.duration">${__P(min_duration,)}</stringProp>
+        <stringProp name="DurationAssertion.duration">${__P(min_duration,50)}</stringProp>
       </DurationAssertion>
       <hashTree/>
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -98,7 +98,7 @@
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="NBT_TEST" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-207985157">
-            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
+            <stringProp name="219567562">${__P(start_thread,1)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
             <stringProp name="1541058">2400</stringProp>
@@ -106,7 +106,7 @@
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -115,7 +115,7 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">${__P(nbt_token_location,)}</stringProp>
+          <stringProp name="filename">${__P(nbt_token_location,../commmon/token_nbt_file.csv)}</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -148,7 +148,7 @@
     &quot;user&quot;: {&#xd;
     	&quot;session_id&quot; : &quot;s&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot; : &quot;2.0.0&quot;&#xd;
+    &quot;api_version&quot; : &quot;5.5&quot;&#xd;
   },&#xd;
   &#xd;
   &quot;type&quot; : &quot;ENTER_TOKEN&quot;,&#xd;
@@ -192,7 +192,7 @@
           <hashTree/>
         </hashTree>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">${__P(loops,11)}</stringProp>
         </LoopController>
         <hashTree>
@@ -219,7 +219,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -262,7 +262,7 @@
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -302,7 +302,7 @@
     &quot;user&quot;: {&#xd;
     	&quot;session_id&quot; : &quot;s&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot; : &quot;2.0.0&quot;&#xd;
+    &quot;api_version&quot; : &quot;5.5&quot;&#xd;
   },&#xd;
   &#xd;
   &quot;type&quot; : &quot;ENTER_TOKEN&quot;,&#xd;
@@ -355,7 +355,7 @@
         </RandomVariableConfig>
         <hashTree/>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-              <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+              <boolProp name="LoopController.continue_forever">false</boolProp>
               <stringProp name="LoopController.loops">${__P(loops,11)}</stringProp>
           </LoopController>
         <hashTree>
@@ -393,7 +393,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -436,7 +436,7 @@
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -521,7 +521,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -564,7 +564,7 @@
           <hashTree/>
         </hashTree>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">${__P(loops,11)}</stringProp>
         </LoopController>
         <hashTree>
@@ -591,7 +591,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -645,7 +645,7 @@
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -685,7 +685,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -754,7 +754,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -803,7 +803,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -841,7 +841,7 @@
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">${__P(continue_forever,false)}</boolProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -881,7 +881,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
@@ -950,7 +950,7 @@
     &quot;user&quot;: {&#xd;
       &quot;session_id&quot;: &quot;${sessionId}&quot;&#xd;
     },&#xd;
-    &quot;api_version&quot;: &quot;2.1.2&quot;&#xd;
+    &quot;api_version&quot;: &quot;5.5&quot;&#xd;
   },&#xd;
   &quot;type&quot;: &quot;TEXT&quot;,&#xd;
   &quot;payload&quot;: {&#xd;
