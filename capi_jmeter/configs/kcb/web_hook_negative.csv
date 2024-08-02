@@ -1,4 +1,0 @@
-name,display_name,trigger_sentences,value
-CurrencyAmountCheck,CurrencyAmountCheck,Currency Amount Check,10 
-DateCheck,date_testing,using date check for perf testing,hello 
-EmailCheck,EmailCheck,email check check,hi 
