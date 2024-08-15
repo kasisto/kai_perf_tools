@@ -168,7 +168,7 @@
           <stringProp name="cacheKey">true</stringProp>
           <stringProp name="filename"></stringProp>
           <stringProp name="parameters"></stringProp>
-          <stringProp name="script">// If user from Jenkins passes a file for questions, use it to execute in tests. Else, use default.
+          <stringProp name="script">// Define the file path (from Jenkins or default)
 def filePath = &apos;../configs/kcb/data/custom_questions.csv&apos;
 
 // Define the default file path
@@ -177,13 +177,19 @@ def defaultFilePath = &apos;../configs/kcb/data/unauthenticated_questions.csv&ap
 // Check if the provided file exists
 File file = new File(filePath)
 
-// If the file doesn&apos;t exist or is not provided, use the default file path
+// If the file doesn&apos;t exist, use the default file path
 if (!file.exists()) {
-    log.info(&quot;File does not exist. Using default file: ${defaultFilePath}&quot;)
-    vars.put(&apos;custom_questions_dir&apos;, defaultFilePath)
+    log.info(&quot;File does not exist at ${filePath}. Using default file: ${defaultFilePath}&quot;)
+    filePath = defaultFilePath
 } else {
     log.info(&quot;Using provided file: ${filePath}&quot;)
-}</stringProp>
+}
+
+// Store the final file path in a variable for use in the test
+vars.put(&apos;custom_questions_dir&apos;, filePath)
+
+// Log the final file path for debugging purposes
+log.info(&quot;Final file path used: ${vars.get(&apos;custom_questions_dir&apos;)}&quot;)</stringProp>
           <stringProp name="scriptLanguage">groovy</stringProp>
         </JSR223PreProcessor>
         <hashTree/>
