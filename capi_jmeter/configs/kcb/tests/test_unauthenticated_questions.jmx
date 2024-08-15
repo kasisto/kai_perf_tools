@@ -164,13 +164,51 @@
           <intProp name="Assertion.test_type">2</intProp>
         </ResponseAssertion>
         <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="FILE_DIR" elementType="Argument">
+              <stringProp name="Argument.name">FILE_DIR</stringProp>
+              <stringProp name="Argument.value">${__P(custom_questions_dir,)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="DEFAULT_FILE" elementType="Argument">
+              <stringProp name="Argument.name">DEFAULT_FILE</stringProp>
+              <stringProp name="Argument.value">../configs/kcb/data/unauthenticated_questions.csv</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">// If user from Jenkins passes a file for questions, use it to execute in tests. Else, use default.
+def filePath = &apos;../configs/kcb/data/custom_questions.csv&apos;
+
+// Define the default file path
+def defaultFilePath = &apos;../configs/kcb/data/unauthenticated_questions.csv&apos;
+
+// Check if the provided file exists
+File file = new File(filePath)
+
+// If the file doesn&apos;t exist or is not provided, use the default file path
+if (!file.exists()) {
+    log.info(&quot;File does not exist. Using default file: ${defaultFilePath}&quot;)
+    vars.put(&apos;custom_questions_dir&apos;, defaultFilePath)
+} else {
+    log.info(&quot;Using provided file: ${filePath}&quot;)
+}</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
+        <hashTree/>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">${__P(loops,-1)}</stringProp>
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Question " enabled="true">
-            <stringProp name="filename">../configs/kcb/data/authenticated_questions.csv</stringProp>
+            <stringProp name="filename">${custom_questions_dir} </stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
