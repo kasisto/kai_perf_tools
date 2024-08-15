@@ -164,21 +164,6 @@
           <intProp name="Assertion.test_type">2</intProp>
         </ResponseAssertion>
         <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-          <collectionProp name="Arguments.arguments">
-            <elementProp name="FILE_DIR" elementType="Argument">
-              <stringProp name="Argument.name">FILE_DIR</stringProp>
-              <stringProp name="Argument.value">${__P(custom_questions_dir,)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="DEFAULT_FILE" elementType="Argument">
-              <stringProp name="Argument.name">DEFAULT_FILE</stringProp>
-              <stringProp name="Argument.value">../configs/kcb/data/unauthenticated_questions.csv</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-          </collectionProp>
-        </Arguments>
-        <hashTree/>
         <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
           <stringProp name="cacheKey">true</stringProp>
           <stringProp name="filename"></stringProp>
