@@ -26,7 +26,7 @@
         </elementProp>
         <stringProp name="HTTPSampler.domain">${__P(server,ncr-mt2-en-us-qa.kitsys.net)}</stringProp>
         <stringProp name="HTTPSampler.port">${__P(port,8090)}</stringProp>
-        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path">/kai/api/v2/capi/user_message</stringProp>
         <stringProp name="TestPlan.comments">Defaults to ncr-mt2-en-us-qa env</stringProp>
@@ -181,7 +181,7 @@
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Question " enabled="true">
-            <stringProp name="filename">../configs/kcb/data/authenticated_questions.csv</stringProp>
+            <stringProp name="filename">../configs/kcb/data/questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>

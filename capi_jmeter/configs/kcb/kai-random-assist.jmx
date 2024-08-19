@@ -102,7 +102,7 @@
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="NBT_TEST" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-207985157">
-            <stringProp name="219567562">${__P(start_thread,)}</stringProp>
+            <stringProp name="219567562">${__P(start_thread,1)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
             <stringProp name="1541058">2400</stringProp>

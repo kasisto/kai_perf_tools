@@ -40,7 +40,7 @@
             </elementProp>
           </collectionProp>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__P(server,)}</stringProp>
+        <stringProp name="HTTPSampler.domain">${__P(server,ncr-mt2-en-us-qa.kitsys.net)}</stringProp>
         <stringProp name="HTTPSampler.port">${__P(port,8090)}</stringProp>
         <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
@@ -51,7 +51,7 @@
       </ConfigTestElement>
       <hashTree/>
       <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Minimum Response Time in Milliseconds" enabled="true">
-        <stringProp name="DurationAssertion.duration">${__P(min_duration,50)}</stringProp>
+        <stringProp name="DurationAssertion.duration">${__P(min_duration,5000)}</stringProp>
       </DurationAssertion>
       <hashTree/>
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -62,7 +62,7 @@
           </elementProp>
           <elementProp name="secret" elementType="Header">
             <stringProp name="Header.name">secret</stringProp>
-            <stringProp name="Header.value">default-assistant-for-nbt-capi-secret</stringProp>
+            <stringProp name="Header.value">ncr-mt2-en-us-qa </stringProp>
           </elementProp>
           <elementProp name="Accept" elementType="Header">
             <stringProp name="Header.name">Accept</stringProp>
@@ -90,14 +90,18 @@
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">assistant_name</stringProp>
-            <stringProp name="Header.value">default_assistant</stringProp>
+            <stringProp name="Header.value">ncr-mt2-en-us-qa </stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">assistant_target</stringProp>
+            <stringProp name="Header.value">stage</stringProp>
           </elementProp>
         </collectionProp>
       </HeaderManager>
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="NBT_TEST" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-207985157">
+          <collectionProp name="-593625728">
             <stringProp name="219567562">${__P(start_thread,1)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="56">8</stringProp>
@@ -354,10 +358,10 @@
           <stringProp name="variableName">token</stringProp>
         </RandomVariableConfig>
         <hashTree/>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-              <boolProp name="LoopController.continue_forever">false</boolProp>
-              <stringProp name="LoopController.loops">${__P(loops,11)}</stringProp>
-          </LoopController>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${__P(loops,1)}</stringProp>
+        </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
             <stringProp name="filename">./Authenticated_questions.csv</stringProp>
@@ -652,7 +656,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-          <stringProp name="filename">result/web_hook_positive.csv</stringProp>
+          <stringProp name="filename">../configs/kcb/data/web_hook_positive.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>
@@ -848,7 +852,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-          <stringProp name="filename">result/web_hook_negative.csv</stringProp>
+          <stringProp name="filename">../configs/kcb/data/web_hook_negative.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>

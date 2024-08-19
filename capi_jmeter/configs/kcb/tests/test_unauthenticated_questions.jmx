@@ -26,7 +26,7 @@
         </elementProp>
         <stringProp name="HTTPSampler.domain">${__P(server,ncr-mt2-en-us-qa.kitsys.net)}</stringProp>
         <stringProp name="HTTPSampler.port">${__P(port,8090)}</stringProp>
-        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path">/kai/api/v2/capi/user_message</stringProp>
         <stringProp name="TestPlan.comments">Defaults to ncr-mt2-en-us-qa env</stringProp>
@@ -34,6 +34,27 @@
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
       </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="secret" elementType="Header">
+            <stringProp name="Header.name">secret</stringProp>
+            <stringProp name="Header.value">${__P(secret,ncr-mt2-en-us-qa)}</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">assistant_name</stringProp>
+            <stringProp name="Header.value">${__P(assistant_name,ncr-mt2-en-us-qa)}</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">assistant_target</stringProp>
+            <stringProp name="Header.value">${__P(assistant_target,stage)}</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">${application/json)}</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Unauthenticated Questions" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
@@ -62,27 +83,6 @@
           <boolProp name="rewindOnTheEndOfList">true</boolProp>
           <boolProp name="independentListPerThread">false</boolProp>
         </com.blazemeter.jmeter.RandomCSVDataSetConfig>
-        <hashTree/>
-        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-          <collectionProp name="HeaderManager.headers">
-            <elementProp name="secret" elementType="Header">
-              <stringProp name="Header.name">secret</stringProp>
-              <stringProp name="Header.value">${secret}</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">assistant_name</stringProp>
-              <stringProp name="Header.value">${assistant_name}</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">assistant_target</stringProp>
-              <stringProp name="Header.value">${assistant_target}</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">Content-Type</stringProp>
-              <stringProp name="Header.value">application/json </stringProp>
-            </elementProp>
-          </collectionProp>
-        </HeaderManager>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Start Session" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -164,46 +164,13 @@
           <intProp name="Assertion.test_type">2</intProp>
         </ResponseAssertion>
         <hashTree/>
-        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
-          <stringProp name="cacheKey">true</stringProp>
-          <stringProp name="filename"></stringProp>
-          <stringProp name="parameters"></stringProp>
-          <stringProp name="script">// Define the file path (from Jenkins or default)
-def filePath = &apos;capi_jmeter/configs/kcb/data/custom_questions.csv&apos;
-
-// Define the default file path
-def defaultFilePath = new File(&apos;capi_jmeter/configs/kcb/data/unauthenticated_questions.csv&apos;)
-
-// Check if the provided file exists
-File file = new File(defaultFilePath)
-
-// If the file doesn&apos;t exist, use the default file path
-if (!file.exists()) {
-    log.info(&quot;File does not exist at ${filePath}. Using default file: ${defaultFilePath}&quot;)
-    System.out.println(&quot;File does not exist at ${filePath}. Using default file: ${defaultFilePath}&quot;)
-    filePath = defaultFilePath
-} else {
-    log.info(&quot;Using provided file: ${filePath}&quot;)
-    System.out.println(&quot;Using provided file: ${filePath}&quot;)
-}
-
-// Store the final file path in a variable for use in the test
-vars.put(&apos;custom_questions_dir&apos;, filePath)
-
-// Log the final file path for debugging purposes
-log.info(&quot;Final file path used: ${vars.get(&apos;custom_questions_dir&apos;)}&quot;)
-System.out.println(&quot;Final file path used: ${vars.get(&apos;custom_questions_dir&apos;)}&quot;)
-</stringProp>
-          <stringProp name="scriptLanguage">groovy</stringProp>
-        </JSR223PreProcessor>
-        <hashTree/>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
           <stringProp name="LoopController.loops">${__P(loops,-1)}</stringProp>
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Question " enabled="true">
-            <stringProp name="filename">${custom_questions_dir} </stringProp>
+            <stringProp name="filename">../configs/kcb/data/questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
@@ -311,7 +278,7 @@ System.out.println(&quot;Final file path used: ${vars.get(&apos;custom_questions
         <stringProp name="filename">../configs/kcb/reports/results_tree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="true">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -356,7 +323,7 @@ System.out.println(&quot;Final file path used: ${vars.get(&apos;custom_questions
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -401,7 +368,7 @@ System.out.println(&quot;Final file path used: ${vars.get(&apos;custom_questions
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -446,7 +413,7 @@ System.out.println(&quot;Final file path used: ${vars.get(&apos;custom_questions
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -483,7 +450,7 @@ System.out.println(&quot;Final file path used: ${vars.get(&apos;custom_questions
         <stringProp name="filename">../configs/kcb/reports/summary_report.csv</stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
