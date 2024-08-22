@@ -1,0 +1,11 @@
+{
+    "publishing_notes": "Test custom response publishing",
+    "revisions": [
+        {
+        "document_type": "response",
+        "document_name": "74_Alerts_S",
+        "revision_id": "4281819d-3bd9-43fc-b1ab-9e5cc4947ca9",
+        "publishing_state": "PUBLISHED"
+        }
+    ]
+ }

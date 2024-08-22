@@ -24,18 +24,17 @@
             </elementProp>
           </collectionProp>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__P(server,ncr-mt2-en-us-qa.kitsys.net)}</stringProp>
-        <stringProp name="HTTPSampler.port">${__P(port,8090)}</stringProp>
+        <stringProp name="HTTPSampler.domain">${__P(server,kai-answers-en-us-gapi-services-query-service-qa.kitsys.net)}</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
         <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-        <stringProp name="HTTPSampler.path">/kai/api/v2/capi/user_message</stringProp>
-        <stringProp name="TestPlan.comments">Defaults to ncr-mt2-en-us-qa env</stringProp>
+        <stringProp name="HTTPSampler.path">/answer</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Authenticated Questions" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Answer Service" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1703980668">
             <stringProp name="200349606">${__P(start_threads_count,1)}</stringProp>
@@ -94,90 +93,9 @@
           <intProp name="Assertion.test_type">2</intProp>
         </ResponseAssertion>
         <hashTree/>
-        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="[DATA] Generate Token" enabled="true">
-          <stringProp name="maximumValue">5000000</stringProp>
-          <stringProp name="minimumValue">10000</stringProp>
-          <stringProp name="outputFormat"></stringProp>
-          <boolProp name="perThread">false</boolProp>
-          <stringProp name="randomSeed"></stringProp>
-          <stringProp name="variableName">token</stringProp>
-        </RandomVariableConfig>
-        <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Authenticate" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-    &quot;context&quot;: {&#xd;
-        &quot;device&quot;: {&#xd;
-            &quot;os&quot;: &quot;Mac/iOS&quot;,&#xd;
-            &quot;model&quot;: &quot;Unknown&quot;,&#xd;
-            &quot;type&quot;: &quot;web&quot;&#xd;
-        },&#xd;
-        &quot;platform&quot;: {&#xd;
-            &quot;name&quot;: &quot;Web&quot;,&#xd;
-            &quot;conversation_id&quot;: &quot;&quot;,&#xd;
-            &quot;session_id&quot;: null,&#xd;
-            &quot;version&quot;: &quot;5.0.0&quot;,&#xd;
-            &quot;user_id&quot;: &quot;PERFORMANCE_TESTING&quot;&#xd;
-        },&#xd;
-        &quot;user&quot;: {&#xd;
-            &quot;time_zone&quot;: &quot;America/New_York&quot;&#xd;
-		},&#xd;
-		&quot;extra&quot;:{&#xd;
-			&quot;override&quot;:{&#xd;
-				&quot;status&quot;:&quot;preview&quot;,&#xd;
-				&quot;segment_name&quot;:&quot;bob&quot;&#xd;
-			}&#xd;
-		},&#xd;
-		&quot;api_version&quot;: ${__P(api_version,5.5)}&#xd;
-	},&#xd;
-	&quot;flags&quot;: [&quot;RICH_MEDIA_ENABLED&quot;],&#xd;
-	&quot;type&quot;: &quot;ENTER_TOKEN&quot;,&#xd;
-	&quot;payload&quot;: {&#xd;
-		&quot;token&quot;: &quot;${token}&quot;&#xd;
-	}&#xd;
-}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/kai/api/v2/capi/event</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">sessionId</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.context.user.session_id</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">$.context.user.session_id</stringProp>
-            <stringProp name="EXPECTED_VALUE"></stringProp>
-            <boolProp name="JSONVALIDATION">false</boolProp>
-            <boolProp name="EXPECT_NULL">false</boolProp>
-            <boolProp name="INVERT">false</boolProp>
-            <boolProp name="ISREGEX">false</boolProp>
-          </JSONPathAssertion>
-          <hashTree/>
-        </hashTree>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">${__P(loops,-1)}</stringProp>
+          <stringProp name="LoopController.loops">${__P(loops,1)}</stringProp>
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Question " enabled="true">
@@ -198,34 +116,19 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-    &quot;context&quot;: {&#xd;
-        &quot;device&quot;: {&#xd;
-            &quot;os&quot;: &quot;Mac/iOS&quot;,&#xd;
-            &quot;model&quot;: &quot;Unknown&quot;,&#xd;
-            &quot;type&quot;: &quot;web&quot;&#xd;
-        },&#xd;
-        &quot;platform&quot;: {&#xd;
-            &quot;name&quot;: &quot;Web&quot;,&#xd;
-            &quot;conversation_id&quot;: &quot;&quot;,&#xd;
-            &quot;session_id&quot;: null,&#xd;
-            &quot;version&quot;: &quot;5.0.0&quot;,&#xd;
-            &quot;user_id&quot;: &quot;PERFORMANCE_TESTING&quot;&#xd;
-        },&#xd;
-        &quot;user&quot;: {&#xd;
-            &quot;time_zone&quot;: &quot;America/New_York&quot;&#xd;
-		},&#xd;
-		&quot;extra&quot;:{&#xd;
-			&quot;override&quot;:{&#xd;
-				&quot;status&quot;:&quot;preview&quot;,&#xd;
-				&quot;segment_name&quot;:&quot;bob&quot;&#xd;
-			}&#xd;
-		},&#xd;
-		&quot;api_version&quot;: ${__P(api_version,5.5)}&#xd;
-	},&#xd;
-	  &quot;type&quot;: &quot;TEXT&quot;,&#xd;
-	  &quot;payload&quot;: {&#xd;
-	    &quot;text&quot;: &quot;${question}&quot;&#xd;
-	  }&#xd;
+    &quot;max_tokens&quot;: 400,&#xd;
+    &quot;temperature&quot;: 1,&#xd;
+    &quot;document_type&quot;: &quot;kai_answers_document&quot;,&#xd;
+    &quot;top_k&quot;: 3,&#xd;
+    &quot;messages&quot;: [&#xd;
+    {&#xd;
+        &quot;role&quot;: &quot;User&quot;,&#xd;
+        &quot;content&quot;: &quot;${question}&quot;&#xd;
+    }&#xd;
+    ],&#xd;
+    &quot;threshold&quot;: 0.3,&#xd;
+    &quot;ranking_threshold&quot;: 0.3&#xd;
+&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -289,7 +192,7 @@
         <stringProp name="filename">../configs/kcb/reports/results_tree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="true">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -334,7 +237,7 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -379,7 +282,7 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -424,7 +327,7 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -461,7 +364,7 @@
         <stringProp name="filename">../configs/kcb/reports/summary_report.csv</stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>

@@ -1,3 +1,2 @@
-assistant_name,assistant_target,secret
-ncr-mt2-en-us-qa2,stage,ncr-mt2-en-us-qa2_stage
-ncr-mt2-en-us-qa,stage,ncr-mt2-en-us-qa_stage
+assistant_name,assistant_target,capi_secret,secret
+ncr-mt2-en-us-qa,stage,ncr-mt2-en-us-qa_stage,ef576554-637f-11e8-adc0-fa7ae01bbebc

@@ -37,9 +37,9 @@
       <hashTree/>
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
         <collectionProp name="HeaderManager.headers">
-          <elementProp name="secret" elementType="Header">
+          <elementProp name="capi_secret" elementType="Header">
             <stringProp name="Header.name">secret</stringProp>
-            <stringProp name="Header.value">${__P(secret,ncr-mt2-en-us-qa)}</stringProp>
+            <stringProp name="Header.value">${__P(capi_secret,ncr-mt2-en-us-qa)}</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">assistant_name</stringProp>
