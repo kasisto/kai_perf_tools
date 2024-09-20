@@ -25,7 +25,7 @@
           </collectionProp>
         </elementProp>
         <stringProp name="HTTPSampler.domain">${__P(server,ncr-mt2-en-us-qa.kitsys.net)}</stringProp>
-        <stringProp name="HTTPSampler.port">${__P(port,)}</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
         <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
@@ -67,15 +67,15 @@
           <collectionProp name="HeaderManager.headers">
             <elementProp name="capi_secret" elementType="Header">
               <stringProp name="Header.name">secret</stringProp>
-              <stringProp name="Header.value">${__P(capi_secret,ncr-mt2-en-us-qa)}</stringProp>
+              <stringProp name="Header.value">${capi_secret}</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">assistant_name</stringProp>
-              <stringProp name="Header.value">${__P(assistant_name,ncr-mt2-en-us-qa)}</stringProp>
+              <stringProp name="Header.value">${assistant_name}</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">assistant_target</stringProp>
-              <stringProp name="Header.value">${__P(assistant_target,stage)}</stringProp>
+              <stringProp name="Header.value">${assistant_target}</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">Content-Type</stringProp>
@@ -123,9 +123,9 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${__P(server,ncr-mt2-en-us-qa.kitsys.net)}</stringProp>
-          <stringProp name="HTTPSampler.port">${__P(port,)}</stringProp>
-          <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/kai/api/v2/capi/event</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -220,9 +220,9 @@
                 </elementProp>
               </collectionProp>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">${__P(server,ncr-mt2-en-us-qa.kitsys.net)}</stringProp>
-            <stringProp name="HTTPSampler.port">${__P(port,)}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${__P(protocol,https)}</stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">/kai/api/v2/capi/user_message</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
