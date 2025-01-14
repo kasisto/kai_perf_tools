@@ -17,91 +17,92 @@
 @Library("jenkins-pipelines") _
 pipeline {
 
-  environment {
-    VAULT_ADDR = "https://vault.kitsys.net:8200"
-  }
-
-  // Use the ansible pod. Update this if necessary
-  agent {
-      kubernetes {
-        inheritFrom 'qa-tests'
-        defaultContainer 'jnlp'
-        yaml libraryResource('podtemplates/qa-tests-container.yml')
-      }
+    environment {
+      VAULT_ADDR = "https://vault.kitsys.net:8200"
     }
 
-    options {
-    withAWS(credentials: 'kasisto-customer-data-qa')
-    buildDiscarder(logRotator(daysToKeepStr: '5', numToKeepStr: '50'))
-  }  
+    // Use the ansible pod. Update this if necessary
+    agent {
+        kubernetes {
+          inheritFrom 'qa-tests'
+          defaultContainer 'jnlp'
+          yaml libraryResource('podtemplates/qa-tests-container.yml')
+        }
+      }
 
-   stages {
+      options {
+      withAWS(credentials: 'kasisto-customer-data-qa')
+      buildDiscarder(logRotator(daysToKeepStr: '5', numToKeepStr: '50'))
+    }  
 
-    stage('Checkout kai_perf_tools repository') {
-      steps {
-        container('jnlp') {
-          dir ('/home/jenkins/agent/workspace/kai_perf_tools')  {
-            checkout([
-                 $class: 'GitSCM',
-                 branches: [[name: BRANCH_NAME]],
-                 doGenerateSubmoduleConfigurations: false,
-                 extensions:
-                 [[
-                         $class: 'RelativeTargetDirectory',
-                         relativeTargetDir: 'input'
-                 ]],
-                 submoduleCfg: [],
-                 userRemoteConfigs: [[
-                   credentialsId: 'ksbuild-user-pass',
-                   url: "https://github.com/kasisto/kai_perf_tools.git"
-                 ]]
-            ])
+    stages {
+
+      stage('Checkout kai_perf_tools repository') {
+        steps {
+          container('jnlp') {
+            dir ('/home/jenkins/agent/workspace/kai_perf_tools')  {
+              checkout([
+                  $class: 'GitSCM',
+                  branches: [[name: BRANCH_NAME]],
+                  doGenerateSubmoduleConfigurations: false,
+                  extensions:
+                  [[
+                          $class: 'RelativeTargetDirectory',
+                          relativeTargetDir: 'input'
+                  ]],
+                  submoduleCfg: [],
+                  userRemoteConfigs: [[
+                    credentialsId: 'ksbuild-user-pass',
+                    url: "https://github.com/kasisto/kai_perf_tools.git"
+                  ]]
+              ])
+            }
           }
         }
       }
-    }
 
-    stage('Run Performance Tests') {
-      steps {
-        container('jnlp') {
+      stage('Run Performance Tests') {
+        steps {
+          container('jnlp') {
 
-          withCredentials(
-            [usernamePassword(credentialsId: 'jenkins-approle', usernameVariable: 'APPROLE_USER', passwordVariable: 'APPROLE_PASSWD'),
-            [$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'kasisto-customer-data-qa', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-            sh '''
-              set -e
-              set +x
+            withCredentials(
+              [usernamePassword(credentialsId: 'jenkins-approle', usernameVariable: 'APPROLE_USER', passwordVariable: 'APPROLE_PASSWD'),
+              [$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'kasisto-customer-data-qa', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+              sh '''
+                set -e
+                set +x
 
-              VAULT_ADDR="https://vault.kitsys.net:8200"
+                VAULT_ADDR="https://vault.kitsys.net:8200"
 
-              export LC_ALL=en_US.UTF-8
-              
-              # Get login into the vault and get a token to use with it
+                export LC_ALL=en_US.UTF-8
+                
+                # Get login into the vault and get a token to use with it
 
-              echo "Logging into vault"
-              VAULT_TOKEN=$(curl -kv -X POST -d "{\\"role_id\\":\\"$APPROLE_USER\\",\\"secret_id\\":\\"$APPROLE_PASSWD\\"}" $VAULT_ADDR/v1/auth/approle/login | jq -r '.auth.client_token')
-              if [[ -z $VAULT_TOKEN ]] || [[ $VAULT_TOKEN == null ]]; then
-                echo "Failed to log into the vault"
-                exit 1
-              fi
-
-              export VAULT_TOKEN
-              export VAULT_ADDR
-        
-            #   # Run the playbook to run the automated Pytest script
-            #   echo "Running the run_pytest.sh script"
-   
-             if [[ -z $VAULT_TOKEN ]] || [[ $VAULT_TOKEN == null ]]; then
+                echo "Logging into vault"
+                VAULT_TOKEN=$(curl -kv -X POST -d "{\\"role_id\\":\\"$APPROLE_USER\\",\\"secret_id\\":\\"$APPROLE_PASSWD\\"}" $VAULT_ADDR/v1/auth/approle/login | jq -r '.auth.client_token')
+                if [[ -z $VAULT_TOKEN ]] || [[ $VAULT_TOKEN == null ]]; then
                   echo "Failed to log into the vault"
                   exit 1
-             fi
+                fi
 
-            TEST_PARAMETERS="-Jloops=$LOOPS -Japi_version=$API_VERSION -Jstart_threads_count=$START_THREADS_COUNT -Jinitial_delay=$INITIAL_DELAY -Jstartup_time=$STARTUP_TIME -Jhold_load_for=$HOLD_LOAD_FOR -Jshutdown_time=$SHUTDOWN_TIME -Jconstant_timer=$CONSTANT_TIMER"
-            echo "PARAMETERS: $TEST_PARAMETERS"
-            cd capi_jmeter/bin && sh jmeter -n -t ../configs/kcb/tests/test_"$TEST".jmx -p ../configs/kcb/properties/runner.properties -l results.jtl -j jmeter.log $TEST_PARAMETERS
-            '''
-          }
+                export VAULT_TOKEN
+                export VAULT_ADDR
+          
+              #   # Run the playbook to run the automated Pytest script
+              #   echo "Running the run_pytest.sh script"
+    
+              if [[ -z $VAULT_TOKEN ]] || [[ $VAULT_TOKEN == null ]]; then
+                    echo "Failed to log into the vault"
+                    exit 1
+              fi
+
+              TEST_PARAMETERS="-Jloops=$LOOPS -Japi_version=$API_VERSION -Jstart_threads_count=$START_THREADS_COUNT -Jinitial_delay=$INITIAL_DELAY -Jstartup_time=$STARTUP_TIME -Jhold_load_for=$HOLD_LOAD_FOR -Jshutdown_time=$SHUTDOWN_TIME -Jconstant_timer=$CONSTANT_TIMER"
+              echo "PARAMETERS: $TEST_PARAMETERS"
+              cd capi_jmeter/bin && sh jmeter -n -t ../configs/kcb/tests/test_"$TEST".jmx -p ../configs/kcb/properties/runner.properties -l results.jtl -j jmeter.log $TEST_PARAMETERS
+              '''
+            }
+        }
       }
     }
   }
-} 
+}
