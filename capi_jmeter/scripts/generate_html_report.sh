@@ -1,0 +1,1 @@
+sh bin/jmeter -g configs/kcb/reports/results.jtl -o configs/kcb/reports/html/

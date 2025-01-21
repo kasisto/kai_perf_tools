@@ -53,7 +53,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Assistant " enabled="true">
-          <stringProp name="filename">../configs/kcb/data/assistants.csv</stringProp>
+          <stringProp name="filename">configs/kcb/data/assistants.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>
@@ -181,7 +181,7 @@
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Question " enabled="true">
-            <stringProp name="filename">../configs/kcb/data/questions.csv</stringProp>
+            <stringProp name="filename">configs/kcb/data/questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
