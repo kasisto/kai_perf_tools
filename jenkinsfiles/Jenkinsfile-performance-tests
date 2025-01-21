@@ -96,11 +96,13 @@ pipeline {
                     exit 1
               fi
 
-              mkdir -p configs/kcb/reports/html/
               TEST_PARAMETERS="-Jloops=$LOOPS -Japi_version=$API_VERSION -Jstart_threads_count=$START_THREADS_COUNT -Jinitial_delay=$INITIAL_DELAY -Jstartup_time=$STARTUP_TIME -Jhold_load_for=$HOLD_LOAD_FOR -Jshutdown_time=$SHUTDOWN_TIME -Jconstant_timer=$CONSTANT_TIMER"
               echo "PARAMETERS: $TEST_PARAMETERS"
-              
+
               BASE_DIR="/home/user/capi_jmeter"
+              mkdir -p "$BASE_DIR"/configs/kcb/reports/html
+              chmod -R 777 ""$BASE_DIR"/configs/kcb/reports
+
               cd capi_jmeter/bin && sh jmeter -n -t "$BASE_DIR"/configs/kcb/tests/test_"$TEST".jmx -p "$BASE_DIR"/configs/kcb/properties/runner.properties -l "$BASE_DIR"/configs/kcb/reports/results.jtl -j "$BASE_DIR"/configs/kcb/reports/jmeter.log -e -o "$BASE_DIR"/configs/kcb/reports/html/ $TEST_PARAMETERS
               python3 capi_jmeter/scripts/upload_report.py
               '''
