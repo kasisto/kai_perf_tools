@@ -98,7 +98,12 @@ pipeline {
 
               TEST_PARAMETERS="-Jloops=$LOOPS -Japi_version=$API_VERSION -Jstart_threads_count=$START_THREADS_COUNT -Jinitial_delay=$INITIAL_DELAY -Jstartup_time=$STARTUP_TIME -Jhold_load_for=$HOLD_LOAD_FOR -Jshutdown_time=$SHUTDOWN_TIME -Jconstant_timer=$CONSTANT_TIMER"
               echo "PARAMETERS: $TEST_PARAMETERS"
-              cd capi_jmeter/bin && sh jmeter -n -t ../configs/kcb/tests/test_"$TEST".jmx -p ../configs/kcb/properties/runner.properties -l results.jtl -j jmeter.log $TEST_PARAMETERS
+
+              REPORTS_DIR=~/capi_jmeter/configs/kcb/reports
+              mkdir -p "$REPORTS_DIR"
+
+              cd capi_jmeter/bin && sh jmeter -n -t ../configs/kcb/tests/test_"$TEST".jmx -p ../configs/kcb/properties/runner.properties -l "$REPORTS_DIR"/results.jtl -j "$REPORTS_DIR"/jmeter.log -e -o "$REPORTS_DIR"/html/ $TEST_PARAMETERS
+              python3 capi_jmeter/scripts/upload_report.py
               '''
             }
         }
