@@ -78,28 +78,34 @@
 JMeter includes the pattern matching software <a href="http://attic.apache.org/projects/jakarta-oro.html">Apache Jakarta ORO</a>
 <br>
 
-There is some documentation for this on the Jakarta web-site, for example 
+There is some documentation for this on the Jakarta web-site, for example
 <a href="http://archimedes.fas.harvard.edu/scrapbook/jakarta-oro-2.0.6/docs/api/org/apache/oro/text/regex/package-summary.html">
 a summary of the pattern matching characters</a>
 </p><p>
-There is also documentation on an older incarnation of the product at 
-<a href="http://www.savarese.org/oro/docs/OROMatcher/index.html">OROMatcher User's guide</a>, which might prove useful. 
+There is also documentation on an older incarnation of the product at
+<a href="http://www.savarese.org/oro/docs/OROMatcher/index.html">OROMatcher User's guide</a>, which might prove useful.
 </p><p>
-The pattern matching is very similar to the pattern matching in Perl. 
+<table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
+<tr><td>With JMeter version 5.5 the Regex implementation can be switched from Oro to the JDK based one by setting
+the JMeter property <tt class="code">jmeter.regex.engine</tt> to some value different than <tt class="code">oro</tt>.</td></tr>
+</table>
+</p>
+<p>
+The pattern matching is very similar to the pattern matching in Perl.
 A full installation of Perl will include plenty of documentation on regular expressions - look for <tt class="code">perlrequick</tt>,
 <tt class="code">perlretut</tt>, <tt class="code">perlre</tt> and <tt class="code">perlreref</tt>.
 </p><p>
 It is worth stressing the difference between &quot;<em>contains</em>&quot; and &quot;<em>matches</em>&quot;, as used on the Response Assertion test element:
 </p><dl>
-<dt>&quot;<em>contains</em>&quot;</dt><dd> means that the regular expression matched at least some part of the target, 
+<dt>&quot;<em>contains</em>&quot;</dt><dd> means that the regular expression matched at least some part of the target,
 so '<tt class="code">alphabet</tt>' &quot;<em>contains</em>&quot; '<tt class="code">ph.b.</tt>' because the regular expression matches the substring '<tt class="code">phabe</tt>'.
 </dd>
 <dt>
-&quot;<em>matches</em>&quot;</dt><dd> means that the regular expression matched the whole target. 
-So '<tt class="code">alphabet</tt>' is &quot;<em>matched</em>&quot; by '<tt class="code">al.*t</tt>'. 
+&quot;<em>matches</em>&quot;</dt><dd> means that the regular expression matched the whole target.
+So '<tt class="code">alphabet</tt>' is &quot;<em>matched</em>&quot; by '<tt class="code">al.*t</tt>'.
 </dd>
-</dl><p>In this case, it is equivalent to wrapping the regular expression in <tt class="code">^</tt> and <tt class="code">$</tt>, viz '<tt class="code">^al.*t$</tt>'. 
-</p><p>However, this is not always the case. 
+</dl><p>In this case, it is equivalent to wrapping the regular expression in <tt class="code">^</tt> and <tt class="code">$</tt>, viz '<tt class="code">^al.*t$</tt>'.
+</p><p>However, this is not always the case.
 For example, the regular expression '<tt class="code">alp|.lp.*</tt>' is &quot;<em>contained</em>&quot; in '<tt class="code">alphabet</tt>',
 but does not &quot;<em>match</em>&quot; '<tt class="code">alphabet</tt>'.
 </p><p>Why? Because when the pattern matcher finds the sequence '<tt class="code">alp</tt>' in '<tt class="code">alphabet</tt>', it stops trying any other
@@ -112,7 +118,7 @@ Unlike Perl, there is no need to (i.e. do not) enclose the regular expression in
 </table>
 </p>
 <p>
-So how does one use the modifiers <tt class="code">ismx</tt> etc. if there is no trailing <tt class="code">/</tt>? 
+So how does one use the modifiers <tt class="code">ismx</tt> etc. if there is no trailing <tt class="code">/</tt>?
 The solution is to use <i>extended regular expressions</i>, i.e. <tt class="code">/abc/i</tt> becomes <tt class="code">(?i)abc</tt>.
 See also <a href="#placement">Placement of modifiers</a> below.
 </p></blockquote>
@@ -128,7 +134,7 @@ See also <a href="#placement">Placement of modifiers</a> below.
 <tr><td>
 <blockquote>
 <h3>Extract single string</h3><p>
-Suppose you want to match the following portion of a web-page: 
+Suppose you want to match the following portion of a web-page:
 <br>
 
 <tt class="code">name=&quot;file&quot; value=&quot;readme.txt&quot;&gt;</tt>
@@ -147,7 +153,7 @@ The special characters above are:
 <dl>
 <dt><tt class="code">(</tt> and <tt class="code">)</tt></dt><dd>these enclose the portion of the match string to be returned</dd>
 <dt><tt class="code">.</tt></dt><dd>match any character</dd>
-<dt><tt class="code">+</tt></dt><dd>one or more times</dd> 
+<dt><tt class="code">+</tt></dt><dd>one or more times</dd>
 <dt><tt class="code">?</tt></dt><dd>don't be greedy, i.e. stop when first match succeeds</dd>
 </dl>
 <p>
@@ -163,14 +169,14 @@ where<br>
 
 <tt class="code">[^&quot;]</tt> - means match anything except <tt class="code">&quot;</tt><br>
 
-In this case, the matching engine can stop looking as soon as it sees the first <tt class="code">&quot;</tt>, 
+In this case, the matching engine can stop looking as soon as it sees the first <tt class="code">&quot;</tt>,
 whereas in the previous case the engine has to check that it has found <tt class="code">&quot;&gt;</tt> rather than say <tt class="code">&quot; &gt;</tt>.
 </p>
 <h3>Extract multiple strings</h3>
 <p>
 Suppose you want to match the following portion of a web-page:<br>
 
-<tt class="code">name=&quot;file.name&quot; value=&quot;readme.txt&quot;</tt> 
+<tt class="code">name=&quot;file.name&quot; value=&quot;readme.txt&quot;</tt>
 and you want to extract both <tt class="code">file.name</tt> and <tt class="code">readme.txt</tt>.
 <br>
 
@@ -208,7 +214,7 @@ The following variables would be set:
 <dt><tt class="code">MYREF_g1</tt></dt><dd><tt class="code">file.name</tt></dd>
 <dt><tt class="code">MYREF_g2</tt></dt><dd><tt class="code">readme.txt</tt></dd>
 </dl>
-These variables can be referred to later on in the JMeter test plan, as <tt class="code">${MYREF}</tt>, <tt class="code">${MYREF_g1}</tt> etc. 
+These variables can be referred to later on in the JMeter test plan, as <tt class="code">${MYREF}</tt>, <tt class="code">${MYREF_g1}</tt> etc.
 </p></blockquote>
 </td></tr>
 <tr><td><br></td></tr>
@@ -221,19 +227,19 @@ These variables can be referred to later on in the JMeter test plan, as <tt clas
 </td></tr>
 <tr><td>
 <blockquote>
-<p>The pattern matching behaves in various slightly different ways, 
+<p>The pattern matching behaves in various slightly different ways,
 depending on the setting of the multi-line and single-line modifiers.
 Note that the single-line and multi-line operators have nothing to do with each other;
 they can be specified independently.
 </p><h3>Single-line mode</h3><p>
 Single-line mode only affects how the '<tt class="code">.</tt>' meta-character is interpreted.
 </p><p>
-Default behaviour is that '<tt class="code">.</tt>' matches any character except newline. 
+Default behaviour is that '<tt class="code">.</tt>' matches any character except newline.
 In single-line mode, '<tt class="code">.</tt>' also matches newline.
 </p><h3>Multi-line mode</h3><p>
 Multi-line mode only affects how the meta-characters '<tt class="code">^</tt>' and '<tt class="code">$</tt>' are interpreted.
 </p><p>
-Default behaviour is that '<tt class="code">^</tt>' and '<tt class="code">$</tt>' only match at the very beginning and end of the string. 
+Default behaviour is that '<tt class="code">^</tt>' and '<tt class="code">$</tt>' only match at the very beginning and end of the string.
 When Multi-line mode is used, the '<tt class="code">^</tt>' metacharacter matches at the beginning of every line,
 and the '<tt class="code">$</tt>' metacharacter matches at the end of every line.</p></blockquote>
 </td></tr>
@@ -348,14 +354,14 @@ Match ExAct case or (?i)ArBiTrARY(?-i) case
 <blockquote>
 <p>
 Since JMeter 2.4, the listener <a href="component_reference.html#View_Results_Tree">View Results Tree</a>
-include a RegExp Tester to test regular expressions directly on sampler response data. 
+include a RegExp Tester to test regular expressions directly on sampler response data.
 </p><p>
 There is a <a href="http://www.regexplanet.com/advanced/java/index.html">Website</a> to test Java Regular expressions.
 </p><p>
 Another approach is to use a simple test plan to test the regular expressions.
 The Java Request sampler can be used to generate a sample, or the HTTP Sampler can be used to load a file.
 Add a Debug Sampler and a Tree View Listener and changes to the regular expression can be tested quickly,
-without needing to access any external servers. 
+without needing to access any external servers.
 </p></blockquote>
 </p>
 </td></tr>
@@ -386,7 +392,7 @@ without needing to access any external servers.
 <tr>
 <td>
 <font color="#525D76" size="-1"><em>
-Copyright &copy; 1999-2019, Apache Software Foundation
+Copyright &copy; 1999-2023, Apache Software Foundation
 </em></font>
 </td>
 <td align="right">
@@ -409,6 +415,9 @@ trademarks of the Apache Software Foundation.
 </body>
 </html>
 <!-- end the processing -->
+
+
+
 
 
 

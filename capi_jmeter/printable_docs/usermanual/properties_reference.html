@@ -77,6 +77,9 @@
 <li><a href="#laf_config">19.4 Look and Feel configuration</a></li>
 <ul>
 </ul>
+<li><a href="#darklaf_config">19.4.1 Darklaf configuration</a></li>
+<ul>
+</ul>
 <li><a href="#toolbar_display">19.5 Toolbar display</a></li>
 <ul>
 </ul>
@@ -197,6 +200,9 @@
 <ul>
 </ul>
 <li><a href="#docgeneration">19.45 Documentation generation</a></li>
+<ul>
+</ul>
+<li><a href="#securityprovider">19.46 Security Provider</a></li>
 <ul>
 </ul>
 </ul>
@@ -406,7 +412,7 @@ No
 <p>
 <table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
 <tr><td>SSL (Java) System properties are now in <tt class="code">system.properties</tt><br>
- 
+
 JMeter no longer converts <tt class="code">javax.<em>xxx</em></tt> property entries in
 <tt class="code">jmeter.properties</tt> into System properties. These must now be
 defined in the <tt class="code">system.properties</tt> file or on the command-line. The
@@ -526,7 +532,7 @@ No
     JVM does not support the specified cipher suites, or if the cipher suites
     supported by the HTTPS server do not overlap this list.  See the
     <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html#Customization">JSSE
-	    Reference Guide.</a><br>
+    Reference Guide.</a><br>
 
     For example: <div align="left">
 <table cellspacing="4" cellpadding="0" border="0">
@@ -562,7 +568,7 @@ Reset HTTP State when starting a new Thread Group iteration.
 In summary<tt class="code">true</tt> means next iteration is associated to a new user.
 <tt class="code">false</tt> means next iteration is associated to same user.
 <tt class="code">true</tt> involves:
- <ul> 
+ <ul>
     <li>Closing opened connection</li>
     <li>resetting SSL State</li>
 </ul>
@@ -751,7 +757,7 @@ No
 
     <p>
 <table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
-<tr><td>When you change Look and Feel (LAF) from JMeter GUI through menu Options &gt; Look and Feel, 
+<tr><td>When you change Look and Feel (LAF) from JMeter GUI through menu Options &gt; Look and Feel,
     you should restart JMeter to ensure change is fully effective.</td></tr>
 </table>
 </p>
@@ -805,6 +811,44 @@ No
     Interval period in <tt class="code">ms</tt> to process the events of the listeners.<br>
 
     Defaults to: <tt class="code">500</tt></td>
+<td>
+No
+</td>
+</tr>
+</table>
+</blockquote>
+</p>
+</td></tr>
+<tr><td><br></td></tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="2" width="100%">
+<tr><td bgcolor="#525D76">
+<font color="#ffffff" face="arial,helvetica,sanserif">
+<a name="darklaf_config"><strong>19.4.1 Darklaf configuration</strong></a></font>
+</td></tr>
+<tr><td>
+<blockquote>
+<p>
+<b>Parameters</b>
+</p>
+<table border="1" cellspacing="0" cellpadding="2">
+<tr><th>Attribute</th><th>Description</th><th>Required</th></tr>
+<tr>
+<td>darklaf.decorations</td>
+<td>
+        Enables custom window chrome when using a Darklaf Look And Feel.
+        Defaults to: <tt class="code">false</tt></td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>darklaf.unifiedMenuBar</td>
+<td>
+        Enables the unified menubar on Windows when using a Darklaf Look and Feel.<br>
+
+        This property only has an effect if <tt class="code">darklaf.native</tt> is <tt class="code">true</tt>.
+        Defaults to: <tt class="code">true</tt></td>
 <td>
 No
 </td>
@@ -902,7 +946,7 @@ No
 <tr>
 <td>jmeter.icons</td>
 <td>
-    Icon definitions. Alternate set: 
+    Icon definitions. Alternate set:
     <div align="left">
 <table cellspacing="4" cellpadding="0" border="0">
 <tr>
@@ -1131,7 +1175,7 @@ No
     directory provided that the last created backup file is <tt class="code">test-plan-000011.jmx</tt>.<br>
 
     Default value is <tt class="code">true</tt> indicating that auto backups are enabled.<br>
- 
+
     Defaults to: <tt class="code">true</tt>
 </td>
 <td>
@@ -1344,12 +1388,14 @@ No
 <tr>
 <td>client.rmi.localport</td>
 <td>
-    Parameter that controls the RMI port used by the <tt class="code">RemoteSampleListenerImpl</tt> (The Controller)<br>
+    Parameter that controls the RMI ports used by <tt class="code">RemoteSampleListenerImpl</tt> and <tt class="code">RemoteThreadsListenerImpl</tt> (The Controller)<br>
 
-    Default value is <tt class="code">0</tt>, which means port is randomly assigned.
+    Default value is <tt class="code">0</tt>, which means ports are randomly assigned.
+    If this is non-zero, it will be used as the base for local port numbers for the client engine.
+    At the moment JMeter will open up to three ports beginning with the port defined in this property.
     <p>
 <table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
-<tr><td>You may need to open a port in the firewall on the Controller machine.</td></tr>
+<tr><td>You may need to open corresponding ports in the firewall on the Controller machine.</td></tr>
 </table>
 </p>
 
@@ -1698,6 +1744,24 @@ No
 No
 </td>
 </tr>
+<tr>
+<td>http.proxyUser</td>
+<td>
+    Set the user name to use with a proxy.
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>http.proxyPass</td>
+<td>
+    Set the password to use with a proxy.
+</td>
+<td>
+No
+</td>
+</tr>
 </table>
 </blockquote>
 </p>
@@ -1734,6 +1798,15 @@ No
 <td>
     Should port be stripped from urls before constructing SPNs for SPNEGO authentication.
     Defaults to: <tt class="code">true</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>kerberos.spnego.use_canonical_host_name</td>
+<td>
+    Should the host name for constructing SPN be canonicalized for SPNEGO authentication.
 </td>
 <td>
 No
@@ -1901,7 +1974,7 @@ No
 <td>httpclient4.retrycount</td>
 <td>
     Number of retries to attempt.
-    Retry will be done on Idempotent Http Methods by default. 
+    Retry will be done on Idempotent Http Methods by default.
     If you want to retry for all methods, see property <tt class="code">httpclient4.request_sent_retry_enabled</tt>
     <br>
 
@@ -1941,7 +2014,7 @@ No
     Check connection if the elapsed time (in milliseconds) since the last use of the connection
     exceeds this value. Ensure this value is always lower by at least 150 ms than <tt class="code">httpclient4.time_to_live</tt><br>
 
-    Defaults to: <tt class="code">1700</tt>
+    Defaults to: <tt class="code">4900</tt>
 </td>
 <td>
 No
@@ -1953,19 +2026,7 @@ No
     <abbr title="time to live">TTL</abbr> (in milliseconds) represents an absolute value.
     No matter what, the connection will not be re-used beyond its TTL.<br>
 
-    Defaults to: <tt class="code">2000</tt>
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>httpclient4.max_body_retain_size</td>
-<td>
-    Max size in bytes of <tt class="code">PUT</tt> body to retain in result sampler.
-    Bigger results will be clipped.<br>
-
-    Defaults to: <tt class="code">327678</tt> (bytes)
+    Defaults to: <tt class="code">60000</tt>
 </td>
 <td>
 No
@@ -2506,7 +2567,7 @@ No
 
     This also affects the timestamp stored in result files.<br>
 
-    Defaults to: <tt class="code">true</tt>
+    Defaults to: <tt class="code">false</tt>
 </td>
 <td>
 No
@@ -2621,6 +2682,18 @@ No
     Add numeric suffix to Sampler names.<br>
 
     defaults to: <tt class="code">true</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>proxy.sampler_format</td>
+<td>
+    Default format string for new samplers when <tt class="code">Use format string</tt> is selected
+    as <tt class="code">naming scheme</tt>.<br>
+
+    Defaults to: <tt class="code">#{counter,number,000} - #{path} (#{name})</tt>
 </td>
 <td>
 No
@@ -3127,7 +3200,7 @@ No
         and <tt class="code">sample_sender_strip_also_on_error</tt></dd>
         <dt><tt class="code">StrippedDiskStore</tt></dt>
         <dd>Same as <tt class="code">DiskStore</tt> but strips response data from SampleResult</dd>
-        <dt>Class extending <a href="../api/org/apache/jmeter/samplers/AbstractSampleSender.html"><tt class="code">AbstractSampleSender</tt></a> (<tt class="code">org.example.load.MySampleSender</tt> for example)</dt>
+        <dt>Class extending <a href="../../docs/api/org/apache/jmeter/samplers/AbstractSampleSender.html"><tt class="code">AbstractSampleSender</tt></a> (<tt class="code">org.example.load.MySampleSender</tt> for example)</dt>
         <dd>A custom implementation of your choice</dd>
     </dl><p>
 <b>Parameters</b>
@@ -3661,11 +3734,24 @@ No
 <tr>
 <td>backend_metrics_large_window</td>
 <td>
-    Backend metrics sliding window size  for <tt class="code">Percentiles</tt>, <tt class="code">Min</tt> 
+    Backend metrics sliding window size  for <tt class="code">Percentiles</tt>, <tt class="code">Min</tt>
     and <tt class="code">Max</tt>. when <tt class="code">backend_metrics_window_mode=timed</tt><br>
 
-    Setting this value too high can lead to OOM Backend metrics sliding window size 
+    Setting this value too high can lead to OOM Backend metrics sliding window size
     Defaults to: <tt class="code">5000</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>backend_metrics_percentile_estimator</td>
+<td>
+    Specify the <a href="https://commons.apache.org/proper/commons-math/javadocs/api-3.6.1/org/apache/commons/math3/stat/descriptive/rank/Percentile.EstimationType.html">Percentile Estimation Type</a> to use.<br>
+
+    To make the values from the dashboard compatible with the Aggregate Report, use the value <tt class="code">R_3</tt>.<br>
+
+    Defaults to: <tt class="code">LEGACY</tt>
 </td>
 <td>
 No
@@ -4150,6 +4236,26 @@ No
 </td>
 </tr>
 <tr>
+<td>function.cache.per.iteration</td>
+<td>
+    <p>Cache function execution during test execution.</p>
+    <p>By default, JMeter caches function properties during a test iteration, however,
+    it might cause unexpected results when a component is shared across threads and the expression depends on
+    the thread variables.</p>
+    <p>
+<table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
+<tr><td>The property will likely be removed in an upcoming version, so if you need it consider raising
+     an issue with your use-case.</td></tr>
+</table>
+</p>
+
+    Defaults to: <tt class="code">false</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
 <td>propertyEditorSearchPath</td>
 <td>
     TestBeanGui<br>
@@ -4300,7 +4406,7 @@ No
 <td>
     The encoding to be used if none is provided.<br>
 
-    Defaults to: <tt class="code">ISO-8859-1</tt>
+    Defaults to: <tt class="code">UTF-8</tt> (since 5.6.1)
 </td>
 <td>
 No
@@ -4393,6 +4499,34 @@ No
 </p>
 
     Defaults to: <tt class="code">false</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>jmeter.regex.engine</td>
+<td>
+    Ability to switch out the old Oro Regex implementation with the JDK built-in implementation.
+    Any value different to <tt class="code">oro</tt> will disable the Oro implementation and enable the JDK based.
+    <p>
+<table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
+<tr><td>We intend to switch the default to the JDK based one in a later version of JMeter.</td></tr>
+</table>
+</p>
+
+    Defaults to: <tt class="code">oro</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>jmeter.regex.patterncache.size</td>
+<td>
+    We assist the JDK based Regex implementation by caching Pattern objects. The size of the
+    cache can be set with this setting. It can be disabled by setting it to <tt class="code">0</tt>.
+    Defaults to: <tt class="code">1000</tt>
 </td>
 <td>
 No
@@ -4615,6 +4749,36 @@ No
 </td>
 </tr>
 <tr>
+<td>view.results.tree.max_line_size</td>
+<td>
+    Maximum size (in characters) of the line in the displayed.<br>
+
+    This property works around Bug 63620 since Swing hangs when displaying very long lines.<br>
+
+    Set to zero to disable line wrapping.<br>
+
+    Defaults to: <tt class="code">110000</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>view.results.tree.soft_wrap_line_size</td>
+<td>
+    Line size (in characters) to consider wrapping to make UI faster.<br>
+
+    This property works around Bug 63620 since Swing hangs when displaying very long lines.<br>
+
+    Set to zero to disable line wrapping.<br>
+
+    Defaults to: <tt class="code">view.results.tree.max_line_size / 1.1f</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
 <td>view.results.tree.renderers_order</td>
 <td>
     Order of Renderers in View Results Tree.<br>
@@ -4655,6 +4819,20 @@ No
 </td>
 </tr>
 <tr>
+<td>view.results.tree.simple_view_limit</td>
+<td>
+    Configures maximum document length for text view before switching to a simpler view, that does not do line breaks.<br>
+
+    Works probably best, when combined with a low setting of <tt class="code">view.results.tree.max_line_size</tt>.
+    Can be switched off by setting the value to <tt class="code">-1</tt>.<br>
+
+    Defaults to: <tt class="code">10000</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
 <td>document.max_size</td>
 <td>
     Maximum size (in bytes) of Document that can be parsed by Tika engine<br>
@@ -4662,6 +4840,17 @@ No
     Set to zero to disable the size check.<br>
 
     Defaults to: <tt class="code">10485760</tt>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>text.kerning.max_document_size</td>
+<td>
+    Configures the maximum document length for rendering with kerning enabled.<br>
+
+    Defaults to: <tt class="code">10000</tt>
 </td>
 <td>
 No
@@ -5637,7 +5826,7 @@ No
 <td>
     Timeout in milliseconds for Report generation when using Tools &gt; Generate HTML report.<br>
 
-    Defaults to: 120000
+    Defaults to: 300000
 </td>
 <td>
 No
@@ -5866,9 +6055,9 @@ No
 <tr>
 <td>think_time_creator.impl</td>
 <td>
-    Default implementation that create the Timer structure to add to Test Plan. 
-    Implementation of interface <a href="../api/org/apache/jmeter/gui/action/thinktime/ThinkTimeCreator.html"><tt class="code">org.apache.jmeter.gui.action.thinktime.ThinkTimeCreator</tt></a>
-    Defaults to: <a href="../api/org/apache/jmeter/thinktime/DefaultThinkTimeCreator.html"><tt class="code">org.apache.jmeter.thinktime.DefaultThinkTimeCreator</tt></a>
+    Default implementation that create the Timer structure to add to Test Plan.
+    Implementation of interface <a href="../../docs/api/org/apache/jmeter/gui/action/thinktime/ThinkTimeCreator.html"><tt class="code">org.apache.jmeter.gui.action.thinktime.ThinkTimeCreator</tt></a>
+    Defaults to: <a href="../../docs/api/org/apache/jmeter/thinktime/DefaultThinkTimeCreator.html"><tt class="code">org.apache.jmeter.thinktime.DefaultThinkTimeCreator</tt></a>
 </td>
 <td>
 No
@@ -5878,7 +6067,7 @@ No
 <td>think_time_creator.default_timer_implementation</td>
 <td>
     Default Timer GUI class added to Test Plan by DefaultThinkTimeCreator
-    Defaults to: <a href="../api/org/apache/jmeter/timers/gui/UniformRandomTimerGui.html"><tt class="code">org.apache.jmeter.timers.gui.UniformRandomTimerGui</tt></a>
+    Defaults to: <a href="../../docs/api/org/apache/jmeter/timers/gui/UniformRandomTimerGui.html"><tt class="code">org.apache.jmeter.timers.gui.UniformRandomTimerGui</tt></a>
 </td>
 <td>
 No
@@ -5946,10 +6135,10 @@ No
 <tr>
 <td>naming_policy.impl</td>
 <td>
-    Implementation of interface <a href="../api/org/apache/jmeter/gui/action/TreeNodeNamingPolicy.html"><tt class="code">org.apache.jmeter.gui.action.TreeNodeNamingPolicy</tt></a>
-    Default implementation that create the Timer structure to add to Test Plan. 
+    Implementation of interface <a href="../../docs/api/org/apache/jmeter/gui/action/TreeNodeNamingPolicy.html"><tt class="code">org.apache.jmeter.gui.action.TreeNodeNamingPolicy</tt></a>
+    Default implementation that create the Timer structure to add to Test Plan.
     Implementation of interface org.apache.jmeter.gui.action.thinktime.ThinkTimeCreator
-    Defaults to: <a href="../api/org/apache/jmeter/gui/action/impl/DefaultTreeNodeNamingPolicy.html"><tt class="code">org.apache.jmeter.gui.action.impl.DefaultTreeNodeNamingPolicy</tt></a>
+    Defaults to: <a href="../../docs/api/org/apache/jmeter/gui/action/impl/DefaultTreeNodeNamingPolicy.html"><tt class="code">org.apache.jmeter.gui.action.impl.DefaultTreeNodeNamingPolicy</tt></a>
 </td>
 <td>
 No
@@ -6010,7 +6199,7 @@ No
 <td>
     Path to Groovy file containing utility functions to make available to <tt class="code"><a href="../usermanual/functions.html#__groovy">__groovy</a></tt> function.<br>
 
-    Defaults to <tt class="code">bin/utility.groovy</tt> 
+    Defaults to <tt class="code">bin/utility.groovy</tt>
     </td>
 <td>
 No
@@ -6103,6 +6292,44 @@ No
 </td></tr>
 <tr><td><br></td></tr>
 </table>
+<table border="0" cellspacing="0" cellpadding="2" width="100%">
+<tr><td bgcolor="#525D76">
+<font color="#ffffff" face="arial,helvetica,sanserif">
+<a name="securityprovider"><strong>19.46 Security Provider</strong></a></font>
+</td></tr>
+<tr><td>
+<blockquote>
+<div class="description">Advanced properties for documentation generation</div>
+<p>
+<b>Parameters</b>
+</p>
+<table border="1" cellspacing="0" cellpadding="2">
+<tr><th>Attribute</th><th>Description</th><th>Required</th></tr>
+<tr>
+<td>security.provider</td>
+<td>
+        The value must be in this format: &lt;ClassName&gt;[:&lt;Postion&gt;[:&lt;ConfigString&gt;]]</td>
+<td>
+No
+</td>
+</tr>
+<tr>
+<td>security.provider.<n></td>
+<td>
+        Replace the <tt class="code">&lt;n&gt;</tt> with any number. The SecurityProviders will be added in the alphabetical
+        order of the property names. (First: <tt class="code">security.provider</tt> and then <tt class="code">security.provider.2</tt>, <tt class="code">security.provider.3</tt>,...)
+        See property <tt class="code">security.provider</tt>
+        </td>
+<td>
+No
+</td>
+</tr>
+</table>
+</blockquote>
+</p>
+</td></tr>
+<tr><td><br></td></tr>
+</table>
 <br>
 <table>
 <tr>
@@ -6128,7 +6355,7 @@ No
 <tr>
 <td>
 <font color="#525D76" size="-1"><em>
-Copyright &copy; 1999-2019, Apache Software Foundation
+Copyright &copy; 1999-2023, Apache Software Foundation
 </em></font>
 </td>
 <td align="right">
@@ -6151,6 +6378,9 @@ trademarks of the Apache Software Foundation.
 </body>
 </html>
 <!-- end the processing -->
+
+
+
 
 
 

@@ -116,9 +116,9 @@ The first step is to configure the injectors that will run JMeter, this as for a
     <li>OS Tuning</li>
     <li>Java setup: Ensure you install the latest version of Java supported by JMeter</li>
     <li><b>Increase the Java Heap size</b>. By default JMeter runs with a heap of 1 GB, this might not be enough for your test and depends on your test plan and number of threads you want to run</li>
-</ul> 
+</ul>
 
-Once everything is ready, you will use CLI mode (Command-line mode previously called <a href="#non_gui">Non-GUI mode</a>) to run it for the Load Test. 
+Once everything is ready, you will use CLI mode (Command-line mode previously called <a href="#non_gui">Non-GUI mode</a>) to run it for the Load Test.
 <p>
 <table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
 <tr><td>Don't run load test using GUI mode !</td></tr>
@@ -186,6 +186,7 @@ The other specific Test Plan sections are:
 <li><a href="build-ldap-test-plan.html">LDAP</a></li>
 <li><a href="build-ldapext-test-plan.html">LDAP Extended</a></li>
 <li><a href="build-ws-test-plan.html">WebServices (SOAP)</a></li>
+<li><a href="build-programmatic-test-plan.html">Building Test Plan programmatically</a></li>
 </ul>
 </p><p>Once you are comfortable with building and running JMeter Test Plans, you can look into the
 various configuration elements (timers, listeners, assertions, and others) which give you more control
@@ -216,7 +217,7 @@ over your Test Plans.</p></blockquote>
 <p>
 <table border="1" bgcolor="#bbbb00" width="50%" cellspacing="0" cellpadding="2">
 <tr><td>JMeter is compatible with Java 8 or higher.
-We highly advise you to install latest minor version of your major version for security and performance reasons. 
+We highly advise you to install latest minor version of your major version for security and performance reasons.
 </td></tr>
 </table>
 </p>
@@ -292,7 +293,7 @@ implementation.</p></blockquote>
 </td></tr>
 <tr><td>
 <blockquote>
-<p>JMeter has extensive Email capabilities. 
+<p>JMeter has extensive Email capabilities.
 It can send email based on test results, and has a POP3(S)/IMAP(S) sampler.
 It also has an SMTP(S) sampler.
 </p></blockquote>
@@ -310,9 +311,9 @@ It also has an SMTP(S) sampler.
 <p>To test a web server using SSL encryption (HTTPS), JMeter requires that an
 implementation of SSL be provided, as is the case with Sun Java 1.4 and above.
 If your version of Java does not include SSL support, then it is possible to add an external implementation.
-Include the necessary encryption packages in JMeter's <a href="#classpath">classpath</a>.  
+Include the necessary encryption packages in JMeter's <a href="#classpath">classpath</a>.
 Also, update <a href="#configuring_jmeter"><tt class="code">system.properties</tt></a> to register the SSL Provider.</p><p>
-JMeter HTTP defaults to protocol level TLS. This can be changed by editing the JMeter property 
+JMeter HTTP defaults to protocol level TLS. This can be changed by editing the JMeter property
 <tt class="code">https.default.protocol</tt> in <tt class="code">jmeter.properties</tt> or <tt class="code">user.properties</tt>.
 </p><p><b>The JMeter HTTP samplers are configured to accept all certificates,
 whether trusted or not, regardless of validity periods, etc.</b>
@@ -491,7 +492,7 @@ There are a few environment variables, that can be used to customize the JVM set
 rem This is the content of bin\setenv.bat,
 rem it will be called by bin\jmeter.bat
 
-set JVM_ARGS=&quot;-Xms1024m -Xmx1024m -Dpropname=value&quot;
+set JVM_ARGS=-Xms1024m -Xmx1024m -Dpropname=value
 </pre></td>
 <td bgcolor="#023264" width="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
 </tr>
@@ -584,7 +585,7 @@ will override the HEAP settings in the script.
 # it will be sourced in by bin/jmeter
 
 # Use a bigger heap, but a smaller metaspace, than the default
-export HEAP=&quot;-Xms1G -Xmx1G -XMaxMetaspaceSize=192m&quot;
+export HEAP=&quot;-Xms1G -Xmx1G -XX:MaxMetaspaceSize=192m&quot;
 
 # Try to guess the locale from the OS. The space as value is on purpose!
 export JMETER_LANGUAGE=&quot; &quot;
@@ -739,11 +740,17 @@ If the proxy host and port are provided, then JMeter sets the following System p
 <li><tt class="code">http.proxyPort</tt></li>
 <li><tt class="code">https.proxyHost</tt></li>
 <li><tt class="code">https.proxyPort</tt></li>
-</ul><ul>
+</ul><p>
+The user and password used for a proxy can be given by the System properties <tt class="code">http.proxyUser</tt>
+and <tt class="code">http.proxyUser</tt>. They will get overridden by the above arguments or values set in the
+HTTP Samplers.
+</p><p>
+If a nonproxy host list is provided, then JMeter sets the following System properties:
+</p><ul>
 <li><tt class="code">http.nonProxyHosts</tt></li>
 <li><tt class="code">https.nonProxyHosts</tt></li>
 </ul><p>
-So if you don't wish to set both http and https proxies, 
+So if you don't wish to set both http and https proxies,
 you can define the relevant properties in <tt class="code">system.properties</tt> instead of using the command-line parameters.
 </p><p>
 Proxy Settings can also be defined in a Test Plan, using either the <a href="../usermanual/component_reference.html#HTTP_Request_Defaults">HTTP Request Defaults</a>
@@ -1198,12 +1205,12 @@ jmeter -Duser.dir=/home/mstover/jmeter_stuff \
 <td bgcolor="#023264" width="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
 <td bgcolor="#ffffff"><pre>
 2017-03-01 12:19:20,314 INFO o.a.j.JMeter: Version 3.2.20170301
-2017-03-01 12:19:45,314 INFO o.a.j.g.a.Load: Loading file: c:\mytestfiles\BSH.jmx 
-2017-03-01 12:19:52,328 INFO o.a.j.e.StandardJMeterEngine: Running the test! 
-2017-03-01 12:19:52,384 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group BSH. Ramp up = 1. 
-2017-03-01 12:19:52,485 INFO o.a.j.e.StandardJMeterEngine: Continue on error 
-2017-03-01 12:19:52,589 INFO o.a.j.t.JMeterThread: Thread BSH1-1 started 
-2017-03-01 12:19:52,590 INFO o.a.j.t.JMeterThread: Thread BSH1-1 is done 
+2017-03-01 12:19:45,314 INFO o.a.j.g.a.Load: Loading file: c:\mytestfiles\BSH.jmx
+2017-03-01 12:19:52,328 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2017-03-01 12:19:52,384 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group BSH. Ramp up = 1.
+2017-03-01 12:19:52,485 INFO o.a.j.e.StandardJMeterEngine: Continue on error
+2017-03-01 12:19:52,589 INFO o.a.j.t.JMeterThread: Thread BSH1-1 started
+2017-03-01 12:19:52,590 INFO o.a.j.t.JMeterThread: Thread BSH1-1 is done
 2017-03-01 12:19:52,691 INFO o.a.j.e.StandardJMeterEngine: Test has ended
 </pre></td>
 <td bgcolor="#023264" width="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
@@ -1228,7 +1235,7 @@ jmeter -Duser.dir=/home/mstover/jmeter_stuff \
 </td></tr>
 <tr><td>
 <blockquote>
-<p>Invoking JMeter as &quot;<tt class="code">jmeter -?</tt>&quot; will print a list of all the command-line options. 
+<p>Invoking JMeter as &quot;<tt class="code">jmeter -?</tt>&quot; will print a list of all the command-line options.
 These are shown below.</p><div align="left">
 <table cellspacing="4" cellpadding="0" border="0">
 <tr>
@@ -1310,7 +1317,7 @@ These are shown below.</p><div align="left">
 </table>
 </div>
 <p>
-Note: the JMeter log file name is formatted as a SimpleDateFormat (applied to the current date) 
+Note: the JMeter log file name is formatted as a SimpleDateFormat (applied to the current date)
 if it contains paired single-quotes, .e.g. '<tt class="code">jmeter_'yyyyMMddHHmmss'.log</tt>'
 </p><p>
 If the special name <tt class="code">LAST</tt> is used for the <tt class="code">-t</tt>, <tt class="code">-j</tt> or <tt class="code">-l</tt> flags,
@@ -1338,8 +1345,8 @@ To detect this situation, JMeter starts a new daemon thread just before it exits
 This daemon thread waits a short while; if it returns from the wait, then clearly the
 JVM has not been able to exit, and the thread prints a message to say why.
 </p><p>
-The property <tt class="code">jmeter.exit.check.pause</tt> can be used to override the default pause of 2000ms (2secs).
-If set to <tt class="code">0</tt>, then JMeter does not start the daemon thread.
+The property <tt class="code">jmeter.exit.check.pause</tt> can be used to configure the delay before printing non-daemon threads.
+If set to <tt class="code">0</tt> (default value), then JMeter does not print non-terminated threads at the end of the test.
 </p></blockquote>
 </td></tr>
 <tr><td><br></td></tr>
@@ -1521,7 +1528,7 @@ See also the comments in the <tt class="code">jmeter.properties</tt>, <tt class=
 <tr>
 <td>
 <font color="#525D76" size="-1"><em>
-Copyright &copy; 1999-2019, Apache Software Foundation
+Copyright &copy; 1999-2023, Apache Software Foundation
 </em></font>
 </td>
 <td align="right">
@@ -1544,6 +1551,9 @@ trademarks of the Apache Software Foundation.
 </body>
 </html>
 <!-- end the processing -->
+
+
+
 
 
 

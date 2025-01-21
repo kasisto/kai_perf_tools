@@ -68,9 +68,9 @@
 </td></tr>
 <tr><td>
 <blockquote>
-<p>Since JMeter 2.13 you can get real-time results sent to a backend through the 
+<p>Since JMeter 2.13 you can get real-time results sent to a backend through the
 <a href="component_reference.html#Backend_Listener">Backend Listener</a> using potentially any backend (JDBC, JMS, Webservice, …)
-by providing a class which implements <a href="../api/org/apache/jmeter/visualizers/backend/AbstractBackendListenerClient.html">AbstractBackendListenerClient</a>.<br>
+by providing a class which implements <a href="../../docs/api/org/apache/jmeter/visualizers/backend/AbstractBackendListenerClient.html">AbstractBackendListenerClient</a>.<br>
 
 JMeter ships with:
 <ul>
@@ -178,12 +178,12 @@ In this document we will present the configuration setup to graph and historize 
       <dt><tt class="code">&lt;rootMetricsPrefix&gt;&lt;samplerName&gt;.a.pct&lt;percentileValue&gt;</tt></dt>
       <dd>Percentile computed for responses of sampler name. There will be one metric for each calculated value. (calculated on the totals for OK and failed samples)</dd>
     </dl><p>
-    The default <tt class="code">percentiles</tt> setting on the <a href="../usermanual/component_reference.html#Backend_Listener">Backend Listener</a> is &quot;90;95;99&quot;, 
+    The default <tt class="code">percentiles</tt> setting on the <a href="../usermanual/component_reference.html#Backend_Listener">Backend Listener</a> is &quot;90;95;99&quot;,
     i.e. the 3 percentiles 90%, 95% and 99%.
     </p><p>
-    The <a href="http://graphite.readthedocs.io/en/latest/feeding-carbon.html#step-1-plan-a-naming-hierarchy">Graphite naming hierarchy</a>
+    The <a href="https://graphite.readthedocs.io/en/latest/feeding-carbon.html#step-1-plan-a-naming-hierarchy">Graphite naming hierarchy</a>
     uses dot (&quot;.&quot;) to separate elements. This could be confused with decimal percentile values.
-    JMeter converts any such values, replacing dot (&quot;.&quot;) with underscore (&quot;-&quot;). 
+    JMeter converts any such values, replacing dot (&quot;.&quot;) with underscore (&quot;-&quot;).
     For example, &quot;<tt class="code">99.9</tt>&quot; becomes &quot;<tt class="code">99_9</tt>&quot;
     </p><p>
     By default JMeter sends metrics for all samplers accumulated under the samplerName &quot;<tt class="code">all</tt>&quot;.
@@ -216,16 +216,18 @@ In this document we will present the configuration setup to graph and historize 
 <table border="0" cellspacing="0" cellpadding="2" width="100%">
 <tr><td bgcolor="#828DA6">
 <font color="#ffffff" face="arial,helvetica,sanserif">
-<a name="influxdb_db_configuration"><strong>15.3 InfluxDB database configuration</strong></a>
+<a name="influxdb_db_configuration"><strong>15.3 InfluxDB configuration</strong></a>
 </font>
 </td></tr>
 <tr><td>
 <blockquote>
-<p>Connect to InfluxDB using <a href="https://docs.influxdata.com/influxdb/latest/introduction/getting_started/">InfluxDB’s Command Line Interface (CLI).</a> and <a href="https://docs.influxdata.com/influxdb/latest/query_language/database_management/">create JMeter database</a>:
+<p>Do one of the following to store data sent by the Backend Listener:
     <ul>
-        <li>jmeter : Used by InfluxDB to store the data sent by the Backend Listener</li>
+        <li>For InfluxDB 2 setup, create a <tt class="code">jmeter</tt> <a href="https://v2.docs.influxdata.com/v2.0/organizations/buckets/create-bucket/" target="_blank">bucket</a></li>
+        <li>For InfluxDB 1.x setup, create a <tt class="code">jmeter</tt> database using the <a href="https://docs.influxdata.com/influxdb/v1.8/introduction/get-started/" target="_blank">Influx CLI</a></li>
     </ul>
-    You can do it too by using the HTTP API.
+    You can also use the HTTP API i.e.
+        <tt class="code">curl -i -XPOST http://localhost:8086/query --data-urlencode &quot;q=CREATE DATABASE jmeter&quot;</tt>
     </p><table border="0" cellspacing="0" cellpadding="2" width="100%">
 <tr><td bgcolor="#828DA6">
 <font color="#ffffff" face="arial,helvetica,sanserif">
@@ -234,12 +236,35 @@ In this document we will present the configuration setup to graph and historize 
 </td></tr>
 <tr><td>
 <blockquote>
-<p>InfluxDB is an open-source, distributed, time-series database that allows to 
+<p>InfluxDB is an open-source, distributed, time-series database that allows to
 easily store metrics.
 Installation and configuration is very easy, read this for more details <a href="https://docs.influxdata.com/influxdb/latest/introduction/installation/" target="_blank">InfluxDB documentation</a>.<br>
 
 InfluxDB data can be easily viewed in a browser through <a href="http://grafana.org/" target="_blank">Grafana</a>.
 </p></blockquote>
+</td></tr>
+<tr><td><br></td></tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="2" width="100%">
+<tr><td bgcolor="#828DA6">
+<font color="#ffffff" face="arial,helvetica,sanserif">
+<a name="influxdb_v2"><strong>15.3.2 InfluxDB 2 setup for InfluxDBBackendListenerClient</strong></a>
+</font>
+</td></tr>
+<tr><td>
+<blockquote>
+<p>
+        The configuration should specify the <tt class="code">influxdbToken</tt> parameter and also specify <tt class="code">bucket</tt> and <tt class="code">org</tt> as query parameters in the <tt class="code">influxdbUrl</tt>. See the <a href="https://v2.docs.influxdata.com/v2.0/api/#operation/PostWrite" target="_blank">InfluxDB v2 API</a> for more details.
+    </p><p>
+     How to retrieve the required information in the InfluxDB UI:
+     <ul>
+         <li><a target="_blank" href="https://v2.docs.influxdata.com/v2.0/security/tokens/view-tokens/">influxdbToken</a></li>
+         <li><a target="_blank" href="https://v2.docs.influxdata.com/v2.0/organizations/buckets/view-buckets/">bucket</a></li>
+         <li><a target="_blank" href="https://v2.docs.influxdata.com/v2.0/organizations/view-orgs/">org</a></li>
+    </ul>
+    </p><table border="0" cellspacing="0" cellpadding="0"><tr><td><img width='882' height='428' src="../../docs/images/screenshots/backend_listener_influxdb_v2.png"/><br>
+<font size="-1">InfluxDB 2 configuration</font></td></tr></table>
+</blockquote>
 </td></tr>
 <tr><td><br></td></tr>
 </table>
@@ -258,8 +283,8 @@ InfluxDB data can be easily viewed in a browser through <a href="http://grafana.
 <p>
     Installing grafana<br>
 
-    Read <a href="http://docs.grafana.org/" target="_blank">documentation</a> for more details.
-    Add the <a href="http://docs.grafana.org/features/datasources/influxdb/" target="_blank">datasource</a><br>
+    Read <a href="https://docs.grafana.org/" target="_blank">documentation</a> for more details.
+    Add the <a href="https://docs.grafana.org/features/datasources/influxdb/" target="_blank">datasource</a><br>
 
     </p><table border="0" cellspacing="0" cellpadding="0"><tr><td><img width='1265' height='581' src="../../docs/images/screenshots/grafana_dashboard.png"/><br>
 <font size="-1">Grafana dashboard</font></td></tr></table>
@@ -270,12 +295,32 @@ InfluxDB data can be easily viewed in a browser through <a href="http://grafana.
 <table border="0" cellspacing="0" cellpadding="2" width="100%">
 <tr><td bgcolor="#828DA6">
 <font color="#ffffff" face="arial,helvetica,sanserif">
-<a name="graphite"><strong>15.5 Graphite</strong></a>
+<a name="graphite_configuration"><strong>15.5 Graphite Configuration</strong></a>
 </font>
 </td></tr>
 <tr><td>
 <blockquote>
-<p>HELP WELCOME for this section, see <a href="../building.html">Contributing documentation</a></p></blockquote>
+<p>To make JMeter send metrics to backend, add a BackendListener using the GraphiteBackendListenerClient.</p><p><a href="./component_reference.html#Backend_Listener">GraphiteBackendListenerClient</a> section will help you do the configuration.</p><table border="0" cellspacing="0" cellpadding="0"><tr><td><img width='902' height='341' src="../../docs/images/screenshots/backend_listener_graphite.png"/><br>
+<font size="-1">Graphite configuration</font></td></tr></table>
+</blockquote>
+</td></tr>
+<tr><td><br></td></tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="2" width="100%">
+<tr><td bgcolor="#828DA6">
+<font color="#ffffff" face="arial,helvetica,sanserif">
+<a name="graphite_sendor"><strong>15.5.1 Graphite Sender</strong></a>
+</font>
+</td></tr>
+<tr><td>
+<blockquote>
+<p>Two types of Senders are available. TextGraphiteMetricsSender, PickleGraphiteMetricsSender</p><ul>
+        <li>For plaintext protocol, set graphiteMetricsSender parameter to <tt class="code">org.apache.jmeter.visualizers.backend.graphite.TextGraphiteMetricsSender</tt></li>
+        <li>For pickle protocol, set graphiteMetricsSender parameter to <tt class="code">org.apache.jmeter.visualizers.backend.graphite.PickleGraphiteMetricsSender</tt></li>
+    </ul><p>To send large amounts of data, use the Pickle sender. It is a more efficient transmission method compared to textplain.
+    Read <a href="https://graphite.readthedocs.io/en/latest/feeding-carbon.html" target="_blank">the Graphite documentation</a> for more details.</p><table border="0" cellspacing="0" cellpadding="0"><tr><td><img width='902' height='341' src="../../docs/images/screenshots/backend_listener_graphite_pickle.png"/><br>
+<font size="-1">Graphite pickle sender</font></td></tr></table>
+</blockquote>
 </td></tr>
 <tr><td><br></td></tr>
 </table>
@@ -309,7 +354,7 @@ InfluxDB data can be easily viewed in a browser through <a href="http://grafana.
 <tr>
 <td>
 <font color="#525D76" size="-1"><em>
-Copyright &copy; 1999-2019, Apache Software Foundation
+Copyright &copy; 1999-2023, Apache Software Foundation
 </em></font>
 </td>
 <td align="right">
@@ -332,6 +377,9 @@ trademarks of the Apache Software Foundation.
 </body>
 </html>
 <!-- end the processing -->
+
+
+
 
 
 

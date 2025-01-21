@@ -58,7 +58,7 @@
 <p>
     The extended LDAP sampler was built to support testing for very complex testpurposes.
     It was aimed at supporting the LDAP operations as close as possible.
-    As the results are not passed back in a user-readable form, I invented my own xml definition to 
+    As the results are not passed back in a user-readable form, I invented my own xml definition to
     construct an answer in xml encoding, so the results may be parsed with regextracter or alike functions.
 </p><table border="0" cellspacing="0" cellpadding="2" width="100%">
 <tr><td bgcolor="#828DA6">
@@ -78,9 +78,9 @@
 
 &lt;/li&gt;
 &lt;li&gt;
-    each ldapanswer contains 4 sections, an &quot;operation&quot; section (enclosed by 
-    &amp;lt;operation&amp;gt; tags) a response code section (enclosed by &amp;lt;responsecode&amp;gt; tags), a 
-    response message (enclosed by &amp;lt;responsemessage&amp;gt; tags and (only with a search 
+    each ldapanswer contains 4 sections, an &quot;operation&quot; section (enclosed by
+    &amp;lt;operation&amp;gt; tags) a response code section (enclosed by &amp;lt;responsecode&amp;gt; tags), a
+    response message (enclosed by &amp;lt;responsemessage&amp;gt; tags and (only with a search
     request) a searchresult section (enclosed with &amp;ltsearchresult&amp;gt tags&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -94,7 +94,7 @@
 <tr><td>
 <blockquote>
 <p>
-The operation section defines the operation as it is sent to the LDAP Server. The 
+The operation section defines the operation as it is sent to the LDAP Server. The
 following tags (with a short explanation) are used
 
 &lt;ol&gt;
@@ -141,7 +141,7 @@ This value is given for any &quot;thread bind&quot; and &quot;thread unbind&quot
 &lt;/li&gt;
 &lt;li&gt;
 &amp;lt;binddn&amp;gt;
-This is the DN of the user that is binding to the directory, it is used in the 
+This is the DN of the user that is binding to the directory, it is used in the
 &quot;thread bind&quot;, &quot;thread unbind&quot; and &quot;single bind&quot; operations.
 &lt;/li&gt;
 &lt;li&gt;
@@ -165,7 +165,7 @@ It is used in Add, Delete, Modify and ModifyDN operations
 &lt;/li&gt;
 &lt;li&gt;
 &amp;lt;newdn&amp;gt;
-This is the new distinghuised name of an object to which the object will be renamed 
+This is the new distinghuised name of an object to which the object will be renamed
 or moved, it is used in de ModifyDN operation
 &lt;/li&gt;
 &lt;li&gt;
@@ -256,7 +256,7 @@ This contains the number of returned attributes.
 &lt;/li&gt;
 &lt;li&gt;
 &amp;lt;attribute&amp;gt;
-Each returned attribute is given between these tags, it always consists of an 
+Each returned attribute is given between these tags, it always consists of an
 attribute name and attribute value pair
 &lt;ol&gt;
 &lt;li&gt;
@@ -296,7 +296,7 @@ This contains the attribute value as returned by the server.
 <tr>
 <td align="center">
 <font color="#525D76" size="-1"><em>
-Copyright &copy; 1999-2019, Apache Software Foundation
+Copyright &copy; 1999-2023, Apache Software Foundation
 </em></font>
 </td>
 </tr>
@@ -314,6 +314,9 @@ trademarks of the Apache Software Foundation.
 </body>
 </html>
 <!-- end the processing -->
+
+
+
 
 
 

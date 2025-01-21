@@ -115,33 +115,10 @@ used in the test plan to affect its behaviour (e.g. connecting to a different re
 Alternatively use different content in any datafiles used by the test
 (e.g. if each server must use unique ids, divide these between the data files)
 </p><p><b>Step 1: Start the servers </b></p><p>To run JMeter in remote node, start the JMeter server component on all machines you wish to run on by running
-the <tt class="code">JMETER_HOME/bin/jmeter-server</tt> (unix) or <tt class="code">JMETER_HOME/bin/jmeter-server.bat</tt> (windows) script.</p><p>Note that there can only be one JMeter server on each node unless different RMI ports are used.</p><p>Since JMeter 2.3.1, the JMeter server application starts the RMI registry itself;
-there is no need to start RMI registry separately.
-To revert to the previous behaviour, define the JMeter property <div align="left">
-<table cellspacing="4" cellpadding="0" border="0">
-<tr>
-<td bgcolor="#023264" width="1" height="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-<td bgcolor="#023264" height="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-<td bgcolor="#023264" width="1" height="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-</tr>
-<tr>
-<td bgcolor="#023264" width="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-<td bgcolor="#ffffff"><pre>server.rmi.create=false</pre></td>
-<td bgcolor="#023264" width="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-</tr>
-<tr>
-<td bgcolor="#023264" width="1" height="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-<td bgcolor="#023264" height="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-<td bgcolor="#023264" width="1" height="1"><img src="/images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"/></td>
-</tr>
-</table>
-</div>
- on the server host systems.
-</p><p>
-By default, RMI uses dynamic ports for the JMeter server engine. This can cause problems for firewalls,
-so you can define the JMeter property <tt class="code">server.rmi.localport</tt>
-to control this port numbers.
-If this is non-zero, it will be used as the base for local port numbers for the server engine. At the moment JMeter will open up to three ports beginning with the port defined in <tt class="code">server.rmi.localport</tt>.
+the <tt class="code">JMETER_HOME/bin/jmeter-server</tt> (unix) or <tt class="code">JMETER_HOME/bin/jmeter-server.bat</tt> (windows) script.</p><p>Note that there can only be one JMeter server on each node unless different RMI ports are used.</p><p>The JMeter server application starts the RMI registry itself; there is no need to start RMI registry separately.</p><p>
+By default, RMI uses a dynamic port for the JMeter server engine. This can cause problems for firewalls,
+so you can define the JMeter property <tt class="code">server.rmi.localport</tt> to control this port number.
+it will be used as the local port number for the server engine.
 </p><p><b>Step 2: Add the server IP to your client's Properties File</b></p><p>Edit the properties file <i>on the controlling JMeter machine</i>.  In <tt class="code">JMETER_HOME/bin/jmeter.properties</tt>,
 find the property named &quot;<tt class="code">remote_hosts</tt>&quot; and
 add the value of your running JMeter server's IP address.  Multiple such servers can be added, comma-delimited.</p><p>Note that you can use the <tt class="code">-R</tt> <a href="get-started.html#override">command line option</a>
@@ -330,10 +307,12 @@ JMeter/RMI requires a connection from the client to the server. This will use th
 
 JMeter/RMI also requires a reverse connection in order to return sample results from the server to the client.<br>
 
-This will use a high-numbered port. <br>
+These will use high-numbered ports. <br>
 
-This port can be controlled by jmeter property called <tt class="code">client.rmi.localport</tt> in <tt class="code">jmeter.properties</tt>.<br>
+These ports can be controlled by jmeter property called <tt class="code">client.rmi.localport</tt> in <tt class="code">jmeter.properties</tt>.<br>
 
+If this is non-zero, it will be used as the base for local port numbers for the client engine. At the moment JMeter will open
+up to three ports beginning with the port defined in <tt class="code">client.rmi.localport</tt>.
 If there are any firewalls or other network filters between JMeter client and server,
 you will need to make sure that they are set up to allow the connections through.
 If necessary, use monitoring software to show what traffic is being generated.
@@ -765,7 +744,7 @@ grant {
 <tr>
 <td>
 <font color="#525D76" size="-1"><em>
-Copyright &copy; 1999-2019, Apache Software Foundation
+Copyright &copy; 1999-2023, Apache Software Foundation
 </em></font>
 </td>
 <td align="right">
@@ -788,6 +767,9 @@ trademarks of the Apache Software Foundation.
 </body>
 </html>
 <!-- end the processing -->
+
+
+
 
 
 
