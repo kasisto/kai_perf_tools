@@ -103,8 +103,7 @@ pipeline {
               REPORTS_DIR=~/capi_jmeter/configs/kcb/reports/html
               mkdir -p "$REPORTS_DIR"
 
-              find /home/user/capi_jmeter -name "runner.properties"
-              ls -l /home/user/capi_jmeter/configs/kcb/properties
+              ls -R
 
               cd capi_jmeter/bin && sh jmeter -n -t ../configs/kcb/tests/test_"$TEST".jmx -p ../configs/kcb/properties/runner.properties -l "$REPORTS_DIR"/configs/kcb/reports/results.jtl -j "$REPORTS_DIR"/configs/kcb/reports/jmeter.log -e -o "$REPORTS_DIR"/configs/kcb/reports/html/ $TEST_PARAMETERS
               python3 capi_jmeter/scripts/upload_report.py
