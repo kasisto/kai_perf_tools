@@ -100,10 +100,10 @@ pipeline {
               echo "PARAMETERS: $TEST_PARAMETERS"
 
               BASE_DIR="/home/user/capi_jmeter"
-              mkdir -p "$BASE_DIR"/configs/kcb/reports/html
-              chmod -R 777 ""$BASE_DIR"/configs/kcb/reports
+              REPORTS_DIR=~/capi_jmeter/configs/kcb/reports/html
+              mkdir -p "$REPORTS_DIR"
 
-              cd capi_jmeter/bin && sh jmeter -n -t "$BASE_DIR"/configs/kcb/tests/test_"$TEST".jmx -p "$BASE_DIR"/configs/kcb/properties/runner.properties -l "$BASE_DIR"/configs/kcb/reports/results.jtl -j "$BASE_DIR"/configs/kcb/reports/jmeter.log -e -o "$BASE_DIR"/configs/kcb/reports/html/ $TEST_PARAMETERS
+              cd capi_jmeter/bin && sh jmeter -n -t "$BASE_DIR"/configs/kcb/tests/test_"$TEST".jmx -p "$BASE_DIR"/configs/kcb/properties/runner.properties -l "$REPORTS_DIR"/configs/kcb/reports/results.jtl -j "$REPORTS_DIR"/configs/kcb/reports/jmeter.log -e -o "$REPORTS_DIR"/configs/kcb/reports/html/ $TEST_PARAMETERS
               python3 capi_jmeter/scripts/upload_report.py
               '''
             }
