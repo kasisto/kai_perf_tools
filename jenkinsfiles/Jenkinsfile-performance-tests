@@ -103,7 +103,7 @@ pipeline {
               mkdir -p "$REPORTS_DIR"
 
               cd capi_jmeter/bin && sh jmeter -n -t ../configs/kcb/tests/test_"$TEST".jmx -p ../configs/kcb/properties/runner.properties -l "$REPORTS_DIR"/results.jtl -j "$REPORTS_DIR"/jmeter.log -e -o "$REPORTS_DIR"/html/ $TEST_PARAMETERS
-              python3 capi_jmeter/scripts/upload_report.py
+              python3 ../scripts/upload_report.py
               '''
             }
         }
