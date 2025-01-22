@@ -102,9 +102,10 @@ pipeline {
               BASE_DIR=capi_jmeter/configs/kcb
               sh capi_jmeter/bin/jmeter -n -t "$BASE_DIR"/tests/test_"$TEST".jmx -p "$BASE_DIR"/properties/runner.properties -l "$BASE_DIR"/reports/results.jtl -j "$BASE_DIR"/reports/jmeter.log -e -o "$BASE_DIR"/reports/html/ $TEST_PARAMETERS
 
-              chmod +x capi_jmeter/scripts/setup.sh
-              sh capi_jmeter/scripts/setup.sh
+              python3 -m venv venv
               source venv/bin/activate
+              pwd
+              pip3 install -r requirements.txt
               python3 capi_jmeter/scripts/upload_report.py
               '''
             }
