@@ -53,7 +53,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Assistant " enabled="true">
-          <stringProp name="filename">configs/kcb/data/assistants.csv</stringProp>
+          <stringProp name="filename">../data/assistants.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>
@@ -181,7 +181,7 @@
         </LoopController>
         <hashTree>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="[DATA] Select Random Question " enabled="true">
-            <stringProp name="filename">configs/kcb/data/questions.csv</stringProp>
+            <stringProp name="filename">../data/questions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames"></stringProp>
@@ -286,7 +286,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/results_tree.csv</stringProp>
+        <stringProp name="filename">../reports/results_tree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="true">
@@ -323,7 +323,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/active_threads_over_time.csv</stringProp>
+        <stringProp name="filename">../reports/active_threads_over_time.csv</stringProp>
         <longProp name="interval_grouping">500</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -368,7 +368,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/transactions_per_sec.csv</stringProp>
+        <stringProp name="filename">../reports/transactions_per_sec.csv</stringProp>
         <longProp name="interval_grouping">10000</longProp>
         <boolProp name="graph_aggregated">true</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -413,7 +413,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/response_times_over_time.csv</stringProp>
+        <stringProp name="filename">../reports/response_times_over_time.csv</stringProp>
         <longProp name="interval_grouping">10000</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -458,7 +458,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/summary_report.csv</stringProp>
+        <stringProp name="filename">../reports/summary_report.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
@@ -495,7 +495,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/aggregate_report.csv</stringProp>
+        <stringProp name="filename">../reports/aggregate_report.csv</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>

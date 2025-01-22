@@ -656,7 +656,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-          <stringProp name="filename">../configs/kcb/data/web_hook_positive.csv</stringProp>
+          <stringProp name="filename">../data/web_hook_positive.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>
@@ -852,7 +852,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="random questions" enabled="true">
-          <stringProp name="filename">../configs/kcb/data/web_hook_negative.csv</stringProp>
+          <stringProp name="filename">../data/web_hook_negative.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>

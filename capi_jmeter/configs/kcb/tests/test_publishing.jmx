@@ -58,7 +58,7 @@
       </ThreadGroup>
       <hashTree>
         <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="Random Assistants" enabled="true">
-          <stringProp name="filename">../configs/kcb/data/assistants.csv</stringProp>
+          <stringProp name="filename">../data/assistants.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="variableNames"></stringProp>
@@ -95,7 +95,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__FileToString(../configs/kcb/data/${__eval(${JSON_FILE})}.txt,,)}&#xd;
+                <stringProp name="Argument.value">${__FileToString(../data/${__eval(${JSON_FILE})}.txt,,)}&#xd;
 </stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -118,7 +118,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="publishing payload" enabled="true">
-          <stringProp name="filename">../configs/kcb/data/publishing.csv</stringProp>
+          <stringProp name="filename">../data/publishing.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">JSON_FILE</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
@@ -205,7 +205,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/publishing/results_tree.csv</stringProp>
+        <stringProp name="filename">../reports/publishing/results_tree.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="true">
@@ -242,7 +242,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/publishing/active_threads_over_time.csv</stringProp>
+        <stringProp name="filename">../reports/publishing/active_threads_over_time.csv</stringProp>
         <longProp name="interval_grouping">500</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -287,7 +287,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/publishing/transactions_per_second.csv</stringProp>
+        <stringProp name="filename">../reports/publishing/transactions_per_second.csv</stringProp>
         <longProp name="interval_grouping">1000</longProp>
         <boolProp name="graph_aggregated">true</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -332,7 +332,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/publishing/response_times_over_time.csv</stringProp>
+        <stringProp name="filename">../reports/publishing/response_times_over_time.csv</stringProp>
         <longProp name="interval_grouping">500</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -377,7 +377,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">../configs/kcb/reports/publishing/summary_report.csv</stringProp>
+        <stringProp name="filename">../reports/publishing/summary_report.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Entities Service" enabled="false">

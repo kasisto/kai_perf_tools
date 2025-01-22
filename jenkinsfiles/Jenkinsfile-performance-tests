@@ -96,15 +96,15 @@ pipeline {
                     exit 1
               fi
 
+              BASE_DIR=capi_jmeter/configs/kcb
               TEST_PARAMETERS="-Jloops=$LOOPS -Japi_version=$API_VERSION -Jstart_threads_count=$START_THREADS_COUNT -Jinitial_delay=$INITIAL_DELAY -Jstartup_time=$STARTUP_TIME -Jhold_load_for=$HOLD_LOAD_FOR -Jshutdown_time=$SHUTDOWN_TIME -Jconstant_timer=$CONSTANT_TIMER"
               echo "PARAMETERS: $TEST_PARAMETERS"
-
-              BASE_DIR=capi_jmeter/configs/kcb
               sh capi_jmeter/bin/jmeter -n -t "$BASE_DIR"/tests/test_"$TEST".jmx -p "$BASE_DIR"/properties/runner.properties -l "$BASE_DIR"/reports/results.jtl -j "$BASE_DIR"/reports/jmeter.log -e -o "$BASE_DIR"/reports/html $TEST_PARAMETERS
+
+              cat "$BASE_DIR"/reports/jmeter.log
 
               python3 -m venv venv
               source venv/bin/activate
-              pwd
               pip3 install -r capi_jmeter/scripts/requirements.txt
               python3 capi_jmeter/scripts/upload_report.py
               '''
