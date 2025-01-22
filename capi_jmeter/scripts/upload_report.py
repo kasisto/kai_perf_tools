@@ -28,8 +28,8 @@ def upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket_name
 
     # Upload ZIP file to S3
     try:
-        s3_client.upload_file(zip_path, bucket_name, zip_name)
-        print(f"Uploaded {zip_path} to s3://{bucket_name}/{destination_folder_path}/{zip_name}")
+        s3_client.upload_file(zip_path, bucket_name, f"{destination_folder_path}/{zip_path}")
+        print(f"Uploaded {zip_path} to s3://{bucket_name}/{destination_folder_path}/{zip_path}")
     except ClientError as e:
         print(f"Error uploading ZIP file: {e}")
         return None
