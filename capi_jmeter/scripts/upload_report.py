@@ -57,6 +57,6 @@ def upload_report(folder_name, origin_folder_path, bucket):
         logging.error(f"Error uploading folder {folder_name}: {e}")
 
 folder_name = 'html'
-origin_folder_path = os.path.abspath(f"capi_jmeter/configs/kcb/reports")
+origin_folder_path = "../configs/kcb/reports/html/"
 bucket = 'kasisto-customer-data-qa'
 upload_report(folder_name, origin_folder_path, bucket)
