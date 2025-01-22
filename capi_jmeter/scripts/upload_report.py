@@ -1,32 +1,12 @@
-import boto3
-import os
-import logging
+import boto3, zipfile, os, logging
 from botocore.exceptions import ClientError
 from datetime import datetime
 
-def upload_folder_to_s3(folder_path, destination_folder_path, bucket_name, s3_client):
+def upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket_name, zip_name):
     """
-    Uploads all files in a folder to the specified S3 bucket while preserving the folder structure.
+    Compress a folder into a ZIP file and upload it to S3.
+    Returns a pre-signed URL for downloading the ZIP file.
     """
-    for root, dirs, files in os.walk(folder_path):
-        for file in files:
-            file_path = os.path.join(root, file)
-            # Preserve folder structure by calculating the relative path
-            relative_path = os.path.relpath(file_path, folder_path)
-            s3_path = os.path.join(destination_folder_path, relative_path).replace("\\", "/")
-
-            try:
-                print(f"Uploading {file_path} to s3://{bucket_name}/{s3_path}")
-                s3_client.upload_file(file_path, bucket_name, s3_path)
-            except ClientError as e:
-                logging.error(f"Error uploading {file_path}: {e}")
-
-def upload_report(folder_name, origin_folder_path, bucket):
-    # It will be stored in bucket_name/test_reports/file_name
-    print(f"AWS_ACCESS_KEY_ID: {'AWS_ACCESS_KEY_ID' in os.environ}")
-    print(f"AWS_SECRET_ACCESS_KEY: {'AWS_SECRET_ACCESS_KEY' in os.environ}")
-    print("AWS_ACCESS_KEY_ID" in os.environ and "AWS_SECRET_ACCESS_KEY" in os.environ)
-
     if "AWS_ACCESS_KEY_ID" in os.environ and "AWS_SECRET_ACCESS_KEY" in os.environ:
         # Explicitly pass aws_access_key_id and aws_secret_access_key to utilize credentials used in Jenkins
         s3_client = boto3.client(
@@ -37,32 +17,51 @@ def upload_report(folder_name, origin_folder_path, bucket):
     else:
         s3_client = boto3.client('s3')
 
-    print(f"\nUploading folder to AWS S3... \nBucket: '{bucket}' \nSource folder: '{origin_folder_path}'")
+    # Create a ZIP file
+    zip_path = f"{zip_name}.zip"
+    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for root, _, files in os.walk(origin_folder_path):
+            for file in files:
+                file_path = os.path.join(root, file)
+                arcname = os.path.relpath(file_path, origin_folder_path)
+                zipf.write(file_path, arcname)
+
+    # Upload ZIP file to S3
     try:
-        timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        destination_folder_path = f"test_reports/performance/{timestamp}/"
-        upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket, s3_client)
-        # print(s3_client.upload_file(f"{origin_folder_path}/index.html", bucket, destination_folder_path))
+        s3_client.upload_file(zip_path, bucket_name, zip_name)
+        print(f"Uploaded {zip_path} to s3://{bucket_name}/{destination_folder_path}/{zip_name}")
+    except ClientError as e:
+        print(f"Error uploading ZIP file: {e}")
+        return None
+    finally:
+        os.remove(zip_path)
+
+    # Generate a pre-signed URL for the ZIP file
+    try:
         url = s3_client.generate_presigned_url(
-            ClientMethod='get_object',
-            Params={
-                'Bucket': bucket,
-                'Key': destination_folder_path,
-                'ResponseContentDisposition': 'attachment'
-            },
+            'get_object',
+            Params={'Bucket': bucket_name, 'Key': zip_name},
             ExpiresIn=86400  # 24 hours in seconds
         )
-        print(url)
+
         with open('out.txt', 'w') as f:
             f.write(url)
+        return url
     except ClientError as e:
-        logging.error(f"Error uploading folder {folder_name}: {e}")
+        print(f"Error generating pre-signed URL: {e}")
+        return None
 
-folder_name = 'html'
+def upload_report(origin_folder_path, bucket):
+    # It will be stored in bucket_name/test_reports/file_name
+    try:
+        timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+        destination_folder_path = f"test_reports/performance"
+        print(f"\nUploading folder to AWS S3... \nBucket: '{bucket}' \nSource folder: '{origin_folder_path}' \nDestination folder: '{destination_folder_path}'")
+        
+        upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket, timestamp)
+    except ClientError as e:
+        logging.error(f"Error uploading folder: {e}")
+
 origin_folder_path = "capi_jmeter/configs/kcb/reports/html"
 bucket = 'kasisto-customer-data-qa'
-print("Current Directory:", os.getcwd())
-print("reports:", os.listdir("capi_jmeter/configs/kcb/reports"))
-print("html:", os.listdir("capi_jmeter/configs/kcb/reports/html"))
-
-upload_report(folder_name, origin_folder_path, bucket)
+upload_report(origin_folder_path, bucket)
