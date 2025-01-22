@@ -6,12 +6,14 @@ from datetime import datetime
 
 def upload_folder_to_s3(folder_path, destination_folder_path, bucket_name, s3_client):
     """
-    Uploads all files in a folder to the specified S3 bucket.
+    Uploads all files in a folder to the specified S3 bucket while preserving the folder structure.
     """
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             file_path = os.path.join(root, file)
-            s3_path = os.path.join(destination_folder_path, file)
+            # Preserve folder structure by calculating the relative path
+            relative_path = os.path.relpath(file_path, folder_path)
+            s3_path = os.path.join(destination_folder_path, relative_path).replace("\\", "/")
 
             try:
                 print(f"Uploading {file_path} to s3://{bucket_name}/{s3_path}")
