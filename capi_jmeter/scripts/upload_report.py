@@ -12,7 +12,7 @@ def upload_folder_to_s3(folder_path, destination_folder_path, bucket_name, s3_cl
         for file in files:
             file_path = os.path.join(root, file)
             s3_path = os.path.join(destination_folder_path, file)
-            print(s3_path)
+
             try:
                 print(f"Uploading {file_path} to s3://{bucket_name}/{s3_path}")
                 s3_client.upload_file(file_path, bucket_name, s3_path)
@@ -39,8 +39,8 @@ def upload_report(folder_name, origin_folder_path, bucket):
     try:
         timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
         destination_folder_path = f"test_reports/performance/{timestamp}/"
-        # upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket, s3_client)
-        print(s3_client.upload_file(f"{origin_folder_path}/index.html", bucket, destination_folder_path))
+        upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket, s3_client)
+        # print(s3_client.upload_file(f"{origin_folder_path}/index.html", bucket, destination_folder_path))
         url = s3_client.generate_presigned_url(
             ClientMethod='get_object',
             Params={
