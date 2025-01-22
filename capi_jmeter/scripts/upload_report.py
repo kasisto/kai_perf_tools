@@ -59,4 +59,5 @@ def upload_report(folder_name, origin_folder_path, bucket):
 folder_name = 'html'
 origin_folder_path = "../configs/kcb/reports/html"
 bucket = 'kasisto-customer-data-qa'
+print("Current Directory:", os.getcwd())
 upload_report(folder_name, origin_folder_path, bucket)
