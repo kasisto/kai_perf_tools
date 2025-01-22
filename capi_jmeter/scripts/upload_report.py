@@ -36,7 +36,7 @@ def upload_report():
         s3_client = boto3.client('s3')
 
     folder_name = 'html'
-    origin_folder_path = f"configs/kcb/reports/{folder_name}"
+    origin_folder_path = os.path.expanduser(f"~/capi_jmeter/configs/kcb/reports/{folder_name}")
     bucket = 'kasisto-customer-data-qa'
 
     print(f"\nUploading folder to AWS S3... \nBucket: '{bucket}' \nSource folder: '{origin_folder_path}'")
