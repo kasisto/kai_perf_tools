@@ -19,7 +19,7 @@ def upload_folder_to_s3(folder_path, destination_folder_path, bucket_name, s3_cl
             except ClientError as e:
                 logging.error(f"Error uploading {file_path}: {e}")
 
-def upload_report():
+def upload_report(folder_name, origin_folder_path, bucket):
     # It will be stored in bucket_name/test_reports/file_name
     print(f"AWS_ACCESS_KEY_ID: {'AWS_ACCESS_KEY_ID' in os.environ}")
     print(f"AWS_SECRET_ACCESS_KEY: {'AWS_SECRET_ACCESS_KEY' in os.environ}")
@@ -35,14 +35,10 @@ def upload_report():
     else:
         s3_client = boto3.client('s3')
 
-    folder_name = 'html'
-    origin_folder_path = os.path.expanduser(f"~/capi_jmeter/configs/kcb/reports/{folder_name}")
-    bucket = 'kasisto-customer-data-qa'
-
     print(f"\nUploading folder to AWS S3... \nBucket: '{bucket}' \nSource folder: '{origin_folder_path}'")
     try:
         timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        destination_folder_path = f"test_reports/{timestamp}/"
+        destination_folder_path = f"test_reports/performance/{timestamp}/"
         # upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket, s3_client)
         print(s3_client.upload_file(f"{origin_folder_path}/index.html", bucket, destination_folder_path))
         url = s3_client.generate_presigned_url(
@@ -60,4 +56,7 @@ def upload_report():
     except ClientError as e:
         logging.error(f"Error uploading folder {folder_name}: {e}")
 
-upload_report()
+folder_name = 'html'
+origin_folder_path = os.path.abspath(f"capi_jmeter/configs/kcb/reports")
+bucket = 'kasisto-customer-data-qa'
+upload_report(folder_name, origin_folder_path, bucket)
