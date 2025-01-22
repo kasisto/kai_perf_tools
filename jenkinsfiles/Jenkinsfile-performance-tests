@@ -103,10 +103,10 @@ pipeline {
               sh capi_jmeter/bin/jmeter -n -t "$BASE_DIR"/tests/test_"$TEST".jmx -p "$BASE_DIR"/properties/runner.properties -l "$BASE_DIR"/reports/results.jtl -j "$BASE_DIR"/reports/jmeter.log -e -o "$BASE_DIR"/reports/html/ $TEST_PARAMETERS
               ls -l | grep '^d'
 
-              chmod +x "$BASE_DIR"/scripts/setup.sh
-              sh "$BASE_DIR"/scripts/setup.sh
+              chmod +x capi_jmeter/scripts/setup.sh
+              sh capi_jmeter/scripts/setup.sh
               source venv/bin/activate
-              python3 "$BASE_DIR"/scripts/upload_report.py
+              python3 capi_jmeter/scripts/upload_report.py
               '''
             }
         }
