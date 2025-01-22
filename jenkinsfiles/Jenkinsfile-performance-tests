@@ -105,7 +105,7 @@ pipeline {
               python3 -m venv venv
               source venv/bin/activate
               pwd
-              pip3 install -r requirements.txt
+              pip3 install -r capi_jmeter/scripts/requirements.txt
               python3 capi_jmeter/scripts/upload_report.py
               '''
             }
