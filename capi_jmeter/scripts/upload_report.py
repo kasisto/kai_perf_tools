@@ -42,9 +42,9 @@ def upload_report():
     print(f"\nUploading folder to AWS S3... \nBucket: '{bucket}' \nSource folder: '{origin_folder_path}'")
     try:
         timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        destination_folder_path = f"perf_test_reports/{timestamp}/"
-        upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket, s3_client)
-
+        destination_folder_path = f"test_reports/{timestamp}/"
+        # upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket, s3_client)
+        print(s3_client.upload_file(f"{origin_folder_path}/index.html", bucket, destination_folder_path))
         url = s3_client.generate_presigned_url(
             ClientMethod='get_object',
             Params={
