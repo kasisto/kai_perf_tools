@@ -99,17 +99,14 @@ pipeline {
               TEST_PARAMETERS="-Jloops=$LOOPS -Japi_version=$API_VERSION -Jstart_threads_count=$START_THREADS_COUNT -Jinitial_delay=$INITIAL_DELAY -Jstartup_time=$STARTUP_TIME -Jhold_load_for=$HOLD_LOAD_FOR -Jshutdown_time=$SHUTDOWN_TIME -Jconstant_timer=$CONSTANT_TIMER"
               echo "PARAMETERS: $TEST_PARAMETERS"
 
-              REPORTS_DIR=~/capi_jmeter/configs/kcb/reports
-              mkdir -p "$REPORTS_DIR"
-
-              cd capi_jmeter/bin && sh jmeter -n -t ../configs/kcb/tests/test_"$TEST".jmx -p ../configs/kcb/properties/runner.properties -l ../configs/kcb/reports/results.jtl -j ../configs/kcb/reports/jmeter.log -e -o ../configs/kcb/reports/html/ $TEST_PARAMETERS
+              BASE_DIR=capi_jmeter/configs/kcb
+              sh capi_jmeter/bin/jmeter -n -t "$BASE_DIR"/test_"$TEST".jmx -p "$BASE_DIR"/properties/runner.properties -l "$BASE_DIR"/reports/results.jtl -j "$BASE_DIR"/reports/jmeter.log -e -o "$BASE_DIR"/reports/html/ $TEST_PARAMETERS
               ls -l | grep '^d'
 
-              chmod +x ../scripts/setup.sh
-              sh ../scripts/setup.sh
+              chmod +x "$BASE_DIR"/scripts/setup.sh
+              sh "$BASE_DIR"/scripts/setup.sh
               source venv/bin/activate
-              pwd
-              python3 ../scripts/upload_report.py
+              python3 "$BASE_DIR"/scripts/upload_report.py
               '''
             }
         }
