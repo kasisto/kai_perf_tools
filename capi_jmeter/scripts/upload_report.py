@@ -20,7 +20,11 @@ def upload_folder_to_s3(folder_path, destination_folder_path, bucket_name, s3_cl
                 logging.error(f"Error uploading {file_path}: {e}")
 
 def upload_report():
-    # It will be stored in bucket_name/test_reports/file_name    
+    # It will be stored in bucket_name/test_reports/file_name
+    print(f"AWS_ACCESS_KEY_ID: {'AWS_ACCESS_KEY_ID' in os.environ}")
+    print(f"AWS_SECRET_ACCESS_KEY: {'AWS_SECRET_ACCESS_KEY' in os.environ}")
+    print("AWS_ACCESS_KEY_ID" in os.environ and "AWS_SECRET_ACCESS_KEY" in os.environ)
+
     if "AWS_ACCESS_KEY_ID" in os.environ and "AWS_SECRET_ACCESS_KEY" in os.environ:
         # Explicitly pass aws_access_key_id and aws_secret_access_key to utilize credentials used in Jenkins
         s3_client = boto3.client(
