@@ -38,18 +38,20 @@ def upload_folder_to_s3(origin_folder_path, destination_folder_path, bucket_name
 
     # Generate a pre-signed URL for the ZIP file
     try:
+        # Generate the URL to get 'key-name' from 'bucket-name'
         url = s3_client.generate_presigned_url(
-            'get_object',
-            Params={'Bucket': bucket_name, 'Key': zip_name},
-            ExpiresIn=86400  # 24 hours in seconds
+            ClientMethod='get_object',
+            Params={
+                'Bucket': bucket,
+                'Key': f"{destination_folder_path}/{zip_path}",
+                'ResponseContentDisposition': 'attachment'
+            },
+            ExpiresIn=86400 # 24 hours in seconds
         )
-
         with open('out.txt', 'w') as f:
             f.write(url)
-        return url
     except ClientError as e:
-        print(f"Error generating pre-signed URL: {e}")
-        return None
+        logging.error(e)
 
 def upload_report(origin_folder_path, bucket):
     # It will be stored in bucket_name/test_reports/file_name
