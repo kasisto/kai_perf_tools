@@ -26,7 +26,7 @@ def upload_report():
                 zipf.write(file_path, arcname)
     
 
-    target_s3_path = f"test_reports/performance/{zip_path}"
+    target_s3_path = f"test_reports/{zip_path}"
     bucket = 'kasisto-customer-data-qa'
 
     print(f"\nUploading report to AWS S3... \nBucket: '{bucket}' \nTarget path: '/{target_s3_path}'")
