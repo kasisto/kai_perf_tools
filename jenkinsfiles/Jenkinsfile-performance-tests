@@ -107,9 +107,14 @@ pipeline {
               source venv/bin/activate
               pip3 install -r capi_jmeter/scripts/requirements.txt
               python3 capi_jmeter/scripts/upload_report.py
-              cat out.txt
               '''
             }
+            sh '''
+              set -e
+              set +x
+              echo "Download Test Results from the URL below. Valid for 24 hours.."
+              cat out.txt
+            '''
         }
       }
     }
